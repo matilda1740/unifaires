@@ -28,7 +28,7 @@ export default function LandingPage() {
       <Fragment>
         <Head>
           <title>
-            UNIFAIRES | Future-proof learning with career opportunities
+            Unifaires | Future-proof learning with career opportunities
           </title>
           <meta
             name="Description"
@@ -39,7 +39,7 @@ export default function LandingPage() {
             name="keywords"
             content="Future-proof learning with career opportunities"
           />
-          <link
+          {/* <link
             href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700"
             rel="stylesheet"
           />
@@ -50,7 +50,8 @@ export default function LandingPage() {
           <link
             href='https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap'
             rel="stylesheet"
-          ></link>
+          ></link> */}
+          <link href="http://fonts.cdnfonts.com/css/maison-neue" rel="stylesheet"/>
         </Head>
         {/* end of head */}
 

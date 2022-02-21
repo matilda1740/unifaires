@@ -19,10 +19,6 @@ const Main = () => {
           <title>Unifaires | Login Page</title>
           <meta name="theme-color" content="#10ac84" />
           <meta name="Description" content="React next landing page" />
-          <link
-            href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i"
-            rel="stylesheet"
-          />
           <link href="http://fonts.cdnfonts.com/css/maison-neue" rel="stylesheet"/>
         </Head>
         <ResetCSS />

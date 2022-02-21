@@ -85,4 +85,5 @@ Text.defaultProps = {
   as: 'p',
   mt: 0,
   mb: '1rem',
+  fontWeight: 300
 };

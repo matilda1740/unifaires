@@ -262,7 +262,7 @@ const NavBar = () => {
             />
           </NavLink>
 
-          <NavLink>Unifairs Bussiness</NavLink>
+          <NavLink>Unifaires Business</NavLink>
           <NavLink>About</NavLink>
           <NavLink>Pricing</NavLink>
           <Link href="/contact">

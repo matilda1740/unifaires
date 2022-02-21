@@ -1,5 +1,5 @@
 import { Modal } from "@redq/reuse-modal";
-// import NProgress from "nprogress";
+import NProgress from "nprogress";
 import Router from "next/router";
 import "@redq/reuse-modal/es/index.css";
 import "common/assets/css/flaticon.css";
