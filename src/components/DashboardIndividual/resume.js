@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Text from 'components/Layout/Text';
 import Heading from 'components/Layout/Heading';
 import { SectionHeader } from '../globalApp.style';
-import SectionWrapper, { ModuleColumn, ModuleHeading, HeadingLeft, HeadingRight,ToggleButton, OptionsRow,OptionButton, ModuleSection, SectionHeading,  ModuleRow, ModuleRowEmpty, CoursesStartCard, JobCard, DashboardBadge, SearchBar } from '../DashboardBusiness/business.style';
+import SectionWrapper, { ModuleColumn, ModuleHeading, HeadingLeft, HeadingRight,ToggleButton, OptionsRow,OptionButton, ModuleSection, SectionHeading,  ModuleRow, ModuleRowEmpty, CoursesStartCard, CoursesResumeCard, JobCard, BadgesCard, DashboardBadge, SearchBar } from '../DashboardBusiness/business.style';
 import SidebarLeft from './SidebarLeft';
 import SidebarRight from './SidebarRight';
 
@@ -19,10 +19,9 @@ import coursesIcon from 'public/images/dashboard/Courses.svg'
 import badgeIcon from 'public/images/dashboard/Group.svg'
 import workIcon from 'public/images/dashboard/Dashboard/Work.svg'
 import dashCard from 'public/images/dashboardCard.png'
-
 import paypal from 'public/images/partners/paypal.svg'
-
-const UserWrapper = (props) => {
+import cisco from 'public/images/dashboard/Resume Course/cisco.png'
+const UserResumeCourse = (props) => {
   const {userOptions} = userModule;
 
   const [state, setState] = useState({
@@ -56,7 +55,7 @@ const UserWrapper = (props) => {
                 <DashboardBadge>
                     <div className="col1">
                         <Text as="p" content={"My Learning"} />
-                        <span>0</span>
+                        <span>980</span>
                     </div>
                     <div className="icon">
                 <img src={coursesIcon?.src} alt="Learn" /> 
@@ -66,7 +65,7 @@ const UserWrapper = (props) => {
                 <DashboardBadge>
                     <div className="col1">
                         <Text as="p" content={"My Jobs"} />
-                        <span>0</span>
+                        <span>980</span>
                     </div>
                     <div className="icon">
                 <img src={workIcon?.src} alt="Learn" /> 
@@ -75,7 +74,7 @@ const UserWrapper = (props) => {
                 <DashboardBadge>
                     <div className="col1">
                         <Text as="p" content={"My Certifications & Badges"} />
-                        <span>0</span>
+                        <span>980</span>
                     </div>
                     <div className="icon">
                 <img src={badgeIcon?.src} alt="Learn" /> 
@@ -98,23 +97,24 @@ const UserWrapper = (props) => {
                     <ModuleRow>
                         {
                             section.courses.map(( course => (
-                                <CoursesStartCard>
-                                    <img src={dashCard?.src} alt="Image" /> 
-                                    <Heading as="h6" content={course.category}></Heading>
-                                    <Heading as="h5" content={course.title}></Heading>
-                                    <Text as="p" content={course.description}></Text>
-                                    <div className="functions_row">
-                                        <div>
-                                            <img src={workIcon?.src} alt="Image" /> 
-                                            <Text as="p" content={`${course.lessons} Lessons`}></Text>
-                                        </div>
-                                        <div>
-                                            <img src={workIcon?.src} alt="Image" /> 
-                                            <Text as="p" content={`${course.time} hrs`}></Text>
-                                        </div>
+                                <CoursesResumeCard>
+                                    <div className=".courses_resume_top">
+
+                                        <img src={dashCard?.src} alt="Image" /> 
+
                                     </div>
-                                    <Link className="course_card_button" href="/resume-course" >Start Course</Link>
-                                </CoursesStartCard>
+                                    
+                                    <Heading as="h6" content={course.category}></Heading>
+                                    <Heading as="h5" content={"JavaScript Complete Beginners Course For Web 2.0"}></Heading>
+
+                                    <div className="courses_resume_bottom">
+
+                                        <div className="percentage_div">
+                                           <span>47%</span> 
+                                        </div>
+                                    <Link href="/">RESUME COURSE</Link>
+                                    </div>
+                                </CoursesResumeCard>
                             )))
                         }
 
@@ -149,13 +149,14 @@ const UserWrapper = (props) => {
                                         <button>Full-time</button>
                                     </div>                        <Text as="p" content={job.description}></Text>
 
-                                    <Link href="/">Apply</Link>
+                                    <Link href="/">In Progress</Link>
                                 </JobCard>
                             )))
                         }
 
                     </ModuleRow>
-                    :            <ModuleRowEmpty>
+                    :            
+                    <ModuleRowEmpty>
                 <Text as="p" content={"Jobs you’ve applied to will be documented here. Get searching"} />
                 <button>Find Jobs</button>
             </ModuleRowEmpty>            
@@ -165,10 +166,38 @@ const UserWrapper = (props) => {
                 <Heading as="h5" content={"My Certifications & Badges"}></Heading>
                 <Link href="/">See all ></Link>
             </SectionHeading>        
+            {
+                userOptions.map(( section => (
+                    section.badges?.length > 0 ?
+                    <ModuleRow>
+                        {
+                            section.badges.map(( badge => (
+                                <BadgesCard>
+                                    <div className="badge_logo_div">
+                                        <img src={cisco?.src}  alt="Image" />
+                                    </div>
 
-            <ModuleRowEmpty>
-                <Text as="p" content={"Oops, you haven’t earned a certificate yet."} />
-            </ModuleRowEmpty>                
+                                    <div className="badge_text_div">
+                                        <Heading as="h5" content={badge.name}></Heading>
+
+                                        <Text as="p" content={"has successfully completed the course"} />
+
+                                        <Heading as="h5" content={badge.title}></Heading>
+
+                                        <Text as="p" content={`on the ${badge.date}`} />
+                                        
+                                        <Heading as="h6" content={`Distinction: ${badge.distinction}`} />
+                                    </div>                               
+                                </BadgesCard>
+                            )))
+                        }
+                    </ModuleRow>
+                    :   
+                    <ModuleRowEmpty>
+                        <Text as="p" content={"Oops, you haven’t earned a certificate yet."} />
+                    </ModuleRowEmpty> 
+            )))
+            }               
         </ModuleSection>
 
       </ModuleColumn>
@@ -178,4 +207,4 @@ const UserWrapper = (props) => {
   );
 };
 
-export default UserWrapper;
+export default UserResumeCourse;

@@ -579,9 +579,24 @@ export const userModule = {
       }
     ],
     scholarships: [
-      
+
     ],
-    badges: []
+    badges: [
+      {
+      logo: "",
+      name: "Oreoluwanimi Adeyemi",
+      title: `"User Experience Design for Beginners"`,
+      date: "23rd of February, 2021.",
+      distinction: "Best in Class"
+      },
+      {
+      logo: "",
+      name: "Oreoluwanimi Adeyemi",
+      title: `"User Experience Design for Beginners"`,
+      date: "23rd of February, 2021.",
+      distinction: "Best in Class"
+      }
+    ]
   }
 ]
 }

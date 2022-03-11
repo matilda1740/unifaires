@@ -56,7 +56,7 @@ export const AvatarIcon = styled.div`
 // }
 // `;
 
-export const CoursesCard = styled.div`
+export const CoursesStartCard = styled.div`
 background-color: rgba(173, 168, 190, 0.08);
 border: 1px solid rgba(173, 168, 190, 0.08);
 height: 316px;
@@ -116,7 +116,8 @@ p{
         margin: 0 8px 0 0;
      }
 }
-.course_card_button{
+/* .course_card_button */
+a{
     background: rgba(88, 50, 218, 0.1);
     border-radius: 36px;
     width: 160px;
@@ -128,8 +129,79 @@ p{
     line-height: 150%;
     margin: 28px 0 0 0;
     align-self: flex-end;
+
+    text-align: center;
 }
 
+`;
+
+export const CoursesResumeCard = styled.div`
+background: #FFFFFF;
+border: 1px solid rgba(18, 53, 91, 0.1);
+width: 332px;
+height: 268px;
+border-radius: 16px;
+padding: 16px;
+display: flex;
+flex-direction: column;
+color: #12355B;
+:nth-child(n+1) {
+    margin-right: 40px;
+}
+img {
+    border-radius: 8px;
+    width: 122px;
+    height: 64px;
+    margin-bottom: 16px;
+}
+.courses_resume_top {
+
+}
+h6 {
+    color: rgba(173, 168, 190, 1);
+    font-size: 12px;
+    margin-bottom: 0px;
+    line-height: 180%;
+    letter-spacing: 0.02em;
+}
+h5{
+    margin: 1px 0 12px 0;
+    color: rgba(18, 53, 91, 1) !important;
+font-size: 18px;
+line-height: 150%;
+height: 64px;
+}
+.courses_resume_bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: calc(100%);
+        height: 75px;
+        margin: 8px 0 0 0px;
+        padding:  16px 0;
+        border-top: 2px solid rgba(18, 53, 91, 0.1);
+;
+    .percentage_div{
+
+        width: 43px;
+        height: 43px;
+        border-radius: 50%;
+        border: 4px solid  rgba(88, 50, 218, 1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        span{
+color: #12355B; 
+        }
+    }
+    a {
+color: rgba(88, 50, 218, 1);
+font-size: 14px;
+line-height: 180%;
+text-transform: uppercase;
+    }
+}
 `;
 
 export const JobCard = styled.div`
@@ -201,6 +273,38 @@ a{
 }
 `;
 
+export const BadgesCard = styled.div`
+width: 439px;
+height: 306px;
+background: rgba(88, 50, 218, 0.02);
+border: 1px solid rgba(88, 50, 218, 0.1);
+border-radius: 12px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+    text-align: center;
+:nth-child(n+1) {
+    margin-right: 35px;
+}
+.badge_logo_div{
+    width: 100%;
+    height: 114px;
+    padding: 12px 0;
+}
+.badge_text_div{
+    color: rgba(18, 53, 91, 1) !important;
+}
+h5, p, h6 {
+    color: rgba(18, 53, 91, 1) !important;
+    margin-bottom: 8px !important;
+line-height: 140%;
+}
+p:last-of-type{
+    font-weight: 300;
+}
+`;
+
 export const DashboardRow = styled.div`
 height: 54px;
 width: 100%;
@@ -256,6 +360,7 @@ color: #082262;
     font-weight: 500 !important;
     }
     span{
+    font-weight: 500 !important;
 
     }
 }
@@ -480,7 +585,7 @@ export const SectionHeading = styled.div`
         line-height: 120%;
     }
     a{
-        color: rgba(173, 168, 190, 0.9);
+        color: rgba(18, 53, 91, 0.9);
         line-height: 120%;
         margin-right: 30px;
         font-weight: 500;
