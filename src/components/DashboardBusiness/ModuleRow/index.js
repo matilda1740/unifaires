@@ -19,4 +19,4 @@ const ModuleRow = (props) => {
   );
 };
 
-export default ModuleRowr;
+export default ModuleRow;

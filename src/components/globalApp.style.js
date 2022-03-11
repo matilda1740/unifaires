@@ -8,7 +8,7 @@ export const GlobalStyle = createGlobalStyle`
     ${'' /* font-family: 'Lato', sans-serif; */}
     font-family: Maison Neue;
     font-style: normal;
-    font-weight: 200 !important;
+    ${'' /* font-weight: 300 !important; */}
   }
   h1,
   h2,

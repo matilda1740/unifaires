@@ -25,8 +25,7 @@ const BusinessWrapper = (props) => {
 
   return (
     <SectionWrapper>
-      <SidebarModule/>
-      
+      <SidebarModule/>     
       <ModuleColumn>
         <ModuleHeading>
             <HeadingLeft>

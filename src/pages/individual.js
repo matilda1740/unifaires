@@ -8,36 +8,26 @@ import ResetCSS from 'common/assets/css/style';
 import { DrawerProvider } from 'common/contexts/DrawerContext';
 // Page Sections
 import Navbar from "components/LandingPage/Navbar";
-import BusinessWrapper from 'components/DashboardBusiness';
+import UserWrapper from 'components/DashboardIndividual';
 
 const Main = () => {
   return (
     <ThemeProvider theme={theme}>
       <Fragment>
         <Head>
-          <title>Unifaires | Business Suite</title>
+          <title>Unifaires | Individual Suite</title>
           <meta name="theme-color" content="#10ac84" />
           <meta name="Description" content="React next landing page" />
-          {/* Load google fonts */}
-          <link
-            href='https://fonts.googleapis.com/css2?family=Lato:wght@500&display=swap'
-            rel="stylesheet"
-          ></link>
+          <link href="http://fonts.cdnfonts.com/css/maison-neue" rel="stylesheet"/>       
         </Head>
         <ResetCSS />
-        {/* End of agency head section */}
-        {/* Start agency wrapper section */}
         <AppWrapper>
-        {/* <h1>Contact</h1> */}
           <Sticky top={0} innerZ={9999} activeClass="sticky-nav-active">
-            <DrawerProvider>
-              {/* <Navbar /> */}
-            </DrawerProvider>
+            {/* <DrawerProvider>
+            </DrawerProvider> */}
           </Sticky>
-          <BusinessWrapper/>
-          {/* <Footer /> */}
+          <UserWrapper/>
         </AppWrapper>
-        {/* End of agency wrapper section */}
       </Fragment>
     </ThemeProvider>
   );

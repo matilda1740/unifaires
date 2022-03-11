@@ -1,10 +1,88 @@
 
 import logo from 'common/assets/images/logoUnifaires.svg'
+import paypal from 'public/images/partners/paypal.svg'
+
+/* -------- About Us data section --------- */
+
+export const aboutUs = {
+  heading: 'Redefining Education for all',
+  subheading: 'Our simple, per-course pricing scales with you.',
+  logo: logo,
+  sections: [
+    {
+      title: 'OUR VISION',
+      subtitle: 'Solve the learning deficit',
+      description: 'Unifaires helps people seeking to learn by providing them with multiple courses to learn form; across various industries and fields. Unifaires helps people seeking to learn by providing them with multiple courses to learn form; across various industries and fields.Unifaires helps people seeking to learn by providing them with multiple courses to learn form; across various industries and fields.',
+      imageURL: 'common/assets/images/',
+      buttonText: ''
+    },
+    {
+      title: 'OUR MISSION',
+      subtitle: 'Solve the learning deficit',
+      description: 'Unifaires helps people seeking to learn by providing them with multiple courses to learn form; across various industries and fields. Unifaires helps people seeking to learn by providing them with multiple courses to learn form; across various industries and fields.Unifaires helps people seeking to learn by providing them with multiple courses to learn form; across various industries and fields.',
+      image: 'common/assets/images/',
+      buttonText: ''
+    },
+    {
+      title: 'OUR PARTNERS',
+      subtitle: 'Backed by the best in the industry',
+      description: '',
+      image: [ 
+        'common/assets/images/', 
+        'common/assets/images/', 
+        'common/assets/images/', 
+        'common/assets/images/', 
+        'common/assets/images/'
+      ],
+      buttonText: ''
+    },     
+    {
+      title: 'OUR CULTURE',
+      subtitle: 'Forged in partnerships',
+      description: 'Unifaires helps people seeking to learn by providing them with multiple courses to learn form; across various industries and fields. Unifaires helps people seeking to learn by providing them with multiple courses to learn form; across various industries and fields.Unifaires helps people seeking to learn by providing them with multiple courses to learn form; across various industries and fields.',
+      image: '',
+      buttonText: ''
+    },   
+    {
+      title: 'CAREERS',
+      subtitle: 'Come work with us',
+      description: 'Get to work n form; across various industries and fields. Unifaires helps people seeking to learn by providing them with multiple courses to learn form; across various industries and fields.Unifaires helps people seeking to learn by providing them with multiple courses to learn from fields.',
+      image: '',
+      buttonText: 'Explore Job Opportunies'
+    },   
+  ], 
+  attractions: [
+    {
+    title: 'Lorem ipsum',
+    iconURL: '',
+    description: 'We’ll never tell your current company or a third-party recruiter about your job search, we respect your privacy. And it’s completely free to search.'
+    },
+    {
+    title: 'Lorem ipsum',
+    iconURL: '',
+    description: 'We’ll never tell your current company or a third-party recruiter about your job search, we respect your privacy. And it’s completely free to search.'
+    },
+    {
+    title: 'Lorem ipsum',
+    iconURL: '',
+    description: 'We’ll never tell your current company or a third-party recruiter about your job search, we respect your privacy. And it’s completely free to search.'
+    },
+    {
+    title: 'Lorem ipsum',
+    iconURL: '',
+    description: 'We’ll never tell your current company or a third-party recruiter about your job search, we respect your privacy. And it’s completely free to search.'
+    },
+    {
+    title: 'Lorem ipsum',
+    iconURL: '',
+    description: 'We’ll never tell your current company or a third-party recruiter about your job search, we respect your privacy. And it’s completely free to search.'
+    },  ]
+}
+
 
 /* -------- Contact Card data section --------- */
-
 export const contactCard = {
-  heading: 'Contact Form',
+  heading: 'Need our help?',
   logo: logo,
   slogan: 'Contact Us',
   title: 'questions, enquiries', 
@@ -23,7 +101,7 @@ export const contactCard = {
   // socials: [facebook, instagram, twitter, youtube]
 }
 
-/* ------------- Pricing policy data section ---------------- */
+/* ----------- Pricing policy data section ------------- */
 
 export const pricing = {
   slogan: 'Pricing',
@@ -317,7 +395,8 @@ export const pricing = {
   ],
 };
 
-/* ------------------  Testimonial data section -------------------- */
+/* ----------  Testimonial data section ----------- */
+
 export const testimonial = {
   slogan: 'Testimonials',
   title: "Don’t take our word for it",
@@ -408,6 +487,105 @@ export const forgotPass = {
   buttonText: 'Send Reset Link'
 }
 
+/* -------- USER MODULE --------- */
+
+export const userModule = {
+  company: 'Unifaires',
+  suite: 'Individual',
+  userType: 'individual',
+  userOptions: [
+    {
+    // courses: [
+    // ],
+    // sections: [
+    //   {
+    //     title: 'My Courses',
+    //     text: 'You have no courses yet! Explore our courses to get started',
+    //     buttonText: 'Explore Courses'
+    //   },
+    //   {
+    //     title: 'My Job Applications',
+    //     text: 'Jobs you’ve applied to will be documented here. Get searching',
+    //     buttonText: 'Find Jobs'
+    //   },
+    //   {
+    //     title: 'My Certifications & Badges',
+    //     text: 'Oops, you haven’t earned a certificate yet.',
+    //     buttonText: ''
+    //   },      
+    // ]
+    courses: [
+      {
+        title: "Introduction to AI",
+        category: "DESIGN",
+        description: "We are looking for an Accountant to manage all financial transactions... ",
+        dateAdded: "12th Jan 2021",
+        thumbnail: 'public/images/dashboardCard.png',
+        lessons: "9",
+        time: "150"
+      },
+      {
+        title: "Introduction to AI",
+        category: "DESIGN",
+        description: "We are looking for an Accountant to manage all financial transactions... ",
+        dateAdded: "12th Jan 2021",
+        thumbnail: "",
+        lessons: "9",
+        time: "150"
+      },
+      {
+        title: "Introduction to AI",
+        category: "DESIGN",
+        description: "We are looking for an Accountant to manage all financial transactions... ",
+        dateAdded: "12th Jan 2021",
+        thumbnail: "",
+        lessons: "9",
+        time: "150"
+      },
+      {
+        title: "Introduction to AI",
+        category: "DESIGN",
+        description: "We are looking for an Accountant to manage all financial transactions...",
+        dateAdded: "12th Jan 2021",
+        thumbnail: "",
+        lessons: "9",
+        time: "150"
+      }
+    ],
+    jobs: [
+      {
+        company: "Paypal",
+        logo: paypal,
+        title: "Senior Product Designer",
+        description: "We are looking for an Accountant to manage all financial transactions..."
+      },
+            {
+        company: "Paypal",
+        logo: paypal,
+        title: "Senior Product Designer",
+        description: "We are looking for an Accountant to manage all financial transactions..."
+      },
+            {
+        company: "Paypal",
+        logo: paypal,
+        title: "Senior Product Designer",
+        description: "We are looking for an Accountant to manage all financial transactions..."
+      },
+            {
+        company: "Paypal",
+        logo: paypal,
+        title: "Senior Product Designer",
+        description: "We are looking for an Accountant to manage all financial transactions..."
+      }
+    ],
+    scholarships: [
+      
+    ],
+    badges: []
+  }
+]
+}
+
 /* -------- BUSINESS MODULE --------- */
 
 export const businessModule = {
@@ -429,3 +607,4 @@ export const businessModule = {
     badges: []
   }]
 }
+

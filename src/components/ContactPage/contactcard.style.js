@@ -4,11 +4,11 @@ import { themeGet } from '@styled-system/theme-get';
 const SectionWrapper = styled.section`
 
   padding: 50px 0;
-  /* background-color:rgba(127, 17, 224, 0.05); */
-    background: linear-gradient(to right, rgba(127, 17, 224, 0.05)  66.666667%, rgba(127, 17, 224, 0.05) 33.333333%), url('/Group.svg');
-      @media only screen and (max-width: 1366px) {
-    padding: 60px 0;
-  }
+  font-weight: 300 ;
+  background: linear-gradient(to right, rgba(127, 17, 224, 0.05)  66.666667%, rgba(127, 17, 224, 0.05) 33.333333%), url('/Group.svg');
+    @media only screen and (max-width: 1366px) {
+  padding: 60px 0;
+}
   @media only screen and (max-width: 667px) {
     padding: 45px 0;
   }
@@ -21,13 +21,13 @@ export const ContactArea = styled.div`
   margin: 0px auto 0 auto;
   display: flex;
 
+
   h5{
     font-style: normal;
       font-weight: 300 !important;
 
   }
   /* background-color: #F7F5FD; */
-  /* background-color: #ffffff; */
   @media only screen and (max-width: 667px) {
     overflow: hidden;
     /* margin-bottom: -40px;
@@ -128,7 +128,6 @@ export const ContactCard = styled.div`
   padding: 20px;
   border-radius: 24px;
   box-shadow: 0 6px 50px ${themeGet('colors.shadow', 'rgba(38, 78, 118, 0.1)')};
-  /* background-color: #F7F5FD; */
   padding: 50px;
   h5{
     color: #5832DA;

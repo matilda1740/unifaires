@@ -263,13 +263,16 @@ const NavBar = () => {
           </NavLink>
 
           <NavLink>Unifaires Business</NavLink>
-          <NavLink>About</NavLink>
-          <NavLink>Pricing</NavLink>
+          <Link href="/about">
+            <NavLink>About</NavLink>
+          </Link>
+          <Link href="/pricing">
+            <NavLink>Pricing</NavLink>
+          </Link>
           <Link href="/contact">
             <NavLink>Contact</NavLink>
           </Link>
         </NavMenu>
-
         <NavBtn>
           <Link href="/login">
             <NavBtnLinkSecondary>Log In</NavBtnLinkSecondary>
