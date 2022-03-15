@@ -30,7 +30,7 @@ const SectionWrapper = styled.section`
         color: #5832DA;
       text-transform: capitalize;
       letter-spacing: 0;
-      font-weight: 400;
+      font-weight: 300;
       font-size: 30px;
       line-height: 125%;
   }
@@ -107,7 +107,7 @@ export const ButtonGroup = styled.div`
     color: #5832DA;
     font-size: 16px;
     line-height: 24px;
-    font-weight: 700;
+    font-weight: 300;
     background-color: transparent;
     cursor: pointer;
     /* width: 100%; */
@@ -129,10 +129,10 @@ export const PricingCard = styled.div`
   max-width: 370px;
   padding: 20px;
   border-radius: 15px;
-  /* box-shadow: 0 6px 50px ${themeGet('colors.shadow', 'rgba(38, 78, 118, 0.1)')}; */
+  font-weight: 300;
   position: relative;
   background-color:#ffffff;
-    box-shadow: 0px 10px 40px -5px rgba(74, 42, 185, 0.12);
+  box-shadow: 0px 10px 40px -5px rgba(74, 42, 185, 0.12);
   @media only screen and (max-width: 1366px) {
     width: calc(100% / 3 - 20px);
   }
@@ -152,6 +152,7 @@ export const PricingCard = styled.div`
     width: 100%;
     margin-right: 0;
   }
+
 :nth-of-type(even){
     background-color: #5832DA ;
     color: rgba(223, 223, 223, 0.9) !important;
@@ -198,29 +199,6 @@ color: rgba(255, 255, 255, 0.4);
 line-height: 150%;
  }
 
-/* .tag {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 109px;
-    height: 30px;
-    position: absolute;
-    top: -10px;
-    left: 37px;
-    border-radius: 5px;
-    font-size: 14px;
-    font-weight: 700;
-    text-transform: capitalize;
-    /* background-color: rgba(127, 17, 224, 0.05);  */
-    /* background-color: rgba(254, 185, 95, 0.99);  */
-    /* .tag * {
-      padding: 0 2.5px;
-    }
-    .card-body ul li i > img {
-      margin-right: 6px;
-    }
-  } */
-
   .card_header {
     padding: 17px 20px;
     /* margin-bottom: 20px; */
@@ -231,7 +209,7 @@ line-height: 150%;
       color: ${themeGet('colors.headingColor', '#0F2137')};
       font-size: 22px;
       line-height: 26px;
-      font-weight: 700;
+      font-weight: 300;
       margin-bottom: 8px;
     }
     p {
@@ -246,6 +224,7 @@ line-height: 150%;
   margin-top: 20px ;
   background-color:rgba(127, 17, 224, 0.1);
   color: #5832DA;
+  font-weight: 300;
     }
   }
 
@@ -298,13 +277,13 @@ line-height: 150%;
       font-size: 16px;
       /* margin-bottom: 27px; */
     span {
-        font-weight: 700;
+        font-weight: 300;
         font-size: 24px;
         color: ${themeGet('colors.headingColor', '#0F2137')};
       }
     }
     span {
-        font-weight: 600;
+        font-weight: 300;
         color: rgba(18, 53, 91, 0.6);
     }
     .reusecore__button {

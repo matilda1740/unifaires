@@ -7,7 +7,9 @@ import { Icon } from 'react-icons-kit';
 import { checkmarkCircled } from 'react-icons-kit/ionicons/checkmarkCircled';
 
 import SectionWrapper, {PricingSectionHeader, ButtonGroup,PricingArea,InnerWrapper,PricingCard, } from '../../PricingPage/pricing.style';
+// import PricingSliderSection from '../PricingLinearProgress'
 import PricingSliderSection from '../PricingSlider'
+
 import crown from 'common/assets/images/crown.svg';
 import checkmark from 'common/assets/images/checkmark.svg';
 
@@ -49,7 +51,7 @@ const PricingPolicy = () => {
             className={state.active === 'annualy' ? 'active' : ''}
             type="button"
             onClick={() => handlePricingPlan('annualy')}
-          >Anually
+          >Annually
           </button>
           <button
             className={state.active === 'monthly' ? 'active' : ''}
@@ -60,9 +62,8 @@ const PricingPolicy = () => {
         </ButtonGroup>          
         </PricingSectionHeader>
 
-        <PricingSliderSection >
-
-        </PricingSliderSection>
+        <PricingSliderSection/>
+        {/* <PricingS/> */}
         <PricingArea>
           <InnerWrapper>
             {state.pricingPlan.map((item) => (

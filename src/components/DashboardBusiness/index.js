@@ -77,8 +77,6 @@ const BusinessWrapper = (props) => {
                     <Text as="p" content={"Price Range Per Course"}/>
                     <img src={arrowDownIcon?.src} alt="Arrow Down" /> 
                 </OptionButton>
-
-
             </OptionsRow>
         </ModuleHeading>
 
@@ -168,11 +166,11 @@ const BusinessWrapper = (props) => {
                 </DashboardCard>                                
             </ModuleRow> 
 
-
             <SectionHeading className="title_row">
                 <Heading as="h5" content={"My Jobs"}></Heading>
                 <Link href="/">See all ></Link>
-            </SectionHeading>        
+            </SectionHeading> 
+
             <ModuleRow>
                 <DashboardCard>
                     <div className="row_top">
@@ -257,7 +255,8 @@ const BusinessWrapper = (props) => {
             <SectionHeading className="title_row">
                 <Heading as="h5" content={"My Scholarships"}></Heading>
                 <Link href="/">See all ></Link>
-            </SectionHeading>        
+            </SectionHeading> 
+
             <ModuleRow>
                 <DashboardCard>
                     <div className="row_top">
@@ -342,7 +341,8 @@ const BusinessWrapper = (props) => {
             <SectionHeading className="title_row">
                 <Heading as="h5" content={"My Badges"}></Heading>
                 <Link href="/">See all -></Link>
-            </SectionHeading>        
+            </SectionHeading>  
+
             <ModuleRow>
                 <DashboardCard>
                     <div className="row_top">
@@ -422,7 +422,8 @@ const BusinessWrapper = (props) => {
                         </div>                        
                     </div>
                 </DashboardCard>                                
-            </ModuleRow>             
+            </ModuleRow>   
+
         </ModuleSection>
       </ModuleColumn>
     </SectionWrapper>

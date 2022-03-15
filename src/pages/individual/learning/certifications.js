@@ -9,13 +9,15 @@ import { DrawerProvider } from 'common/contexts/DrawerContext';
 // Page Sections
 import Navbar from "components/LandingPage/Navbar";
 import UserWrapper from 'components/DashboardIndividual';
+import CertificationsSection from 'components/DashboardIndividual/Pages/Learning/certificates';
+import LearningSection from 'components/DashboardIndividual/Pages/Learning';
 
 const Main = () => {
   return (
     <ThemeProvider theme={theme}>
       <Fragment>
         <Head>
-          <title>Unifaires | Individual Suite</title>
+          <title>Unifaires | Individual | Certifications</title>
           <meta name="theme-color" content="#10ac84" />
           <meta name="Description" content="React next landing page" />
           <link href="http://fonts.cdnfonts.com/css/maison-neue" rel="stylesheet"/>       
@@ -23,10 +25,10 @@ const Main = () => {
         <ResetCSS />
         <AppWrapper>
           <Sticky top={0} innerZ={9999} activeClass="sticky-nav-active">
-            {/* <DrawerProvider>
-            </DrawerProvider> */}
           </Sticky>
-          <UserWrapper/>
+          <UserWrapper 
+            content={(<LearningSection content={(<CertificationsSection />)} />)}
+          />         
         </AppWrapper>
       </Fragment>
     </ThemeProvider>

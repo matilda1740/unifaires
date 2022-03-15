@@ -1,47 +1,28 @@
 import * as React from 'react';
-import PropTypes from 'prop-types';
-import LinearProgress from '@mui/material/LinearProgress';
-import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
+import Slider from '@mui/material/Slider';
 
-function LinearProgressWithLabel(props) {
-  return (
-    <Box sx={{ display: 'flex', alignItems: 'center' }}>
-      <Box sx={{ width: '100%', mr: 2, height: 8 }}>
-        <LinearProgress variant="determinate" {...props} />
-      </Box>
-      <Box sx={{ minWidth: 35 }}>
-        <Typography variant="body2" color="text.secondary">{`${Math.round(
-          props.value,
-        )}%`}</Typography>
-      </Box>
-    </Box>
-  );
+function valuetext(value) {
+  return `${value} users`;
 }
 
-LinearProgressWithLabel.propTypes = {
-  /**
-   * The value of the progress indicator for the determinate and buffer variants.
-   * Value between 0 and 100.
-   */
-  value: PropTypes.number.isRequired,
-};
-
 export default function PricingSliderSection() {
-  const [progress, setProgress] = React.useState(10);
-
-  React.useEffect(() => {
-    const timer = setInterval(() => {
-      setProgress((prevProgress) => (prevProgress >= 100 ? 10 : prevProgress + 10));
-    }, 800);
-    return () => {
-      clearInterval(timer);
-    };
-  }, []);
-
   return (
-    <Box className="pricing_slider_div" sx={{ width: '80%', height: '50px', margin: '40px 90px 20px 125px' }}>
-      <LinearProgressWithLabel value={progress} />
+    <Box className="pricing_slider_div" sx={{ width: '83%', height: '50px', margin: '40px 90px 40px 120px' }}>
+    {/* ACTUAL SLIDER */}
+        <Box sx={{ width: '100%', mr: 2, height: 8  }}>
+        <Slider
+            aria-label="Always visible"
+            defaultValue={30}
+            getAriaValueText={valuetext}
+            valueLabelDisplay="on"
+            step={10}
+            marks
+            min={10}
+            max={100}
+            sx={{ color: '#5832DA'}}
+        />
+        </Box>
     </Box>
   );
 }

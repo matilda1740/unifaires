@@ -1,60 +1,57 @@
 import styled from 'styled-components';
 import { themeGet } from '@styled-system/theme-get';
 
-
 export const AvatarIcon = styled.div`
-
 `;
 
-// export const DashboardCard = styled.div`
-//     border-radius: 12px;
-//     background-image: linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('/card_bg.png');
-//     height: 220px;
-//     width: 370px;
-//     margin-right: 20px;
-//     padding: 10px 20px;
-//     color: #f4f4f4;
-//     font-size: 14px;
-//     display: flex;
-//     flex-direction: column;
-// h5{   
-//     /* font-weight: bold; */
-//     color: #f4f4f4;
-//     font-size: 14px;
-// }
-// p{
-//     color: #f4f4f4;
-// }
-// .row_top{
-//     height: 80%;
-// }
-// .row_bottom{
-//     width: 100%;
-//     height: 50px;
-//     display: flex;
-//     flex-direction: row;
-// }
-// .col_bottom{
-//     width: 50%;
-//     flex-direction: column;
-//     p{
-//      margin:0 0 5px 0;
-//  }
-// }
-// .col_row{
-//     display: flex;
-//     flex-direction: row;
-//     align-items:center;
+export const BadgesCard = styled.div`
 
-//     .icon_ellipse{
-//         height: 20px;
-//         width:20px;
-//         margin:0% 5px 0 0;
-//         background-color:rgba(255, 255, 255, 0.5);
-//     }
- 
-// }
-// `;
+    width: 365px;
+    height: 141px;
+    background: rgba(88, 50, 218, 0.05);
+    border: 1px solid rgba(88, 50, 218, 0.01);
+    border-radius: 12px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    transition: all 0.3s ease-in-out;
+
+    :hover {
+        cursor: pointer;
+        transform: scale(1.01);
+    }
+    .badge_logo_div{
+        width: 25%;
+        height: 60%;
+
+        img{
+            object-fit: contain;
+            width: 100%;
+            height: 100%;
+
+        }
+    }
+    .badge_info_div{
+        width: 75%;
+        height: 100%;
+        text-align: center;
+        padding: 20px 0;
+        h5, p{
+            color: #12355B;
+            line-height: 140%;
+            margin: 0 0 8px 0 ;
+        }
+        h5 {
+            font-size: 14px;
+        }
+        p{
+            font-size: 12px;
+
+        }
+
+    }
+`;
 
 export const CoursesStartCard = styled.div`
 background-color: rgba(173, 168, 190, 0.08);
@@ -66,7 +63,13 @@ padding: 16px;
 display: flex;
 flex-direction: column;
 color: #12355B;
+margin-top: 5px;
+transition: all 0.3s ease-in-out;
 
+:hover {
+    cursor: pointer;
+    transform: scale(1.01);
+}
 
 :nth-child(n+1) {
     margin-right: 40px;
@@ -145,31 +148,70 @@ padding: 16px;
 display: flex;
 flex-direction: column;
 color: #12355B;
+margin-top: 5px;
+
+transition: all 0.3s ease-in-out;
+
+:hover {
+    cursor: pointer;
+    transform: scale(1.01);
+}
 :nth-child(n+1) {
     margin-right: 40px;
 }
-img {
-    border-radius: 8px;
-    width: 122px;
-    height: 64px;
-    margin-bottom: 16px;
-}
-.courses_resume_top {
 
+.courses_resume_top {
+    width: 100%;
+    height: 64px;
+    display: flex;
+
+
+    img {
+        border-radius: 8px;
+        width: 122px;
+        height: 64px;
+        margin-bottom: 16px;
+    }
+    .top_icons{
+        display: flex;
+        width: 100%;
+        height:100%;
+        align-self: flex-end;
+        margin-left: 94px;
+        color: rgba(32, 14, 50, 1);
+
+        .each_top_icons{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            :first-of-type{
+                margin-right: 20px;
+                width: 12px;
+
+            }
+            img {
+                width: 20px;
+                height: 19px;
+                margin-bottom: 5px;
+            }
+        }
+
+    }
 }
 h6 {
     color: rgba(173, 168, 190, 1);
     font-size: 12px;
-    margin-bottom: 0px;
+    margin: 8px 0 1px 0;
     line-height: 180%;
     letter-spacing: 0.02em;
 }
 h5{
-    margin: 1px 0 12px 0;
+    margin: 1px 0 0px 0;
     color: rgba(18, 53, 91, 1) !important;
-font-size: 18px;
-line-height: 150%;
-height: 64px;
+    font-size: 16px;
+    line-height: 150%;
+    height: 64px;
 }
 .courses_resume_bottom {
         display: flex;
@@ -214,7 +256,12 @@ padding: 16px;
 display: flex;
 flex-direction: column;
 color: #12355B;
+transition: all 0.3s ease-in-out;
 
+:hover {
+    cursor: pointer;
+    transform: scale(1.01);
+}
 :nth-child(n+1) {
     margin-right: 31px;
 }
@@ -273,7 +320,7 @@ a{
 }
 `;
 
-export const BadgesCard = styled.div`
+export const CertsCard = styled.div`
 width: 439px;
 height: 306px;
 background: rgba(88, 50, 218, 0.02);
@@ -283,16 +330,23 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
-    text-align: center;
+text-align: center;
+margin-top: 5px;
+transition: all 0.3s ease-in-out;
+
+:hover {
+    cursor: pointer;
+    transform: scale(1.01);
+}
 :nth-child(n+1) {
     margin-right: 35px;
 }
-.badge_logo_div{
+.cert_logo_div{
     width: 100%;
     height: 114px;
     padding: 12px 0;
 }
-.badge_text_div{
+.cert_text_div{
     color: rgba(18, 53, 91, 1) !important;
 }
 h5, p, h6 {
@@ -305,22 +359,24 @@ p:last-of-type{
 }
 `;
 
-export const DashboardRow = styled.div`
+export const DashboardRow = styled.a`
 height: 54px;
 width: 100%;
 display: flex;
 align-items: center;
-/* font-size: 14px; */
-/* justify-content: center; */
-/* background-color:blue; */
-padding: 0px 30px;
+padding: 0px 30px 0 26px;
 border-color: transparent;
 border-radius: 0px 12px 12px 0px;
+border-left: 4px solid rgba(88, 50, 218, 0);
 transition:all 0.3s ease-in-out;
 
-:hover {
+:hover{
     border-left: 4px solid rgba(88, 50, 218, 1);
-;
+    cursor: pointer;
+    img{
+    /* filter: invert(25%) sepia(93%) saturate(1986%) hue-rotate(243deg) brightness(81%) contrast(111%); */
+    filter: invert(16%) sepia(97%) saturate(3077%) hue-rotate(252deg) brightness(98%) contrast(95%);
+]    }
 }
 
 img{
@@ -328,12 +384,8 @@ img{
 }
 p{
     font-size: 14px;
-/* line-height: 120%; */
- height: 24px;
+     height: 24px;
 }
-p:hover {
-}
-
 
 `;
 
@@ -383,6 +435,31 @@ img{
 
 `;
 
+export const DashboardLinks = styled.div`
+width: 100%;
+height: 38px;
+font-weight: 300;
+border-bottom: rgba(234, 234, 234, 1);
+margin-top: -20px;
+a{
+/* width: 125px; */
+margin-right: 32px; 
+color: #B8BCCA;
+/* border-bottom: 0px solid  transparent; */
+border-radius: 8px 8px 0px 0px;
+padding-bottom: 8px;
+transition: all 0.3s ease-in-out;
+}
+a:hover, .selected{
+    color: #12355B;
+    line-height: 120%;
+    border-bottom: 4px solid  rgba(18, 53, 91, 1);
+
+}
+
+
+`;
+
 export const HeadingLeft = styled.div`
 height: 100px;
 width: 30%;
@@ -404,7 +481,7 @@ export const ModuleColumn = styled.div`
     display:flex;
     flex-direction: column; 
     background-color: #f8f8f8;
-    padding:40px 40px;
+    padding:40px 30px;
     width: 70%;
     /* height:1400px; */
 `;
@@ -437,6 +514,29 @@ export const ModuleSection = styled.div`
     overflow-y: scroll;
     font-weight: 300;
 
+    .courses_row{
+        height: 286px;
+        margin-bottom: 10px;
+    }
+    .row2col {
+        justify-content: space-between;
+        flex-flow: row wrap;
+        height: 100%;
+        margin-top: 25px;
+        padding: 0 10px;
+    }
+    .each_cert_card{
+        width: 364px;
+        margin-bottom: 20px;
+        padding: 0 25px;
+        /* font-size: small; */
+        :nth-child(n+1) {
+            margin-right: 0;
+        }
+        h5 {
+            font-size: 1rem;
+        }
+    }
 `;
 
 export const ModuleRow = styled.div`
@@ -684,8 +784,15 @@ export const SidebarCard = styled.section`
     background: linear-gradient(180deg, rgba(176, 214, 255, 0.1) 0%, rgba(163, 189, 217, 0.1) 100%);
     width:25%;
     height:1000px;
-    /* padding: 50px 0 0 0; */
-
+    .dash_selected {
+        border-left: 4px solid rgba(88, 50, 218, 1);
+        p{
+            color: rgba(88, 50, 218, 1);
+        }
+        img{
+            /* filter: invert(25%) sepia(93%) saturate(1986%) hue-rotate(243deg) brightness(80%) contrast(111%); */
+    filter: invert(16%) sepia(97%) saturate(3077%) hue-rotate(252deg) brightness(98%) contrast(95%);        }
+    }
     h4 {
         margin: 20px 0 0 35px;
     }
@@ -694,7 +801,7 @@ export const SidebarCard = styled.section`
         opacity: 0.5;
     }
 
-/* display: */
+
 `;
 export const ProfileCard = styled.section`
     /* background: linear-gradient(180deg, rgba(176, 214, 255, 0.1) 0%, rgba(163, 189, 217, 0.1) 100%); */background: #ffffff;

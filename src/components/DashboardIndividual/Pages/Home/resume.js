@@ -2,10 +2,8 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import Text from 'components/Layout/Text';
 import Heading from 'components/Layout/Heading';
-import { SectionHeader } from '../globalApp.style';
-import SectionWrapper, { ModuleColumn, ModuleHeading, HeadingLeft, HeadingRight,ToggleButton, OptionsRow,OptionButton, ModuleSection, SectionHeading,  ModuleRow, ModuleRowEmpty, CoursesStartCard, CoursesResumeCard, JobCard, BadgesCard, DashboardBadge, SearchBar } from '../DashboardBusiness/business.style';
-import SidebarLeft from './SidebarLeft';
-import SidebarRight from './SidebarRight';
+
+import SectionWrapper, { ModuleColumn, ModuleHeading, HeadingLeft, HeadingRight,ToggleButton, OptionsRow,OptionButton, ModuleSection, SectionHeading,  ModuleRow, ModuleRowEmpty, CoursesResumeCard, BadgesCard, JobCard, DashboardBadge, SearchBar } from '../../../DashboardBusiness/business.style';
 
 import { userModule } from 'common/data/appData';
 
@@ -21,18 +19,18 @@ import workIcon from 'public/images/dashboard/Dashboard/Work.svg'
 import dashCard from 'public/images/dashboardCard.png'
 import paypal from 'public/images/partners/paypal.svg'
 import cisco from 'public/images/dashboard/Resume Course/cisco.png'
-const UserResumeCourse = (props) => {
+
+import bookIcon from 'public/images/dashboard/Dashboard/Resume Course/COURSE/book.svg'
+import threeUsersIcon from 'public/images/dashboard/3User.svg'
+
+const ResumeCoursesSection = () => {
   const {userOptions} = userModule;
 
   const [state, setState] = useState({
   });
-  
 
   return (
-    <SectionWrapper>
-      <SidebarLeft/>  
-    
-      <ModuleColumn>
+      <>
         <ModuleHeading>
             <div className="top_row">
             <HeadingLeft>
@@ -84,7 +82,6 @@ const UserResumeCourse = (props) => {
 
         </ModuleHeading>
 
-
         <ModuleSection>
             <SectionHeading className="title_row">
                 <Heading as="h5" content={"My Courses"}></Heading>
@@ -98,10 +95,18 @@ const UserResumeCourse = (props) => {
                         {
                             section.courses.map(( course => (
                                 <CoursesResumeCard>
-                                    <div className=".courses_resume_top">
-
+                                    <div className="courses_resume_top">
                                         <img src={dashCard?.src} alt="Image" /> 
-
+                                        <div className="top_icons">
+                                            <div className="each_top_icons">
+                                                <img src={bookIcon?.src} alt="Search" /> 
+                                                <span>5</span>
+                                            </div>
+                                            <div className="each_top_icons">
+                                                <img src={threeUsersIcon?.src} alt="Search" /> 
+                                                <span>12,342</span>
+                                            </div>
+                                        </div>
                                     </div>
                                     
                                     <Heading as="h6" content={course.category}></Heading>
@@ -172,7 +177,7 @@ const UserResumeCourse = (props) => {
                     <ModuleRow>
                         {
                             section.badges.map(( badge => (
-                                <BadgesCard>
+                                <CertsCard>
                                     <div className="badge_logo_div">
                                         <img src={cisco?.src}  alt="Image" />
                                     </div>
@@ -188,7 +193,7 @@ const UserResumeCourse = (props) => {
                                         
                                         <Heading as="h6" content={`Distinction: ${badge.distinction}`} />
                                     </div>                               
-                                </BadgesCard>
+                                </CertsCard>
                             )))
                         }
                     </ModuleRow>
@@ -200,11 +205,8 @@ const UserResumeCourse = (props) => {
             }               
         </ModuleSection>
 
-      </ModuleColumn>
-
-      <SidebarRight/>
-    </SectionWrapper>
+      </>
   );
 };
 
-export default UserResumeCourse;
+export default ResumeCoursesSection;

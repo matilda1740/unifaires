@@ -516,6 +516,7 @@ export const userModule = {
     // ]
     courses: [
       {
+        courseID: 'AK561GH',
         title: "Introduction to AI",
         category: "DESIGN",
         description: "We are looking for an Accountant to manage all financial transactions... ",
@@ -525,6 +526,7 @@ export const userModule = {
         time: "150"
       },
       {
+        courseID: 'AW561GH',
         title: "Introduction to AI",
         category: "DESIGN",
         description: "We are looking for an Accountant to manage all financial transactions... ",
@@ -534,6 +536,7 @@ export const userModule = {
         time: "150"
       },
       {
+        courseID: 'QG561GH',
         title: "Introduction to AI",
         category: "DESIGN",
         description: "We are looking for an Accountant to manage all financial transactions... ",
@@ -543,6 +546,7 @@ export const userModule = {
         time: "150"
       },
       {
+        courseID: 'PX561GH',
         title: "Introduction to AI",
         category: "DESIGN",
         description: "We are looking for an Accountant to manage all financial transactions...",
@@ -579,9 +583,8 @@ export const userModule = {
       }
     ],
     scholarships: [
-
     ],
-    badges: [
+    certifications: [
       {
       logo: "",
       name: "Oreoluwanimi Adeyemi",
@@ -595,6 +598,64 @@ export const userModule = {
       title: `"User Experience Design for Beginners"`,
       date: "23rd of February, 2021.",
       distinction: "Best in Class"
+      },
+      {
+      logo: "",
+      name: "Oreoluwanimi Adeyemi",
+      title: `"User Experience Design for Beginners"`,
+      date: "23rd of February, 2021.",
+      distinction: "Best in Class"
+      },      
+      {
+      logo: "",
+      name: "Oreoluwanimi Adeyemi",
+      title: `"User Experience Design for Beginners"`,
+      date: "23rd of February, 2021.",
+      distinction: "Best in Class"
+      }    
+    ],
+    badges: [
+      {
+        title: 'Certificate of Exceptional Performance',
+        category: '“User Experience Design for Beginners”',
+        name: 'Oreoluwa Adeyemi',
+        date: '23rd of February, 2021.',
+        rank: 2,
+      },
+            {
+        title: 'Certificate of Exceptional Performance',
+        category: '“User Experience Design for Beginners”',
+        name: 'Oreoluwa Adeyemi',
+        date: '23rd of February, 2021.',
+        rank: 3,
+      },
+            {
+        title: 'Certificate of Exceptional Performance',
+        category: '“User Experience Design for Beginners”',
+        name: 'Oreoluwa Adeyemi',
+        date: '23rd of February, 2021.',
+        rank: 1,
+      },
+            {
+        title: 'Certificate of Exceptional Performance',
+        category: '“User Experience Design for Beginners”',
+        name: 'Oreoluwa Adeyemi',
+        date: '23rd of February, 2021.',
+        rank: 3,
+      },
+            {
+        title: 'Certificate of Exceptional Performance',
+        category: '“User Experience Design for Beginners”',
+        name: 'Oreoluwa Adeyemi',
+        date: '23rd of February, 2021.',
+        rank: 1,
+      },
+            {
+        title: 'Certificate of Exceptional Performance',
+        category: '“User Experience Design for Beginners”',
+        name: 'Oreoluwa Adeyemi',
+        date: '23rd of February, 2021.',
+        rank: 2,
       }
     ]
   }
