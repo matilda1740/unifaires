@@ -561,25 +561,52 @@ export const userModule = {
         company: "Paypal",
         logo: paypal,
         title: "Senior Product Designer",
-        description: "We are looking for an Accountant to manage all financial transactions..."
+        description: "We are looking for an Accountant to manage all financial transactions...",
+        current: 0      
       },
             {
         company: "Paypal",
         logo: paypal,
         title: "Senior Product Designer",
-        description: "We are looking for an Accountant to manage all financial transactions..."
+        description: "We are looking for an Accountant to manage all financial transactions...",
+        current: 0
       },
             {
         company: "Paypal",
         logo: paypal,
         title: "Senior Product Designer",
-        description: "We are looking for an Accountant to manage all financial transactions..."
+        description: "We are looking for an Accountant to manage all financial transactions...",
+        current: 0
       },
             {
         company: "Paypal",
         logo: paypal,
         title: "Senior Product Designer",
-        description: "We are looking for an Accountant to manage all financial transactions..."
+        description: "We are looking for an Accountant to manage all financial transactions...",
+        current: 1
+      },
+            {
+        company: "Paypal",
+        logo: paypal,
+        title: "Senior Product Designer",
+        description: "We are looking for an Accountant to manage all financial transactions...",
+        current: 0
+      }
+      ,
+            {
+        company: "Paypal",
+        logo: paypal,
+        title: "Senior Product Designer",
+        description: "We are looking for an Accountant to manage all financial transactions...",
+        current: 1
+      }
+      ,
+            {
+        company: "Paypal",
+        logo: paypal,
+        title: "Senior Product Designer",
+        description: "We are looking for an Accountant to manage all financial transactions...",
+        current: 0
       }
     ],
     scholarships: [
@@ -657,6 +684,54 @@ export const userModule = {
         date: '23rd of February, 2021.',
         rank: 2,
       }
+    ],
+    helpOptions: [
+      {
+        icon: "",
+        title: "General",
+        description: "Set up your account.",
+      },
+            {
+        icon: "",
+        title: "General",
+        description: "Set up your account.",
+      },
+            {
+        icon: "",
+        title: "General",
+        description: "Set up your account.",
+      },
+            {
+        icon: "",
+        title: "General",
+        description: "Set up your account.",
+      }
+    ],
+    helpBottom: [
+      {
+        heading: "Where can I watch?",
+        paragraph: "Nibh quisque suscipit fermentum netus nulla cras porttitor euismod nulla. Orci, dictumst nec aliquet id ullamcorper venenatis. Fermentum sulla craspor ttitore  ismod nulla.",
+      },
+      {
+        heading: "Where can I watch?",
+        paragraph: "Nibh quisque suscipit fermentum netus nulla cras porttitor euismod nulla. Orci, dictumst nec aliquet id ullamcorper venenatis. Fermentum sulla craspor ttitore  ismod nulla.",
+      },
+      {
+        heading: "Where can I watch?",
+        paragraph: "Nibh quisque suscipit fermentum netus nulla cras porttitor euismod nulla. Orci, dictumst nec aliquet id ullamcorper venenatis. Fermentum sulla craspor ttitore  ismod nulla.",
+      },
+      {
+        heading: "Where can I watch?",
+        paragraph: "Nibh quisque suscipit fermentum netus nulla cras porttitor euismod nulla. Orci, dictumst nec aliquet id ullamcorper venenatis. Fermentum sulla craspor ttitore  ismod nulla.",
+      },    
+      {
+        heading: "Where can I watch?",
+        paragraph: "Nibh quisque suscipit fermentum netus nulla cras porttitor euismod nulla. Orci, dictumst nec aliquet id ullamcorper venenatis. Fermentum sulla craspor ttitore  ismod nulla.",
+      },
+      {
+        heading: "Where can I watch?",
+        paragraph: "Nibh quisque suscipit fermentum netus nulla cras porttitor euismod nulla. Orci, dictumst nec aliquet id ullamcorper venenatis. Fermentum sulla craspor ttitore  ismod nulla.",
+      },    
     ]
   }
 ]

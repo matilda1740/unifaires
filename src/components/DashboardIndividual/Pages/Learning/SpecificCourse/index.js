@@ -18,6 +18,14 @@ const SpecificCourseSection = () => {
 
   return (
     <>      
+    {/* 
+      1. H3: COURSE HEADING
+      2. IMAGE: THUMBNAIL/VIDEO
+      3. Simple Heading: About This Course
+      4. P TAG: Course Description
+      5. Course Section Heading: Recommended Study Material/ Recommended Research Materilas + Div with: Two Links (Bopoks/Articles)
+    
+     */}
     </>
   );
 };

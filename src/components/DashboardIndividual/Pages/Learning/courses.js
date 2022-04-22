@@ -91,7 +91,7 @@ const CoursesSection = () => {
             section.courses?.length > 0 ?
             <ModuleRow>
                 {
-                    section.coures.map(( course => (
+                    section.courses.map(( course => (
                         <Link href={`/individual/learning/courses/${course.courseID}`}>
                         <CoursesStartCard key={course.courseID}>
                             <img src={dashCard?.src} alt="Image" /> 

@@ -13,6 +13,7 @@ const LoginCard = () => {
   });
   
   const handleContactChange = () => {
+
   };
 
   const handleContactSubmit = async (e) => {
@@ -36,7 +37,8 @@ const LoginCard = () => {
           </div>                    
           </CardFormRow>
           <CardFormRow>
-              <button type="submit">Complete Sign In</button>
+              {/* <button type="submit">Complete Sign In</button> */}
+              <Link href="/individual/dashboard"><button type="submit">Complete Sign In</button></Link>
           </CardFormRow>                     
       </form>
       <CardFormRow className="auth_footer card_footer">

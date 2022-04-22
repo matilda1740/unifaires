@@ -40,15 +40,19 @@ const SidebarLeft = () => {
                 </DashboardRow>
             </Link>
             <Link href="/individual/learning/courses">
-                <DashboardRow className={router.pathname === "/individual/learning/courses" ? "dash_row dash_selected" : "dash_row"}>
+                <DashboardRow className={ router.pathname === "/individual/learning/courses" || router.pathname === "/individual/learning/certifications" || router.pathname === "/individual/learning/badges"   ? "dash_row dash_selected" : "dash_row"}>
                     <img src={accountIcon?.src} alt="My Learning" /> 
                     <Text as="p" content={"My Learning"}/>
                 </DashboardRow>
             </Link>
-            <DashboardRow className="dash_row">
-                <img src={postsIcon?.src} alt="Jobs" /> 
-                <Text as="p" content={"Jobs"}/>
-            </DashboardRow>
+            <Link href="/individual/jobs">
+                <DashboardRow className={ router.pathname === "/individual/jobs" ? "dash_row dash_selected" : "dash_row"}>
+                    <img src={postsIcon?.src} alt="Jobs" /> 
+                    <Text as="p" content={"Jobs"}/>
+                </DashboardRow>
+            </Link>
+
+
             <DashboardRow className="dash_row">
                 <img src={postsIcon?.src} alt="Funding" /> 
                 <Text as="p" content={"Funding"}/>
@@ -61,19 +65,19 @@ const SidebarLeft = () => {
 
     
         <div className="dash_sectionTwo">
-            <DashboardRow className="dash_row">
-                <img src={settingIcon?.src} alt="Settings" /> 
-                <Text as="p" content={"Settings"}/>
-            </DashboardRow> 
-            <DashboardRow className="dash_row">
-                <img src={helpIcon?.src} alt="Help" /> 
-                <Text as="p" content={"Help"}/>
-            </DashboardRow> 
-            <DashboardRow className="dash_row">
-                <img src={feedbackIcon?.src} alt="Feedback" /> 
-                <Text as="p" content={"Give Feedback"}/>
-            </DashboardRow> 
-             <button>Sign Out</button>
+            <Link href="/individual/settings">
+                <DashboardRow className="dash_row">
+                    <img src={settingIcon?.src} alt="Settings" /> 
+                    <Text as="p" content={"Settings"}/>
+                </DashboardRow> 
+            </Link>
+            <Link href="/individual/help">
+                <DashboardRow className="dash_row">
+                    <img src={helpIcon?.src} alt="Help" /> 
+                    <Text as="p" content={"Help"}/>
+                </DashboardRow> 
+            </Link>
+            <Link href="/login"><button>Sign Out</button></Link>
         </div>  
                
 

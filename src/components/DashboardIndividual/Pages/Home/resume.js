@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Text from 'components/Layout/Text';
 import Heading from 'components/Layout/Heading';
 
-import SectionWrapper, { ModuleColumn, ModuleHeading, HeadingLeft, HeadingRight,ToggleButton, OptionsRow,OptionButton, ModuleSection, SectionHeading,  ModuleRow, ModuleRowEmpty, CoursesResumeCard, BadgesCard, JobCard, DashboardBadge, SearchBar } from '../../../DashboardBusiness/business.style';
+import SectionWrapper, { FilterSeeAllContainer, FilterDropDown, FilterButton, ModuleColumn, ModuleHeading, HeadingLeft, HeadingRight,ToggleButton, OptionsRow,OptionButton, ModuleSection, SectionHeading,  ModuleRow, ModuleRowEmpty, CoursesResumeCard, CertsCard, BadgesCard, JobCard, DashboardBadge, SearchBar } from '../../../DashboardBusiness/business.style';
 
 import { userModule } from 'common/data/appData';
 
@@ -86,7 +86,15 @@ const ResumeCoursesSection = () => {
             <SectionHeading className="title_row">
                 <Heading as="h5" content={"My Courses"}></Heading>
                 {/* INSERT FILTER OPTION IF COURSES */}
-                <Link href="/">See all ></Link>
+                {/* <div className=""></div> */}
+                <FilterSeeAllContainer>
+                    <FilterButton>
+                        <Text as="p" content={"FILTER"} />
+                        <img src={arrowDownIcon?.src}  alt="Arrow" />
+                    </FilterButton>
+                    <Link href="/">See all ></Link>
+                </FilterSeeAllContainer>
+                
             </SectionHeading>    
             {
                 userOptions.map(( section => (
@@ -134,7 +142,22 @@ const ResumeCoursesSection = () => {
 
             <SectionHeading className="title_row">
                 <Heading as="h5" content={"My Job Applications"}></Heading>
-                <Link href="/">See all ></Link>
+                <FilterSeeAllContainer>
+                    <FilterButton>
+                        <Text as="p" content={"FILTER"} />
+                        <img src={arrowDownIcon?.src}  alt="Arrow" />
+                    </FilterButton>
+                    <Link href="/">See all ></Link>
+                </FilterSeeAllContainer>
+                {/* <FilterDropDown>
+                    <ul>
+                        <li>Salary</li>
+                        <li>Location</li>
+                        <li>Skills</li>
+                        <li>Experience</li>
+                        <li>Company Size</li>
+                    </ul>
+                </FilterDropDown> */}
             </SectionHeading>  
             {
                 userOptions.map(( section => (

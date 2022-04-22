@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { themeGet } from '@styled-system/theme-get';
 
+
 export const AvatarIcon = styled.div`
 `;
 
@@ -460,6 +461,69 @@ a:hover, .selected{
 
 `;
 
+export const FilterDropDown = styled.div`
+display: flex;
+flex-direction: column;
+align-items: space-around;
+padding: 12px 77px 13px 24px;
+
+position: absolute;
+width: 117px;
+height: 181px;
+background: rgba(220, 220, 220, 1);
+border-radius: 8px;
+
+li {
+    color: rgba(18, 53, 91, 0.8);
+    padding: 0 0 5px 0;
+}
+`;
+
+export const FilterSeeAllContainer = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+position: relative;
+
+    width: 25%;
+
+        a{
+        color: rgba(18, 53, 91, 0.9);
+        line-height: 120%;
+        margin-right: 30px;
+        font-weight: 500;
+
+    }
+`;
+
+export const FilterButton = styled.div`
+width: 97px;
+height: 40px;
+background: rgba(128, 128, 128, 0.2);
+border-radius: 8px;
+display: flex;
+padding: 12px 12px;
+justify-content: space-between;
+align-items: center;
+font-size: 12px;
+:hover{
+    cursor: pointer;
+}
+p{
+    width: 100%;
+    height: 50%;
+   margin: 0 0px 10px 0;
+   color: rgba(18, 53, 91, 1);
+
+}
+img {
+    width: 8px;
+    height: 4px;
+}
+
+
+`;
+
 export const HeadingLeft = styled.div`
 height: 100px;
 width: 30%;
@@ -477,6 +541,257 @@ display: flex;
 }
 `;
 
+export const HelpSectionDiv = styled.section`
+    width: 100%;
+    height: 100%;
+
+    .help_section_heading{
+        margin: 24px 0 12px 0;
+        color: #12355B;
+        line-height: 120%;
+
+    }
+    .help_section_input{
+        border-radius: 16px;
+        background: rgba(242, 242, 242, 0.4);
+        border: 1px solid #DFDFDF;
+        width: 100%;
+        height: 200px;
+        font-size: 14px;
+        line-height: 120%;
+        font-weight: 300;
+        padding: 12px;
+    }
+
+    form{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    a {
+        position: absolute;
+        margin-top: -60%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px ;
+        width: 150px ;
+        height: 42px ;
+        border:  1px solid rgba(88, 50, 218, 1);
+        color:  rgba(88, 50, 218, 1);
+        font-size: 14px;
+        line-height: 120%;
+        font-weight: 500;
+        transition: all 0.3s ease-in-out;
+        background: rgba(245, 247, 249, 0.5);        
+
+    }
+    a:hover, button:hover {
+        transform: scale(1.02);
+    }
+    form {
+        button {
+            width: 195px;
+            height: 54px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px ;
+            width: 150px ;
+            height: 42px ;
+            border:  1px solid rgba(88, 50, 218, 1);
+            color:  rgba(88, 50, 218, 1);
+            font-size: 14px;
+            line-height: 120%;
+            font-weight: 500;
+            transition: all 0.3s ease-in-out;
+            background: rgba(245, 247, 249, 0.5);
+
+       }
+    }
+
+    form {
+        button {
+            align-self: flex-end;
+            margin: 0;
+        }
+    }
+    .clicked{
+        border: 1px solid rgba(88, 50, 218, 1);
+        background-color: rgba(238, 234, 251, 1);
+        h6, p {
+            color: rgba(88, 50, 218, 1) !important;
+        }
+    }
+    .not_clicked{
+        background: #FFFFFF;
+        border: 1px solid #DFDFDF;
+    }
+    .not_expanded{
+        height: 58px;
+        div{
+            margin-bottom: 0px;
+        }
+        p{
+            display: none;
+        }
+    }
+    .expanded{
+        height: 100px;
+        div {
+            margin-bottom: 10px;
+        }
+        img {
+            height: 7px;
+        }
+    }
+`;
+
+export const HelpHeading = styled.div`
+width: 100%;
+height: 225px;
+background: linear-gradient(0deg, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), linear-gradient(141.54deg, rgba(212, 250, 234, 0.3) 7.01%, rgba(183, 159, 212, 0.6) 96.64%);
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+    div{
+        h6, p {
+            color: rgba(18, 53, 91, 1);
+            padding-left: 40px;
+            margin-bottom: 4px;
+        }
+    }
+.help_heading_right{
+    width: 30%;
+    height: 100%;
+    position: relative;
+
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    a{
+
+    }
+
+}
+`;
+
+export const HelpOptionsRow = styled.section`
+    height: 200px;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 25px 0 0 0 ;
+    overflow-x :scroll;
+`;
+
+export const HelpCard = styled.div`
+    height: 150px;
+    width: 175px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(238, 234, 251, 1);
+    background: rgba(255, 255, 255, 1);
+
+    :nth-child(n+1){
+            margin-right: 20px;
+        }
+    h6, p {
+        margin-bottom: 2px;
+    }
+    :hover{
+        cursor: pointer;
+    }
+
+
+`;
+
+export const HelpEmojiRow = styled.div`
+    display:flex;
+    width: 100%;
+    height: 60px;
+
+`;
+
+export const HelpEmojiDiv = styled.div`
+    width: 75px;
+    height: 60px;
+    border-radius: 8px;
+    margin: 3px 11px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .checked {
+        width: 20%;
+        height: 20px;
+        margin-top: -30%;
+        margin-right: -100%;
+    }
+    .not_checked {
+        display: none;
+    }
+    img {
+        width: 50%;
+    }
+    :hover{
+        cursor: pointer;
+    }
+`;
+
+export const HelpBottomSection = styled.section`
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 48px 24px;
+background: rgba(247, 245, 253, 0.5);
+width: 100%;
+height: 802px;
+
+`;
+
+export const HelpBottomOptions = styled.div`
+    background: #FFFFFF;
+    color: #000000;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 126px;
+    padding: 18px 24px;
+    border: transparent;
+    margin: 10px 0 ;
+
+    div{
+        width: 100%;
+        height: 25px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h6{
+            margin-bottom: 0px;
+        }
+    }
+    img {
+        height: 10px;
+        width: 15px;
+    }
+        :hover {
+            cursor: pointer;
+        }
+`;
+
 export const ModuleColumn = styled.div`
     display:flex;
     flex-direction: column; 
@@ -484,6 +799,13 @@ export const ModuleColumn = styled.div`
     padding:40px 30px;
     width: 70%;
     /* height:1400px; */
+
+    .module_row_jobs {
+        height: 100%;
+        display:flex;
+        flex-flow: row wrap;
+    }
+    
 `;
 
 export const ModuleHeading = styled.div`
@@ -547,6 +869,10 @@ export const ModuleRow = styled.div`
     display:flex;
     flex-flow: column wrap;
     overflow-x:scroll;
+
+    .module_row_jobs_card:nth-child(n+3){
+            margin-top: 20px;
+        }
 
 `;
 
@@ -683,13 +1009,7 @@ export const SectionHeading = styled.div`
         font-style: normal;
         font-weight: 500;
         line-height: 120%;
-    }
-    a{
-        color: rgba(18, 53, 91, 0.9);
-        line-height: 120%;
-        margin-right: 30px;
-        font-weight: 500;
-
+        width: 75%;
     }
 `;
 
@@ -803,6 +1123,7 @@ export const SidebarCard = styled.section`
 
 
 `;
+
 export const ProfileCard = styled.section`
     /* background: linear-gradient(180deg, rgba(176, 214, 255, 0.1) 0%, rgba(163, 189, 217, 0.1) 100%); */background: #ffffff;
     width: 25%;

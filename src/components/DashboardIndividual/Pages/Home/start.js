@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Text from 'components/Layout/Text';
 import Heading from 'components/Layout/Heading';
 
-import SectionWrapper, { ModuleColumn, ModuleHeading, HeadingLeft, HeadingRight,ToggleButton, OptionsRow,OptionButton, ModuleSection, SectionHeading,  ModuleRow, ModuleRowEmpty, CoursesStartCard, JobCard, DashboardBadge, SearchBar } from '../../../DashboardBusiness/business.style';
+import SectionWrapper, {FilterSeeAllContainer, FilterDropDown, FilterButton, ModuleColumn, ModuleHeading, HeadingLeft, HeadingRight,ToggleButton, OptionsRow,OptionButton, ModuleSection, SectionHeading,  ModuleRow, ModuleRowEmpty, CoursesStartCard, JobCard, DashboardBadge, SearchBar } from '../../../DashboardBusiness/business.style';
 import { userModule } from 'common/data/appData';
 
 import notificationIcon from 'public/images/dashboard/Dashboard/Iconly/Light-outline/Notification.svg'
@@ -80,8 +80,13 @@ const StartCoursesSection = () => {
         <ModuleSection>
         <SectionHeading className="title_row">
             <Heading as="h5" content={"My Courses"}></Heading>
-            {/* INSERT FILTER OPTION IF COURSES */}
-            <Link href="/">See all ></Link>
+                <FilterSeeAllContainer>
+                    <FilterButton>
+                        <Text as="p" content={"FILTER"} />
+                        <img src={arrowDownIcon?.src}  alt="Arrow" />
+                    </FilterButton>
+                    <Link href="/">See all ></Link>
+                </FilterSeeAllContainer>
         </SectionHeading>    
         {
             userOptions.map(( section => (
@@ -104,7 +109,7 @@ const StartCoursesSection = () => {
                                         <Text as="p" content={`${course.time} hrs`}></Text>
                                     </div>
                                 </div>
-                                <Link className="course_card_button" href="/resume-course" >Start Course</Link>
+                                <Link className="course_card_button" href="/individual/dashboard/resume-course" >Start Course</Link>
                             </CoursesStartCard>
                         )))
                     }
@@ -120,7 +125,13 @@ const StartCoursesSection = () => {
 
         <SectionHeading className="title_row">
             <Heading as="h5" content={"My Job Applications"}></Heading>
-            <Link href="/">See all ></Link>
+            <FilterSeeAllContainer>
+                <FilterButton>
+                    <Text as="p" content={"FILTER"} />
+                    <img src={arrowDownIcon?.src}  alt="Arrow" />
+                </FilterButton>
+                <Link href="/">See all ></Link>
+            </FilterSeeAllContainer>
         </SectionHeading>  
         {
             userOptions.map(( section => (
@@ -154,7 +165,13 @@ const StartCoursesSection = () => {
         }
         <SectionHeading className="title_row">
             <Heading as="h5" content={"My Certifications & Badges"}></Heading>
-            <Link href="/">See all ></Link>
+            <FilterSeeAllContainer>
+                <FilterButton>
+                    <Text as="p" content={"FILTER"} />
+                    <img src={arrowDownIcon?.src}  alt="Arrow" />
+                </FilterButton>
+                <Link href="/">See all ></Link>
+            </FilterSeeAllContainer>
         </SectionHeading>        
 
         <ModuleRowEmpty>
