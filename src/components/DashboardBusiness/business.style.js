@@ -5,6 +5,7 @@ import { themeGet } from '@styled-system/theme-get';
 export const AvatarIcon = styled.div`
 `;
 
+// -------- CARDS --------------- //
 export const BadgesCard = styled.div`
 
     width: 365px;
@@ -360,6 +361,106 @@ p:last-of-type{
 }
 `;
 
+export const FundingCard = styled.div`
+
+/* WHOLE DIV  */
+height: 316px;
+width: 332px;
+border-radius: 12px;
+background: rgba(247, 245, 253, 0.5);
+padding: 8px 8px 8px 16px;
+
+:hover {
+    cursor: pointer;
+    transform: scale(1.01);
+}
+:nth-child(n+1) {
+    margin-right: 31px;
+}
+
+/* TOP DIV  */
+.top_row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 16px 0 8px;
+    
+}
+/* LEFT */
+.company_logo_div{
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), linear-gradient(141.54deg, #D4FAEA 7.01%, #B79FD4 96.64%);
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+
+    img {
+        width: 32px;
+        height: 32px;
+        margin: 16px 0;
+    }
+}
+/* right */
+.top_row_right{
+    margin-top: 8px;
+    button {
+        display: flex;
+        align-items: center;
+        border-radius: 19px;
+        padding: 10px 18px;
+        font-size: 14px;
+        line-height: 150%;
+        width: 90px;
+        height: 38px;
+        margin: 0px 16px 16px 0;
+    }
+    .waiting{
+        background: rgba(173, 168, 190, 0.1);
+        color: #12355B;
+    }
+    .granted {
+        background: rgba(125, 191, 16, 0.1);
+        color: #7DBF10;;
+    }
+    .rejected {
+        background: rgba(255, 12, 62, 0.1);
+        color: #FF0C3E;
+    }
+}
+h6 {
+    color: rgba(173, 168, 190, 1);
+    font-size: 12px;
+    margin: 16px 0 0px 0;
+    line-height: 180%;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+h5{
+    margin: 1px 0 12px 0 !important;
+    color:  #5832DA !important;
+    line-height: 140%;
+    font-size: 18px;
+}
+.timing_row{
+    display: flex;
+    width: 100%;
+    button {
+        background: rgba(173, 168, 190, 0.1);
+        border-radius: 19px;
+        padding: 10px 18px;
+        font-size: 14px;
+        line-height: 150%;
+        width: 90px;
+        height: 38px;
+        color: #12355B;
+        margin: 0px 16px 16px 0;
+    }
+}
+`;
+
+// --------- END OF CARDS --------- //
 export const DashboardRow = styled.a`
 height: 54px;
 width: 100%;

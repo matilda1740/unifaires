@@ -25,7 +25,7 @@ const Main = () => {
         <AppWrapper>
           <Sticky top={0} innerZ={9999} activeClass="sticky-nav-active">
           </Sticky>
-          <UserWrapper content={(<HelpSection />)}/>       
+          <UserWrapper content={(<FundingSection />)}/>       
           </AppWrapper>
       </Fragment>
     </ThemeProvider>

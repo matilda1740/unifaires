@@ -732,7 +732,111 @@ export const userModule = {
         heading: "Where can I watch?",
         paragraph: "Nibh quisque suscipit fermentum netus nulla cras porttitor euismod nulla. Orci, dictumst nec aliquet id ullamcorper venenatis. Fermentum sulla craspor ttitore  ismod nulla.",
       },    
-    ]
+    ],
+    funding: [
+      {
+        status: 2,
+        // imageURL: "",
+        company: "IBM",
+        title: "50% Design Programs",
+        type: "Grant",
+        duration: "4 weeks",
+        description: "We are looking for an Accountant to manage all financial transactions... We are looking for an Accountant to manage all financial transactions... ",
+      },
+      {
+        status: 1,
+        // imageURL: "",
+        company: "IBM",
+        title: "50% Design Programs",
+        type: "Grant",
+        duration: "4 weeks",
+        description: "We are looking for an Accountant to manage all financial transactions... We are looking for an Accountant to manage all financial transactions... ",
+      },      {
+        status: 3,
+        // imageURL: "",
+        company: "IBM",
+        title: "50% Design Programs",
+        type: "Grant",
+        duration: "4 weeks",
+        description: "We are looking for an Accountant to manage all financial transactions... We are looking for an Accountant to manage all financial transactions... ",
+      },      {
+        status: 2,
+        // imageURL: "",
+        company: "IBM",
+        title: "50% Design Programs",
+        type: "Grant",
+        duration: "4 weeks",
+        description: "We are looking for an Accountant to manage all financial transactions... We are looking for an Accountant to manage all financial transactions... ",
+      },      {
+        status: 1,
+        // imageURL: "",
+        company: "IBM",
+        title: "50% Design Programs",
+        type: "Grant",
+        duration: "4 weeks",
+        description: "We are looking for an Accountant to manage all financial transactions... We are looking for an Accountant to manage all financial transactions... ",
+      },      {
+        status: 3,
+        // imageURL: "",
+        company: "IBM",
+        title: "50% Design Programs",
+        type: "Grant",
+        duration: "4 weeks",
+        description: "We are looking for an Accountant to manage all financial transactions... We are looking for an Accountant to manage all financial transactions... ",
+      },
+    ],
+    messaging: [
+      {
+        status: 1, //Determine Deleted or not 1=active 0 =deleted
+        from: "Anna Smith",
+        messages: [
+          {
+            text: "Hello I’m excited to be here. I have no idea why you might be interested",
+            createdAt: "Aug 29",
+            status: 1, // Read or not read
+            isFrom: 0
+          }, 
+          {
+            text: "Hello I’m excited to be here. I have no idea why you might be interested",
+            createdAt: "",
+            status: 1 , // Read or not read
+            isFrom: 1
+          }, 
+          {
+            text: "Hello I’m excited to be here. I have no idea why you might be interested",
+            createdAt: "",
+            status: 1 , // Read or not read
+            isFrom: 0
+          }, 
+          
+        ]
+      },
+      {
+        status: 1, //Determine Deleted or not 1=active 0 =deleted
+        from: "John Smith",
+        messages: [
+          {
+            text: "Hello I’m excited to be here. I have no idea why you might be interested",
+            createdAt: "Aug 29",
+            status: 1, // Read or not read
+            isFrom: 0
+          }, 
+          {
+            text: "Hello I’m excited to be here. I have no idea why you might be interested",
+            createdAt: "",
+            status: 1 , // Read or not read
+            isFrom: 1
+          }, 
+          {
+            text: "Hello I’m excited to be here. I have no idea why you might be interested",
+            createdAt: "",
+            status: 1 , // Read or not read
+            isFrom: 0
+          }, 
+          
+        ]
+      },
+      ]
   }
 ]
 }

@@ -52,15 +52,19 @@ const SidebarLeft = () => {
                 </DashboardRow>
             </Link>
 
+            <Link href="/individual/funding">
+                <DashboardRow className={ router.pathname === "/individual/funding" ? "dash_row dash_selected" : "dash_row"}>
+                    <img src={postsIcon?.src} alt="Funding" /> 
+                    <Text as="p" content={"Funding"}/>
+                </DashboardRow>
+            </Link>
+            <Link href="/individual/messaging">
+                <DashboardRow className={ router.pathname === "/individual/messaging" ? "dash_row dash_selected" : "dash_row"}>
+                    <img src={activityIcon?.src} alt="Messages" /> 
+                    <Text as="p" content={"Messages"}/>
+                </DashboardRow>
+            </Link>
 
-            <DashboardRow className="dash_row">
-                <img src={postsIcon?.src} alt="Funding" /> 
-                <Text as="p" content={"Funding"}/>
-            </DashboardRow>
-            <DashboardRow className="dash_row">
-                <img src={activityIcon?.src} alt="Messages" /> 
-                <Text as="p" content={"Messages"}/>
-            </DashboardRow>
         </div>         
 
     

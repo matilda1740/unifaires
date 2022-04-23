@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Text from 'components/Layout/Text';
 import Heading from 'components/Layout/Heading';
 
-import SectionWrapper, {FilterSeeAllContainer, FilterDropDown, FilterButton, ModuleColumn, ModuleHeading, HeadingLeft, HeadingRight,ToggleButton, OptionsRow,OptionButton, ModuleSection, SectionHeading,  ModuleRow, ModuleRowEmpty, CoursesStartCard, JobCard, DashboardBadge, SearchBar } from '../../../DashboardBusiness/business.style';
+import SectionWrapper, {FilterSeeAllContainer, FilterDropDown, FilterButton, ModuleColumn, ModuleHeading, HeadingLeft, HeadingRight,ToggleButton, OptionsRow,OptionButton, ModuleSection, SectionHeading,  ModuleRow, ModuleRowEmpty, CoursesStartCard, FundingCard, DashboardBadge, SearchBar } from '../../../DashboardBusiness/business.style';
 import { userModule } from 'common/data/appData';
 
 import notificationIcon from 'public/images/dashboard/Dashboard/Iconly/Light-outline/Notification.svg'
@@ -29,8 +29,8 @@ const FundingSection = () => {
         <ModuleHeading>
             <div className="top_row">
             <HeadingLeft>
-                <Heading as="h4" content={"Help"}/>
-                <Text as="p" content={""}/>
+                <Heading as="h4" content={"Funding"}/>
+                <Text as="p" content={"Your collection of requested funding."}/>
             </HeadingLeft>
             <HeadingRight>
                 <SearchBar>
@@ -47,32 +47,38 @@ const FundingSection = () => {
 
         <ModuleSection>
 
-        {/* {
+        {
             userOptions.map(( section => (
-                section.jobs?.length > 0 &&
+                section.funding?.length > 0 &&
                 <ModuleRow className="module_row_jobs">
                     {
-                        section.jobs.map(( job => (
-                            <JobCard className="module_row_jobs_card">
-                                <div className="company_logo_div">
-                                    <img src={paypal?.src}  alt="Image" />
+                        section.funding.map(( job => (
+                            <FundingCard className="module_row_jobs_card">
+                                <div className="top_row">
+                                    <span className="company_logo_div">
+                                        <img src={paypal?.src}  alt="Image" />
+                                    </span>
+                                    <span className="top_row_right">
+                                        <button className={job.status === 1 ? "granted" : job.status === 2 ? "waiting" : job.status === 3 &&  "rejected"} >{job.status === 1 ? "Granted" : job.status === 2 ? "Waiting" : job.status === 3 &&  "Rejected"}</button>
+                                    </span>
                                 </div>
                                     
                                 <Heading as="h6" content={job.company}></Heading>
                                 <Heading as="h5" content={job.title}></Heading>
-                                <div className="timing_row">
-                                    <button>Remote</button>
-                                    <button>Full-time</button>
-                                </div>                        <Text as="p" content={job.description}></Text>
 
-                                <Link href="/">{job.current === 1 ? "In Progress" : "Apply"}</Link>
-                            </JobCard>
+                                <div className="timing_row">
+                                    <button>{job.type}</button>
+                                    <button>{job.duration}</button>
+                                </div>                        
+                                
+                                <Text as="p" content={job.description}></Text>
+                            </FundingCard>
                         )))
                     }
 
                 </ModuleRow>          
             )))
-        } */}
+        }
                
         </ModuleSection>
     </>
