@@ -4,13 +4,13 @@ import { themeGet } from '@styled-system/theme-get';
 import { colorStyle } from '../../../../customVariant';
 import { base } from '../../../../base';
 
-const ConversationBoxStyle = styled.div`
+const ConversationBoxStyle = styled.a`
     padding: 10px;
     width: 100%;
     height: 80px;
     display: flex;
     
-    .profile_picture, .profile_details, .timestamp{
+    .profile_picture, .profile_details, .timestamp, .icon_div{
         height: 100%;
         display: flex;
         justify-content: center;
@@ -49,6 +49,19 @@ const ConversationBoxStyle = styled.div`
         cursor: pointer;
     }
 
+    /* SETTINGS STYLES */
+    &.settings_div {
+        .icon_div{
+            img {
+                height: 20px;
+                width: 20px;
+            }
+        }
+        .profile_details{
+            width: 80%;
+        }
+
+    }
 
   /* Material style goes here */
   &.is-material {

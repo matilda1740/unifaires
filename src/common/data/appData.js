@@ -735,6 +735,7 @@ export const userModule = {
     ],
     funding: [
       {
+        fundingID: "P20PAK561GH",
         status: 2,
         // imageURL: "",
         company: "IBM",
@@ -744,41 +745,50 @@ export const userModule = {
         description: "We are looking for an Accountant to manage all financial transactions... We are looking for an Accountant to manage all financial transactions... ",
       },
       {
+        fundingID: "T34PAK561GH",
         status: 1,
         // imageURL: "",
-        company: "IBM",
-        title: "50% Design Programs",
+        company: "GOOGLE",
+        title: "85% Design Programs",
         type: "Grant",
         duration: "4 weeks",
         description: "We are looking for an Accountant to manage all financial transactions... We are looking for an Accountant to manage all financial transactions... ",
-      },      {
+      },     
+      {
+        fundingID: "GH7PAK561GH",
         status: 3,
         // imageURL: "",
-        company: "IBM",
-        title: "50% Design Programs",
+        company: "MICROSOFT",
+        title: "13% Design Programs",
         type: "Grant",
         duration: "4 weeks",
         description: "We are looking for an Accountant to manage all financial transactions... We are looking for an Accountant to manage all financial transactions... ",
-      },      {
+      },      
+      {
+        fundingID: "9BWPAK561GH",
         status: 2,
         // imageURL: "",
-        company: "IBM",
-        title: "50% Design Programs",
+        company: "TESLA",
+        title: "48% Design Programs",
         type: "Grant",
         duration: "4 weeks",
         description: "We are looking for an Accountant to manage all financial transactions... We are looking for an Accountant to manage all financial transactions... ",
-      },      {
+      },      
+      {
+        fundingID: "1THPAK561GH",
         status: 1,
         // imageURL: "",
-        company: "IBM",
-        title: "50% Design Programs",
+        company: "PURPLE",
+        title: "97% Design Programs",
         type: "Grant",
         duration: "4 weeks",
         description: "We are looking for an Accountant to manage all financial transactions... We are looking for an Accountant to manage all financial transactions... ",
-      },      {
+      },      
+      {
+        fundingID: "DDDPAK561GH",
         status: 3,
         // imageURL: "",
-        company: "IBM",
+        company: "META",
         title: "50% Design Programs",
         type: "Grant",
         duration: "4 weeks",
@@ -836,7 +846,76 @@ export const userModule = {
           
         ]
       },
-      ]
+      ],
+    settings: [
+      {
+      modules: [
+        {
+          title: "Profile",
+          description: "Edit your name and how people",
+        },
+        {
+          title: "Billings",
+          description: "Edit your name and how people",
+        },
+        {
+          title: "Notifications",
+          description: "Edit your name and how people",
+        },        
+        {
+          title: "Security",
+          description: "Edit your name and how people",
+        }     
+      ],
+      }
+
+    ],
+    instructors: [
+      {
+        image: "",
+        name: "Simon Mudessar",
+        role: "Top Instructor",
+        company: "Google",
+        preview: "IBM is recognized as a cognitive solutions and cloud platform company with one purpose - to be essential to the world.",
+        registeredNumber: "5K",
+        rating: 4.4,
+        coursesNumber: 12
+      },
+      {
+        image: "",
+        name: "Simon Mudessar",
+        role: "Top Instructor",
+        company: "Google",
+        preview: "IBM is recognized as a cognitive solutions and cloud platform company with one purpose - to be essential to the world.",
+        registeredNumber: "5K",
+        rating: 4.4,
+        coursesNumber: 12
+      },
+      {
+        image: "",
+        name: "Simon Mudessar",
+        role: "Top Instructor",
+        company: "Google",
+        preview: "IBM is recognized as a cognitive solutions and cloud platform company with one purpose - to be essential to the world.",
+        registeredNumber: "5K",
+        rating: 4.4,
+        coursesNumber: 12
+      },
+    ],
+    featuredReviews: [
+      {
+        createdBy: "Simon Mudessar",
+        createdAt: "2 weeks ago",
+        message: "IBM is recognized as a cognitive solutions and cloud platform company with one purpose - to be essential to the world. We do this in part through innovative learning and credentialing programs that help develop and recognize the talent",
+        reviewValue: 4,
+      },
+      {
+        createdBy: "Simon Mudessar",
+        createdAt: "3 weeks ago",
+        message: "IBM is recognized as a cognitive solutions and cloud platform company with one purpose - to be essential to the world. We do this in part through innovative learning and credentialing programs that help develop and recognize the talent",
+        reviewValue: 5,
+      },      
+    ]
   }
 ]
 }
@@ -863,3 +942,10 @@ export const businessModule = {
   }]
 }
 
+// FILTER BUTTONS DATA
+
+export const filterData = {
+  courses: [ "Salary", "Location", "Skills", "Experience", "Company Size" ],
+  funding: [ "All", "In Progress", "Granted", "Rejected"],
+  jobs: ["New Jobs", "InProgress"]
+}

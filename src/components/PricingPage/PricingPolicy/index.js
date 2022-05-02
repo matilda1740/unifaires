@@ -15,6 +15,7 @@ import checkmark from 'common/assets/images/checkmark.svg';
 
 
 import { pricing } from 'common/data/appData';
+import SliderSection from '../PricingSlider';
 
 const PricingPolicy = () => {
   const { slogan, title, subtitle, monthly, annualy, class_name } = pricing;
@@ -62,7 +63,12 @@ const PricingPolicy = () => {
         </ButtonGroup>          
         </PricingSectionHeader>
 
-        <PricingSliderSection/>
+        <SliderSection
+          variant={'#5832DA'}
+          margin={'40px 90px 40px 120px'}
+          width={'83%'}
+          height={'50px'}
+        />
         {/* <PricingS/> */}
         <PricingArea>
           <InnerWrapper>

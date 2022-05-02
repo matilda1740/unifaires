@@ -69,7 +69,7 @@ const SidebarLeft = () => {
 
     
         <div className="dash_sectionTwo">
-            <Link href="/individual/settings">
+            <Link href="/individual/settings/profile">
                 <DashboardRow className="dash_row">
                     <img src={settingIcon?.src} alt="Settings" /> 
                     <Text as="p" content={"Settings"}/>

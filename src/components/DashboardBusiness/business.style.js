@@ -2,6 +2,247 @@ import styled from 'styled-components';
 import { themeGet } from '@styled-system/theme-get';
 
 
+export const ModuleSectionWrapper = styled.section`
+        /* background: rgba(255, 255, 255, 1); */
+
+    .whereTo_section{
+        height: 100%;
+        background: rgba(238, 234, 251, 1);
+        width: 70%;
+        margin: 10px 10px 40px auto;
+        border-radius: 8px 8px 8px 8px;
+        border-left: 4px solid #5832DA;
+
+        padding: 12px 24px; 
+        .not_expanded{
+        height: 58px;
+        div{
+            margin-bottom: 0px;
+        }
+        p{
+            display: none;
+        }
+    }
+    .expanded{
+        height: 150px;
+        div {
+            margin-bottom: 10px;
+        }
+        img {
+            height: 7px;
+        }
+    }
+}
+`;
+
+export const ModuleSectionHeader = styled.div`
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 10px;
+
+    .left_div {
+        display: flex;
+        align-items: center;
+
+        width: 30%;
+        height: 100%;
+
+        :hover{
+        cursor: pointer;
+        }
+        img {
+            width: 12px;
+            height: 12px;
+            margin-right: 8px;
+        }
+
+        p{
+
+        }
+    }
+
+    .right_div {
+        width: 30%;
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        button {
+            border: 1px solid rgba(18, 53, 91, 1);
+            background: transparent;
+            border-radius: 8px;
+            width: 150px;
+            height: 42px;
+            color: rgba(18, 53, 91, 1);
+            margin: 0 5px 0 0;
+            align-self: flex-end;
+            
+        }
+        img {
+            width: 20px;
+            height: 20px;
+            margin-left: 16px;
+            :hover { cursor: pointer}
+        }
+    }
+    .right_div.funding {
+        /* TO ALLOW DROP DOWN */
+        position: relative;
+    }
+`;
+
+export const ModuleSectionContainer = styled.section`
+
+    width: 100%;
+    height: 100%;
+    display: flex; 
+        padding: 20px 0;
+
+    /* flex-direction: column; */
+    .col1 {
+        width: 30%;
+        height: 100%;
+        .module_thumbnail{
+            width: 200px;
+            height: 200px;
+            /* background: #F5F7F9; */
+            /* background: #eee; */
+
+            border-radius: 16px;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                border-radius: 16px;
+            }
+        }
+    }
+    .col2 {
+        width: 70%;
+        height: 100%;
+        h5 {
+            margin-bottom: 8px;
+            color: rgba(18, 53, 91, 1);
+
+        }
+        p{
+            color: rgba(77, 77, 77, 1);
+            text-align:left;
+        }
+        /* :first-child{
+
+        } */
+    }
+
+`;
+
+export const SectionDivider = styled.div`
+        height: 40px;
+        width: 70%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: -10px 0 10px auto;
+
+        * {
+            color: rgba(173, 168, 190, 1);
+            font-size: 12px;
+
+        }
+
+        h6 {
+            margin-bottom: 0;
+            font-size: 12px;
+
+        }
+        .right_div{
+            width: 50%;
+            height: 100%;
+            display: flex;
+
+            
+            div {
+                width: 50%;
+                height: 100%;
+        display: flex;
+
+        align-items: center;
+               
+            img {
+                margin-right: 8px;
+                width: 12px;
+                height: 12px;
+            }
+            }
+
+        }
+`;
+
+export const WhereToSection = styled.div`
+
+        height: 100%;
+        background: rgba(238, 234, 251, 1);
+        width: 70%;
+        margin: 10px 0 0 auto;
+        border-radius: 8px 0px 0px 8px;
+        border: 4px solid #5832DA;
+        /* display: flex;
+        justify-content: space-between;
+        align-items: center; */
+`;
+
+export const InformationContainer = styled.div`
+
+        height: 100%;
+        /* background: rgba(238, 234, 251, 1); */
+        width: 100%;
+        margin: 20px 10px 0  auto;
+        border-radius: 8px;
+        padding: 24px 24px 24px 24px; 
+        background: transparent;
+        border: 1px solid #F2F2F2;
+        &.funding{
+            width: 70%;
+
+        }
+        *{
+            color: rgba(18, 53, 91, 1) !important;
+            margin-bottom: 10px !important;
+        }
+        h5 {
+                margin-bottom: 10px !important;
+        }
+        ul li{
+                margin-bottom: 8px !important;
+                list-style-type: disc;
+                margin-left: 12px; 
+
+        }
+
+`;
+
+export const SectionTitle = styled.h5`
+    color: rgba(18, 53, 91, 1) !important;
+    height: 20px;
+    width: 100%;
+    /* line-height:25px; */
+    margin: 20px 0px -10px 17.5px !important;
+
+`;
+
+
+export const RecommendationsWrapper = styled.div`
+    margin: 20px 0;
+    h5 {
+        /* color: #5832DA */
+        margin: 10px 0 !important;
+    }
+`;
 export const AvatarIcon = styled.div`
 `;
 
@@ -132,7 +373,7 @@ a{
     font-weight: 300;
     font-size: 14px;
     line-height: 150%;
-    margin: 28px 0 0 0;
+    margin: 28px 0 10px 0;
     align-self: flex-end;
 
     text-align: center;
@@ -562,30 +803,10 @@ a:hover, .selected{
 
 `;
 
-export const FilterDropDown = styled.div`
-display: flex;
-flex-direction: column;
-align-items: space-around;
-padding: 12px 77px 13px 24px;
-
-position: absolute;
-width: 117px;
-height: 181px;
-background: rgba(220, 220, 220, 1);
-border-radius: 8px;
-
-li {
-    color: rgba(18, 53, 91, 0.8);
-    padding: 0 0 5px 0;
-}
-`;
-
 export const FilterSeeAllContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-around;
-position: relative;
-
     width: 25%;
 
         a{
@@ -598,31 +819,37 @@ position: relative;
 `;
 
 export const FilterButton = styled.div`
-width: 97px;
-height: 40px;
-background: rgba(128, 128, 128, 0.2);
-border-radius: 8px;
-display: flex;
-padding: 12px 12px;
-justify-content: space-between;
-align-items: center;
-font-size: 12px;
-:hover{
-    cursor: pointer;
-}
-p{
-    width: 100%;
-    height: 50%;
-   margin: 0 0px 10px 0;
-   color: rgba(18, 53, 91, 1);
+    width: 97px;
+    height: 40px;
+    background: rgba(128, 128, 128, 0.2);
+    border-radius: 8px;
+    display: flex;
+    padding: 12px 12px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
 
-}
-img {
-    width: 8px;
-    height: 4px;
-}
+    &.only_element {
+        margin-left: auto; /* flex-end */
+    }
+    &.courses_section {
+        width: 112px;
+    }
 
+    :hover{
+        cursor: pointer;
+    }
+    p{
+        width: 100%;
+        height: 50%;
+    margin: 0 0px 10px 0;
+    color: rgba(18, 53, 91, 1);
 
+    }
+    img {
+        width: 8px;
+        height: 4px;
+    }
 `;
 
 export const HeadingLeft = styled.div`
@@ -973,7 +1200,7 @@ export const ModuleRow = styled.div`
 
     .module_row_jobs_card:nth-child(n+3){
             margin-top: 20px;
-        }
+    }
 
 `;
 
@@ -1112,11 +1339,18 @@ export const SectionHeading = styled.div`
         line-height: 120%;
         width: 75%;
     }
+    &.position_dropdown{
+        position: relative;
+        /* margin: 0 0 20px 0 !important; */
+
+    }
 `;
 
 const SectionWrapper = styled.section`
     color:#5832DA;
-    height: 1000px;
+    /* height: 1000px; */
+    min-height: fit-content;
+
         display:flex;
     flex-direction: row; 
 .icon_ellipse{

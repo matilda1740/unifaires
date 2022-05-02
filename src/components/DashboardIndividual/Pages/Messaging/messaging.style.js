@@ -17,6 +17,12 @@ export const ColumnConversation = styled.div`
     width: 35%;
     height: 100%;
     margin-right: 4px;
+    &.column1_settings{
+        :first-child{
+            padding: 30px 10px 0px 10px;
+            margin-bottom: 0;
+        }
+    }
 `;
 
 export const ConversationHeading = styled.section`
@@ -112,6 +118,9 @@ export const ColumnChat = styled.div`
     flex-direction: column;
     width: 65%;
     height: 100%;
+    /* &.column2_settings{
+        width: 65%;
+    } */
 `;
 
 export const ChatForm = styled.form`

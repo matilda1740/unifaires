@@ -6,9 +6,9 @@ function valuetext(value) {
   return `${value} users`;
 }
 
-export default function PricingSliderSection() {
+export default function SliderSection({variant, width, height, margin}) {
   return (
-    <Box className="pricing_slider_div" sx={{ width: '83%', height: '50px', margin: '40px 90px 40px 120px' }}>
+    <Box className="pricing_slider_div" sx={{ width: `${width}`, height: '50px', margin:`${margin}` }}>
     {/* ACTUAL SLIDER */}
         <Box sx={{ width: '100%', mr: 2, height: 8  }}>
         <Slider
@@ -20,7 +20,7 @@ export default function PricingSliderSection() {
             marks
             min={10}
             max={100}
-            sx={{ color: '#5832DA'}}
+            sx={{ color: `${variant}`}}
         />
         </Box>
     </Box>

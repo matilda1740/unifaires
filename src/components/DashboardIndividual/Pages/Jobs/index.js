@@ -3,8 +3,9 @@ import Link from 'next/link';
 import Text from 'components/Layout/Text';
 import Heading from 'components/Layout/Heading';
 
-import SectionWrapper, {FilterSeeAllContainer, FilterDropDown, FilterButton, ModuleColumn, ModuleHeading, HeadingLeft, HeadingRight,ToggleButton, OptionsRow,OptionButton, ModuleSection, SectionHeading,  ModuleRow, ModuleRowEmpty, CoursesStartCard, JobCard, DashboardBadge, SearchBar } from '../../../DashboardBusiness/business.style';
-import { userModule } from 'common/data/appData';
+import SectionWrapper, {FilterSeeAllContainer, FilterButton, ModuleColumn, ModuleHeading, HeadingLeft, HeadingRight,ToggleButton, OptionsRow,OptionButton, ModuleSection, SectionHeading,  ModuleRow, ModuleRowEmpty, CoursesStartCard, JobCard, DashboardBadge, SearchBar } from '../../../DashboardBusiness/business.style';
+
+import { userModule, filterData } from 'common/data/appData';
 
 import notificationIcon from 'public/images/dashboard/Dashboard/Iconly/Light-outline/Notification.svg'
 import showIcon from 'public/images/dashboard/Dashboard/Iconly/Light-outline/Show.svg'
@@ -17,12 +18,13 @@ import badgeIcon from 'public/images/dashboard/Group.svg'
 import workIcon from 'public/images/dashboard/Dashboard/Work.svg'
 import dashCard from 'public/images/dashboardCard.png'
 import paypal from 'public/images/partners/paypal.svg'
+import FilterDropDownComponent from '../Components/FilterDropDown';
 
 const JobsSection = () => {
   const {userOptions} = userModule;
 
-  const [state, setState] = useState({
-  });
+    const [show, setShow ] = useState(false);
+    const toggleDropDown = () => setShow(!show)
 
   return (
     <>
@@ -44,9 +46,17 @@ const JobsSection = () => {
             </HeadingRight>
             </div>
         </ModuleHeading>
-
         <ModuleSection>
-
+        <SectionHeading className="title_row position_dropdown">
+            <FilterButton onClick={toggleDropDown} className="only_element">
+                <Text as="p" content={"FILTER"} />
+                <img src={arrowDownIcon?.src}  alt="Arrow" />
+            </FilterButton>
+        </SectionHeading>  
+        <FilterDropDownComponent
+            data={filterData.jobs}
+            variant={ show ? "show_dropdown filter" : "hide_dropdown filter"}
+        /> 
         {
             userOptions.map(( section => (
                 section.jobs?.length > 0 &&

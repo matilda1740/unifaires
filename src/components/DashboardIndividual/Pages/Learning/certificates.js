@@ -22,7 +22,7 @@ import dashCard from 'public/images/dashboardCard.png'
 import paypal from 'public/images/partners/paypal.svg'
 import cisco from 'public/images/dashboard/Resume Course/cisco.png'
 
-import bookIcon from 'public/images/dashboard/Dashboard/Resume Course/COURSE/book.svg'
+import bookIcon from 'public/images/dashboard/book.svg'
 import threeUsersIcon from 'public/images/dashboard/3User.svg'
 
 const CertificationsSection = () => {
