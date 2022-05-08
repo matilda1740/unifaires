@@ -9,7 +9,7 @@ import ChatBubble from './ChatBubble';
 import ChatHeading from './ChatHeading';
 import ConversationBox from './ConversationBox';
 
-import SectionWrapper, {FilterSeeAllContainer, FilterDropDown, FilterButton, ModuleColumn, ModuleHeading, HeadingLeft, HeadingRight,ToggleButton, OptionsRow,OptionButton, ModuleSection, SectionHeading,  ModuleRow, ModuleRowEmpty, CoursesStartCard, JobCard, DashboardBadge, SearchBar } from '../../../DashboardBusiness/business.style';
+import SectionWrapper, {FilterSeeAllContainer, FilterButton, ModuleColumn, ModuleHeading, HeadingLeft, HeadingRight,ToggleButton, OptionsRow,OptionButton, ModuleSection, SectionHeading,  ModuleRow, ModuleRowEmpty, CoursesStartCard, JobCard, DashboardBadge, SearchBar, ModuleSectionHeader } from '../../../DashboardBusiness/business.style';
 
 import { userModule } from 'common/data/appData';
 
@@ -29,21 +29,44 @@ import profilePic from 'public/images/dashboard/profile/profile.jpeg'
 import optionsIcon from 'public/images/dashboard/dotIcon.svg'
 
 // FORM ACTION ICONS
-import paperClipIcon from 'public/images/dashboard/paperclip.svg'
-import smileIcon from 'public/images/dashboard/smile.svg'
-import sendIcon from 'public/images/dashboard/send.svg'
+
 import readIcon from 'public/images/dashboard/tick.svg'
+import SpecificChatSection from './SpecificChat';
+import useWindowSize from 'hooks/useWindowSize';
+import BackURLModule from '../Components/BackURLModule';
 
-
+// import use
 
 
 const MessagingSection = () => {
     const {userOptions} = userModule;
+    const [senderID, setSenderID] = useState("AS239TH");
+    const sizeWindow = useWindowSize();
+    // console.log(sizeWindow)
 
-    const [state, setState] = useState({
-    });
+    // const getMessages = () => {
+    //     return userOptions.map( section => {
+    //         if(senderID !== undefined ){
+    //             return section.messaging.find( chatObject => senderID === chatObject.userID)
+    //         }else {
+    //             return {}
+    //         }
+    //     }) 
+    // }
+    const handleConversationClick = input => (e) => {
+        setSenderID(input)
+        // console.log(getMessages())
+        if(sizeWindow.width < 480){
+            if(e.target.parentNode.parentNode.parentNode.parentNode.classList.contains("conversation_col")){
+                e.target.parentNode.parentNode.parentNode.parentNode.classList.add("slide_left")
+                // console.log("nice", e);
+            }
+        }
+    }
 
+    const handleBackURL = () => {
 
+    }
 
     const getTimeStamp = () => {
         // const createdAt = {
@@ -119,9 +142,8 @@ const MessagingSection = () => {
             </div>
         </ModuleHeading>
 
-        <MessagingSectionWrapper>
-
-            <ColumnConversation>
+        <MessagingSectionWrapper className="messaging_section">
+            <ColumnConversation className="conversation_col">
                 <ConversationHeading>
                     <div className="top_row_div">
                         <Heading as="h6" content={"Conversations"}/>
@@ -139,29 +161,32 @@ const MessagingSection = () => {
 
                 <BoxWrapper>
                     {/* MAP THROUGH THE CONVERSATIONS */}
+                        <a href="#specific_chats">
+                        <ConversationBox className="active" onClick={handleConversationClick("AS239TH")} id="conversation_box">
+                        <div className="profile_picture">
+                            <img src={profilePic?.src} alt="Profile" />              
+                        </div>
+                        <div className="profile_details">
+                            <Text as="h6" content={"Anna Smith"}></Text>
+                            <Text as="p" content={"Hey, what’s the update .."}></Text>
+                        </div>
+                        <div className="timestamp">
+                            <Text as="p" content={"Today"}></Text>
+                        </div>
+                        </ConversationBox>
+                        </a>
+             
 
-                    <ConversationBox className="active">
+                    <ConversationBox onClick={() => setSenderID("JS239TH")}>
                         <div className="profile_picture">
                             <img src={profilePic?.src} alt="Profile" />              
                         </div>
                         <div className="profile_details">
-                            <Text as="h6" content={"Anna Smith"}></Text>
+                            <Text as="h6" content={"John Smith"}></Text>
                             <Text as="p" content={"Hey, what’s the update .."}></Text>
                         </div>
                         <div className="timestamp">
-                            <Text as="p" content={"Aug 29"}></Text>
-                        </div>
-                    </ConversationBox> 
-                    <ConversationBox>
-                        <div className="profile_picture">
-                            <img src={profilePic?.src} alt="Profile" />              
-                        </div>
-                        <div className="profile_details">
-                            <Text as="h6" content={"Anna Smith"}></Text>
-                            <Text as="p" content={"Hey, what’s the update .."}></Text>
-                        </div>
-                        <div className="timestamp">
-                            <Text as="p" content={"Aug 29"}></Text>
+                            <Text as="p" content={"Yesterday"}></Text>
                         </div>
                     </ConversationBox>
                     <ConversationBox>
@@ -203,129 +228,39 @@ const MessagingSection = () => {
                 </BoxWrapper>
         
             </ColumnConversation>
-            
-            <ColumnChat>
-            
-                <ChatHeading>
-                    <div className="profile_row">
-                        <div className="profile_picture">
-                            <img src={profilePic?.src} alt="Profile" />              
-                        </div>
-                        <div className="online"></div>
-                    </div>
+            <ColumnChat className="chat_col" id="specific_chats">
+                {/* {props.content} */}
+                {sizeWindow.width < 480 &&
+                    <ModuleSectionHeader>
+                    <BackURLModule
+                        text={"My Conversations"}
+                        prevPath={"#conversation_box"}
+                    />
+                    </ModuleSectionHeader>
+                }
+                {
+                    userOptions.map( section => (
+                        senderID !== undefined && 
+                        section.messaging.map( chatObject => (
+                            senderID === chatObject.userID  ?
+                            <SpecificChatSection 
+                                chatObject={chatObject}
+                            />
+                            : 
+                            <></>
+ //                           {/* <ChatBubble className={`main_bubble sent`}>
+   //                              <Text as="p" content={"Spark a conversation"} />
+  //                           </ChatBubble> */}
+                        ))
+                    ))
+                }
 
-                    <div className="profile_details">
-                        <Heading as="h6" content={"Oreoluwanimi Adeyemi"}/>
-                        <Text as="p" content={"Active"}></Text>
-                    </div>
-
-                    <div className="options">
-                        <img src={optionsIcon?.src} alt="Options" />
-                    </div>
-
-                </ChatHeading>
-
-                <BoxWrapper>
-                {/* Hello I’m excited to be here. */}
-                    <ChatBubble className="main_bubble received">
-                        <Text as="p" content={"Hello I’m excited to be here."} />
-                        <div>
-                            <Text as="p" content={"4:00pm"} />
-                            {/* <img src={searchIcon?.src} alt="Search" /> */}
-                        </div>
-                    </ChatBubble>
-                    <ChatBubble className="main_bubble received">
-                        <Text as="p" content={"Hello I’m excited to be here. I have no idea why you might be interested"} />
-                        <div>
-                            <Text as="p" content={"4:00pm"} />
-                            {/* <img src={searchIcon?.src} alt="Search" /> */}
-                        </div>
-                    </ChatBubble>
-                    <DaySectionDivider>
-                        <Text as="p" content={"Wednesday, 23 Dec"} />
-                    </DaySectionDivider>
-                    <ChatBubble className="main_bubble sent">
-                        <Text as="p" content={"Hello I’m excited to be here. I have no idea why you might be interested"} />
-                        <div>
-                            <img src={readIcon?.src} alt="Search" />
-                            <Text as="p" content={"4:00pm"} />
-                        </div>
-                    </ChatBubble>
-                </BoxWrapper>
-
-
-                <ChatForm>
-                    <input name="message" type="text" placeholder="Type your message"></input>
-                    <div className="form_actions_div">
-                        <img src={paperClipIcon?.src} alt="Attachment" />
-                        <img src={smileIcon?.src} alt="Emoji" />
-                        <div className="send_div">
-                            <img src={sendIcon?.src} alt="Send" />
-                        </div>
-                    </div>
-
-                </ChatForm>
-            </ColumnChat>
-
-
-        {/* 3 hours ----- LOGIC -------
-            1. I need to display previous messages    
-            2. Add a form to take in new messages 
-            3. Color and position bubble according to the sender 
-            4. Group Messages by days sent 
-            5. Check active tab to display all messages/deleted messages
-            6. Check active tab to show current conversation
-         */}
-
-
-         {/* ----- CSS -------------------------------
-            1. TWO COLUMNS: 30% AND 70 %
-            COLUMN 1: 
-                MAJOR ROW 1: MESSAGE HEADING ROW
-                    ROW 1 : HEADING (H5) "Conversations" + IMG: ICON (SEARCH)
-                    ROW 2 : START CONVERSATION BUTTON
-                MAJOR ROW 1: MESSAGE HEADING ROW
-                    ROW 1 : URL STATION: TWO LINKS/BUTTONS FOR ALL & DELETED
-                    ROW 2 : MESSAGE ROWS: MODULE (CHATPREVIEWBOX) : MAPPED
-            COLUMN 2: 
-                MAJOR ROW 1: CHAT HEADING ROW 
-                    COLUMN 1 : PROFILE PICTURE & STATUS
-                    COLUMN 2 : NAME 
-                    COLUMN 3 : OPTIONS
-                MAJOR ROW 2: 
-                    ROW 1 : CHAT BUBBLES
-                    ROW 2 : CHAT FORM
-          */}
-        {/* {
-            userOptions.map(( section => (
-                section.jobs?.length > 0 &&
-                <ModuleRow className="module_row_jobs">
-                    {
-                        section.jobs.map(( job => (
-                            <JobCard className="module_row_jobs_card">
-                                <div className="company_logo_div">
-                                    <img src={paypal?.src}  alt="Image" />
-                                </div>
-                                    
-                                <Heading as="h6" content={job.company}></Heading>
-                                <Heading as="h5" content={job.title}></Heading>
-                                <div className="timing_row">
-                                    <button>Remote</button>
-                                    <button>Full-time</button>
-                                </div>                        <Text as="p" content={job.description}></Text>
-
-                                <Link href="/">{job.current === 1 ? "In Progress" : "Apply"}</Link>
-                            </JobCard>
-                        )))
-                    }
-
-                </ModuleRow>          
-            )))
-        } */}
-               
+            </ColumnChat>        
         </MessagingSectionWrapper>
     </>
   );
 };
 
 export default MessagingSection;
+
+

@@ -16,7 +16,7 @@ const Link = ({ children, ...props }) => (
 export default Link;
 
 Link.propTypes = {
-  as: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+  as: PropTypes.oneOfType([PropTypes.string, PropTypes.object, PropTypes.array]),
   children: PropTypes.any.isRequired,
   ...base.propTypes,
 };

@@ -16,7 +16,7 @@ const SidebarRight = () => {
   
 
   return (
-    <ProfileCard>
+    <ProfileCard className="sidebar_right">
         <Heading as="h4" content={"Profile"}/>
         <img src={avatarIcon?.src} alt="Profile"/> 
         <div className="profile_name">

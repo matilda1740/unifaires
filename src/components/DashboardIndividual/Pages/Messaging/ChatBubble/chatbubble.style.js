@@ -14,7 +14,7 @@ const ChatBubbleStyle = styled.div`
     width:fit-content;
     max-width: 55%;
     height: fit-content;
-    max-height: 78px;
+    /* max-height: px; */
     border-radius: 10px;
     position: relative; /* POSITION RELATIVE TO GET CORNER */
     margin: 10px 20px; 

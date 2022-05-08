@@ -21,7 +21,7 @@ import workIcon from 'public/images/dashboard/Dashboard/Work.svg'
 import dashCard from 'public/images/dashboardCard.png'
 
 import paypal from 'public/images/partners/paypal.svg'
-import bookIcon from 'public/images/dashboard/Dashboard/Resume Course/COURSE/book.svg'
+import bookIcon from 'public/images/dashboard/book.svg'
 import threeUsersIcon from 'public/images/dashboard/3User.svg'
 
 const CoursesSection = () => {
@@ -92,7 +92,6 @@ const CoursesSection = () => {
             <ModuleRow>
                 {
                     section.courses.map(( course => (
-                        <Link href={`/individual/learning/courses/${course.courseID}`}>
                         <CoursesStartCard key={course.courseID}>
                             <img src={dashCard?.src} alt="Image" /> 
                             <Heading as="h6" content={course.category}></Heading>
@@ -108,9 +107,13 @@ const CoursesSection = () => {
                                     <Text as="p" content={`${course.time} hrs`}></Text>
                                 </div>
                             </div>
-                            <Link className="course_card_button" href="/resume-course" >Start Course</Link>
+                            <Link                                
+                                href={{
+                                pathname: "/individual/learning/courses/[id]",
+                                query: { id: course.courseID }
+                                }}>Start Course
+                            </Link>
                         </CoursesStartCard>
-                        </Link>
                     )))
                 }
             </ModuleRow>

@@ -7,7 +7,7 @@ import {useRouter} from 'next/router'
 import Text from 'components/Layout/Text';
 import Heading from 'components/Layout/Heading';
 import { SectionHeader } from '../../globalApp.style';
-import { SectionWrapper, SidebarCard,  ProfileCard, DashboardRow } from '../../DashboardBusiness/business.style' ;
+import { SectionWrapper,  ProfileCard, DashboardRow } from '../../DashboardBusiness/business.style' ;
 
 import accountIcon from 'public/images/dashboard/Dashboard/Iconly/Light-outline/Account.svg'
 import activityIcon from 'public/images/dashboard/Dashboard/Iconly/Light-outline/Activity.svg'
@@ -18,18 +18,37 @@ import postsIcon from 'public/images/dashboard/Dashboard/Iconly/Light-outline/Wo
 import settingIcon from 'public/images/dashboard/Dashboard/Iconly/Light-outline/Setting.svg'
 import helpIcon from 'public/images/dashboard/Dashboard/Iconly/Light-outline/Help.svg'
 import feedbackIcon from 'public/images/dashboard/Dashboard/Iconly/Light-outline/Feedback.svg'
+import CloseIcon from 'public/images/dashboard/Close.svg'
+import SearchIcon from 'public/images/dashboard/Search.svg'
+import MenuBarIcon from 'public/images/dashboard/MenuBar.svg'
+
 
 // import badgeIcon from 'public/images/dashboard/Dashboard/badge.svg'
 import profileImg from 'public/images/dashboard/Dashboard/icon.svg'
+import SidebarCard, { MobileHeader }  from './sidebarleft.style';
 
 
-const SidebarLeft = () => {
+const SidebarLeft = ({isNavOpen, setIsNavOpen}) => {
     const {company, suite} = userModule;
     const [state, setState] = useState({
     });
     const router = useRouter();
+
+    // CONTROL MOBILE NAV BAR
+
     return (
-    <SidebarCard>
+    <SidebarCard className={ isNavOpen ? "expanded" : "not_expanded"}>
+        {/* IF MOBLIE NAV */}
+        <MobileHeader>
+            <div className="ellipse" onClick={() => setIsNavOpen(!isNavOpen)}>
+                <img src={CloseIcon?.src} alt="Close" />
+            </div>
+            <div className="ellipse">
+                <img src={SearchIcon?.src} alt="Search" />
+            </div>
+        </MobileHeader>
+
+
         <Heading as="h4" content={company}/>
         <Heading as="h5" content={suite}/>
         <div className="dash_sectionOne">
@@ -69,7 +88,7 @@ const SidebarLeft = () => {
 
     
         <div className="dash_sectionTwo">
-            <Link href="/individual/settings">
+            <Link href="/individual/settings/profile">
                 <DashboardRow className="dash_row">
                     <img src={settingIcon?.src} alt="Settings" /> 
                     <Text as="p" content={"Settings"}/>

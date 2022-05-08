@@ -6,7 +6,53 @@ export const MessagingSectionWrapper = styled.section`
     flex-direction: row;
     width: 100%;
     height: 70%;   
-    /* height: 100%; */
+
+    /* SLIDING LEFT AND RIGHT */
+    transition: all 0.3s ease-in-out;
+    .not_visible{
+        /* left: -480px; */
+    }
+    @keyframes slide_left {
+        0%{
+            left: 0;
+            visibility:visible;
+        }
+        50%{
+            left: -50%;
+            visibility:hidden;
+        }
+        100%{
+            left: -100%;
+            visibility:hidden;
+        }
+    }
+    /* @keyframes slide_right {
+        0%{
+            left: 0;
+            visibility:visible;
+        }
+        50%{
+            left: -50%;
+            visibility:hidden;
+        }
+        100%{
+            left: -100%;
+            visibility:hidden;
+        }
+    } */
+    @media screen and (max-width: 480px) {
+        height: 100%;
+        .column1_settings { 
+            display: none;
+        }
+        .column2_settings {
+            width: 100%;
+        }
+
+        &.messaging_section{
+            flex-direction: column;
+        }
+    }
 `;
 
 export const ColumnConversation = styled.div`
@@ -17,6 +63,15 @@ export const ColumnConversation = styled.div`
     width: 35%;
     height: 100%;
     margin-right: 4px;
+    &.column1_settings{
+        :first-child{
+            padding: 30px 10px 0px 10px;
+            margin-bottom: 0;
+        }
+    }
+    @media screen and (max-width: 480px) {
+        width: 100%;
+    }
 `;
 
 export const ConversationHeading = styled.section`
@@ -59,6 +114,7 @@ export const ConversationHeading = styled.section`
         height: 40px;
         width: 90%;
     }
+
 `;
 
 export const ConversationLinks = styled.section`
@@ -101,6 +157,8 @@ export const BoxWrapper = styled.section`
     width: 100%;
     height: 100%;
     margin-top: 10px;
+    overflow-y: scroll;
+    ::-webkit-scrollbar { display: none}
     /* padding: 12px 24px; */
 
 `;
@@ -112,63 +170,16 @@ export const ColumnChat = styled.div`
     flex-direction: column;
     width: 65%;
     height: 100%;
-`;
-
-export const ChatForm = styled.form`
-
-    width: 100%;
-    margin: 20px 0;
-    padding: 0 24px;
-    display: flex;
-    /* align-self: flex-end; */
-    *{
-        font-weight: 300;
-
-    }
-    input {
-        background: rgba(255, 255, 255, 0.1);
-        color: rgba(191, 191, 191, 1);
-        outline: none;
-        border: 1px solid rgba(0, 0, 0, 0.1);
-        border-radius: 16px;
-        height: 40px;
-        width: 95%;
-        position: relative;
-       
-    }
-    input[type="text"]::placeholder {
-            padding-left: 10px;
-        }
-
-    .form_actions_div {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        width: 100px;
-        height: 100%;
-        margin: 0px 2% 0px -23.5%;
-        * {
-            margin: 0 4px;
-        }
-        img {
-            width: 15px;
-            height: 15px;
-            :hover {
-                cursor: pointer;
-            }
-        }
-        .send_div {
-            background: #5832DA;
-            border-radius: 6px;
-            width: 20px;
-            height: 20px;
-            img {
-            margin-left: 2px;
-
-            }
-        }
+    @media screen and (max-width: 480px) {
+        /* display: none; */
+        width: 100%;
+        /* Temporary */
+        /* margin-top: -850px; */
+        height: 1000px;
     }
 `;
+
+
 
 export const DaySectionDivider = styled.div`
     margin: 30px 5%;
@@ -192,3 +203,9 @@ export const DaySectionDivider = styled.div`
         margin: 0 10px;
     }
 `;
+
+// export const EmptyState = styled.div`
+
+//     @media screen and (max-width: 480px) {
+//     }
+// `;

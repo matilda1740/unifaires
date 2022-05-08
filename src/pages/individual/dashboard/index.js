@@ -9,7 +9,7 @@ import { DrawerProvider } from 'common/contexts/DrawerContext';
 // Page Sections
 import Navbar from "components/LandingPage/Navbar";
 import UserWrapper from 'components/DashboardIndividual';
-import StartCoursesSection from 'components/DashboardIndividual/Pages/Home/start';
+import StartCoursesSection from 'components/DashboardIndividual/Pages/Home';
 
 const Main = () => {
   return (

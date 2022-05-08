@@ -10,6 +10,7 @@ import { DrawerProvider } from 'common/contexts/DrawerContext';
 import Navbar from "components/LandingPage/Navbar";
 import UserWrapper from 'components/DashboardIndividual';
 import MessagingSection from 'components/DashboardIndividual/Pages/Messaging';
+import SpecificChatSection from 'components/DashboardIndividual/Pages/Messaging/SpecificChat';
 
 const Main = () => {
   return (

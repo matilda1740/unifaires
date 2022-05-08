@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Text from 'components/Layout/Text';
 import Heading from 'components/Layout/Heading';
 
-import SectionWrapper, { FilterSeeAllContainer, FilterDropDown, FilterButton, ModuleColumn, ModuleHeading, HeadingLeft, HeadingRight,ToggleButton, OptionsRow,OptionButton, ModuleSection, SectionHeading,  ModuleRow, ModuleRowEmpty, CoursesResumeCard, CertsCard, BadgesCard, JobCard, DashboardBadge, SearchBar } from '../../../DashboardBusiness/business.style';
+import SectionWrapper, { FilterSeeAllContainer, FilterButton, ModuleColumn, ModuleHeading, HeadingLeft, HeadingRight,ToggleButton, OptionsRow,OptionButton, ModuleSection, SectionHeading,  ModuleRow, ModuleRowEmpty, CoursesResumeCard, CertsCard, BadgesCard, JobCard, DashboardBadge, SearchBar } from '../../../DashboardBusiness/business.style';
 
 import { userModule } from 'common/data/appData';
 
@@ -20,7 +20,7 @@ import dashCard from 'public/images/dashboardCard.png'
 import paypal from 'public/images/partners/paypal.svg'
 import cisco from 'public/images/dashboard/Resume Course/cisco.png'
 
-import bookIcon from 'public/images/dashboard/Dashboard/Resume Course/COURSE/book.svg'
+import bookIcon from 'public/images/dashboard/book.svg'
 import threeUsersIcon from 'public/images/dashboard/3User.svg'
 
 const ResumeCoursesSection = () => {

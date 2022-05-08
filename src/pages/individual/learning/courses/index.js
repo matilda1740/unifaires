@@ -27,7 +27,10 @@ const Main = () => {
           <Sticky top={0} innerZ={9999} activeClass="sticky-nav-active">
           </Sticky>
           <UserWrapper 
-            content={(<LearningSection content={(<CoursesSection/>)} />)}
+            content={(
+            <LearningSection 
+              content={(<CoursesSection/>)} 
+            />)}
           />
         </AppWrapper>
       </Fragment>
