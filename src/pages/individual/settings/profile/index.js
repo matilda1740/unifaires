@@ -20,7 +20,8 @@ const Main = () => {
           <title>Unifaires | Settings </title>
           <meta name="theme-color" content="#10ac84" />
           <meta name="Description" content="React next landing page" />
-          <link href="http://fonts.cdnfonts.com/css/maison-neue" rel="stylesheet"/>       
+          <link href="http://fonts.cdnfonts.com/css/maison-neue" rel="stylesheet"/>  
+          <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>      
         </Head>
         <ResetCSS />
         <AppWrapper>

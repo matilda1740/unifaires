@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Text from 'components/Layout/Text';
 import Heading from 'components/Layout/Heading';
 import { SectionHeader } from '../../../../globalApp.style';
-import SectionWrapper, { ModuleRow, ModuleRowEmpty, BadgesCard, ModuleSectionHeader, ModuleSectionContainer, ModuleSectionWrapper, SectionDivider, HelpBottomOptions, WhereToSection, HelpBottomSection, InformationContainer, SectionTitle } from '../../../../DashboardBusiness/business.style';
+import SectionWrapper, {ModuleSection, ModuleRow, ModuleRowEmpty, BadgesCard, ModuleSectionHeader, ModuleSectionContainer, ModuleSectionWrapper, SectionDivider, HelpBottomOptions, WhereToSection, HelpBottomSection, InformationContainer, SectionTitle,  } from '../../../../DashboardBusiness/business.style';
 import RecommendedFundingCard, { FundingSectionWrapper } from '../../Components/RecommendedFunding'
 import BillingButton from '../../Settings/Billings/BillingButton';
 import DropDownList from '../../Components/DropDownList';
@@ -19,6 +19,7 @@ import FundingThumbnail from 'public/images/dashboard/fundingCompany.png'
 import FundingBG from 'public/images/dashboard/VideoControls/VideoBG.png'
 
 import { useRouter } from "next/router";
+import BackURLModule from '../../Components/BackURLModule';
 
 const SpecificFundingSection = () => {
   const {userOptions} = userModule;
@@ -64,13 +65,13 @@ const SpecificFundingSection = () => {
       }
   }
   return (
-    <>  
+    <ModuleSection>  
     <ModuleSectionWrapper>
       <ModuleSectionHeader>
-        <div className="left_div">
-          <img src={arrowLeft?.src} alt="Back" /> 
-          <p>Funding</p>
-        </div>
+        <BackURLModule 
+        text="Funding" 
+        prevPath="/individual/funding"
+        />  
         <div className="right_div funding">
         <BillingButton 
           variant={ fundingStatus.granted ? "granted" : fundingStatus.rejected ? "rejected" :  fundingStatus.waiting && "waiting"}
@@ -138,7 +139,7 @@ const SpecificFundingSection = () => {
         /> */}
       </FundingSectionWrapper>
     </ModuleSectionWrapper>    
-    </>
+    </ModuleSection>
   );
 };
 

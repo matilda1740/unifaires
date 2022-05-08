@@ -10,6 +10,9 @@ export const AccountsWrapper = styled.div`
     height: 100%;
     display: flex;
     flex-direction: column;
+    @media screen and (max-width:480px){
+        height: auto;
+    }
 `;
 
 const AccountsCardStyle = styled.div`
@@ -17,9 +20,11 @@ const AccountsCardStyle = styled.div`
     height: 80px;
     display: flex;
     flex-direction: column;
-    box-shadow:  4px 8px 4px rgba(221, 221, 221, 0.15);
+    /* background: #fff;
+    box-shadow:  4px 8px 4px rgba(221, 221, 221, 0.15); */
+    background: #F7F5FD;
+    box-shadow: 2px 8px 4px rgba(221, 221, 221, 0.05);
     border-radius: 8px;
-    background: #fff;
     color: rgba(18, 53, 91, 1);
     padding: 16px;
     margin: 10px 0;
@@ -45,6 +50,10 @@ const AccountsCardStyle = styled.div`
         }
     }
     h6, p{ margin-bottom: 0; }
+
+    @media screen and (max-width: 480px) {
+        .top_div .icon_div img { margin-left: 2.5px; }
+    }
 `;
 
 const AccountsCard = (props) => {

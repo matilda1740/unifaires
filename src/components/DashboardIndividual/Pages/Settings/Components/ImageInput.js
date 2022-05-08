@@ -13,25 +13,25 @@ const ImageInputStyle = styled.div`
     display: flex;
     margin: 0px 0 10px 0;
     .image_container {
-        width: 20%;
-        height: 100%; 
+        height: 80px;   
         display: flex;
         flex-direction: column;
-
-        img {
-            object-fit: contain;
-            width: 80px;
-            height: 100%;   
-            :hover {
-                cursor: pointer;
-            }
-        }
+        position: relative;
+        width: 80px;
         input {   
-            width: 80px;
-            height: 100px;   
-
-            /* display: none; */
-        }   
+            width: 100%;
+            height: 100%;   
+            opacity: 0;
+            position: absolute;
+        }  
+        img {
+            object-fit: fill;
+            width: 100%;
+            height: 100%;   
+            border-radius: 50%;
+            position: absolute;
+            :hover { cursor: pointer; }
+        } 
     }
     .image_details_container{
         display: flex;
@@ -40,14 +40,11 @@ const ImageInputStyle = styled.div`
         padding: 15px 5px;
         width: 80%;
         height: 100%; 
-
-        *{
-            margin-bottom: 5px;
-        }
-        p{
-        color: rgba(173, 168, 190, 1);
-
-        }
+        *{ margin-bottom: 5px; }
+        p{ color: rgba(173, 168, 190, 1); }
+    }
+    @media screen and (max-width: 480px) {
+        .image_container { margin-right: 5px; }
     }
 `;
 
@@ -60,12 +57,10 @@ const ImageInput = (props) => {
 
     const loadImage = (event) => {
         const image = document.querySelector("#display_userImage");
-        // image.src = URL.createObjectURL(event.target.files[0]);
-
         if(event.target.files[0] !== undefined){
             image.src = URL.createObjectURL(event.target.files[0]);
             image.style.display = "block"
-            setProdImage(event.target.files[0])
+            setProfileImage(event.target.files[0])
         }else {
             image.src = avatarProfile ;
         }        
@@ -74,8 +69,8 @@ const ImageInput = (props) => {
     return (
         <ImageInputStyle>
             <div className="image_container">
-                <input onChange={loadImage} type="file" name="profile_image" accept="image/*" />
                 <img id="display_userImage" src={avatarProfile?.src} alt="Avatar" />
+                <input onChange={loadImage} type="file" name="profile_image" accept="image/*" />
             </div>
             <div className="image_details_container">
                 <Heading as="h6" content={title} />

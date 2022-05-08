@@ -20,7 +20,7 @@ const FormStyleInput = styled.div`
 
         ::placeholder{
             font-weight: 500;
-            color: rgba(18, 53, 91, 1);
+            color: rgba(18, 53, 91, 0.9);
         }    
     }
 
@@ -40,13 +40,14 @@ const FormStyleInput = styled.div`
         }
     }
     &.focus {
-        border-bottom: 1px solid rgba(88, 50, 218, 1);
+        border-bottom: 1px solid rgba(88, 50, 218, 0.9);
         *{
             font-weight: 300;
             color: rgba(88, 50, 218, 1);
           ::placeholder{
             font-weight: 500;
             color: rgba(88, 50, 218, 1);
+            /* color: rgba(173, 168, 190, 1); */
         }    
         }
 

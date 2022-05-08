@@ -22,7 +22,8 @@ export const BackUrlWrapper = styled.a`
     }
 
     p{
-        color: rgba(184, 188, 202, 1);
+        /* color: rgba(184, 188, 202, 1); */
+        color: rgba(18, 53, 91, 0.8);
     }
 `;
 

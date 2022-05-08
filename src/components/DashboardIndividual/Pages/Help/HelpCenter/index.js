@@ -100,7 +100,12 @@ const HelpCenter = () => {
                     </HelpBottomOptions>
                 )))
             )))
-        }          
+        }      
+        <div className="help_heading_right mobile_section">
+            <img src={helpBG?.src}  alt="help" />
+            <Link href="/individual/help/feedback">
+            Give Feedback</Link>
+        </div>    
         </HelpBottomSection>
     </>
   );

@@ -24,6 +24,7 @@ import searchIcon from 'public/images/dashboard/Dashboard/search.svg'
 import settingsIcon from 'public/images/dashboard/settings/Setting.svg'
 import { ModuleHeader, ProfileForm } from './settings.style';
 import ProfileSection from './Profile';
+import TabBottomNavigation from '../Components/TabBottomNavigation'
 
 const SettingsSection = (props) => {
   const {userOptions} = userModule;
@@ -32,7 +33,7 @@ const SettingsSection = (props) => {
 
   return (
     <>
-        <ModuleHeading>
+        <ModuleHeading className="settings_header_mobile">
             <div className="top_row">
             <HeadingLeft>
                 <Heading as="h4" content={"Settings"}/>
@@ -130,6 +131,9 @@ const SettingsSection = (props) => {
             <ColumnChat className="column2_settings">
                 {props.content}
             </ColumnChat>
+
+            {/* INSERT TAB NAVIGATION HERE */}
+            <TabBottomNavigation />
         </MessagingSectionWrapper>
     </>
   );

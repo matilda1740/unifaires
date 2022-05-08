@@ -24,7 +24,10 @@ const FormCheckboxStyle = styled.div`
       font-weight: 300;
     }
     #checkbox:checked{
-      background: #5832DA !important;
+      accent-color: #5832DA !important;
+    }
+    @media screen and (max-width: 480px) {
+      p { height: 60%;}
     }
 `;
 

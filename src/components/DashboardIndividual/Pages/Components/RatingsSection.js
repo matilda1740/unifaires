@@ -51,6 +51,12 @@ export const RatingsSectionStyle = styled.div`
         flex-direction: column;
         justify-content: space-evenly;
     }
+     @media screen and (max-width: 480px) {
+         .average_rating_container{
+            width: 40%;
+         }
+         p{ font-size: 12px; }
+    }
 `;
 
 const EachRatingStyle = styled.div`

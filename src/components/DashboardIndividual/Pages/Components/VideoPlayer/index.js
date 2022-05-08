@@ -42,6 +42,9 @@ const VideoPlayerStyle = styled.div`
     border-radius: 32px;
     /* object-fit:contain;     */
     }
+    @media screen and (max-width: 480px){
+      height: 300px;
+    }
 `;
 
 const VideoControlWrapper = styled.div`
@@ -52,7 +55,7 @@ const VideoControlWrapper = styled.div`
     padding: 10px 20px;
     align-self: flex-end;
     margin-top: -73px;
-    z-index: 20;
+    z-index: 4;
 
     input{
       width: 100%;

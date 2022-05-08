@@ -8,7 +8,7 @@ import 'react-phone-number-input/style.css'
 import PhoneInput from 'react-phone-number-input'
 
 // STYLE COMPONENTS 
-import { AddButton, Button, ButtonWrapper, ProfileForm, SkillsButton, SkillsWrapper } from './profile.style';
+import { Button, ButtonWrapper, ProfileForm, SkillsButton, SkillsWrapper } from './profile.style';
 import { ModuleHeader } from '../settings.style';
 // REUSABLE COMPONENTS 
 import FormSectionDivider from '../Components/FormSectionDivider';
@@ -18,6 +18,7 @@ import Form, { FormEachPhoneContainer, FormHalfContainer } from '../Components/F
 import FormCheckbox from '../Components/FormCheckbox';
 import FormWorkGroup from '../Components/FormWorkGroup';
 import AccountCard, { AccountsWrapper } from '../Components/AccountCard';
+import FormSelectBox from '../Components/FormSelectBox';
 
 // DATA
 import { userModule } from 'common/data/appData';
@@ -25,16 +26,16 @@ import { userModule } from 'common/data/appData';
 // ICONS
 import settingsIcon from 'public/images/dashboard/settings/Setting.svg'
 import closeIcon from 'public/images/dashboard/settings/close.svg'
-import FormSelectBox from '../Components/FormSelectBox';
+import AddGroup from '../../Components/AddGroup';
 
 
 // MAIN FUNCTION
 const ProfileSection = () => {
   const {userOptions} = userModule;
 
-  const [state, setState] = useState({
-  });
-   const [phone, setPhone] = useState()
+  const [phone, setPhone] = useState()
+  const [altPhone, setAltPhone] = useState()
+
 
   const initialValues = {
     firstname: '',
@@ -62,11 +63,8 @@ const ProfileSection = () => {
     identity: ''
   };
 
-  // const [workGroups, setWorkGroups] = useState(1)
+  const [newWorkGroup, setNewWorkGroup] = useState(false);
 
-  // const addWG = () => {
-
-  // }
   const addWorkGroup = React.useRef(null)
   // const addWorkGroup = () => {
   //   console.log("From Main Form")
@@ -105,18 +103,19 @@ const ProfileSection = () => {
         <FormHalfContainer>
           <FormSelectBox label={"Gender"} placeholder={"Female"} name={"gender"} />
           <FormSelectBox label={"Location"} placeholder={""} name={"location"} />
-          {/* <FormInput size={"half"} label={"Gender"} placeholder={"Female"} name={"gender"} type={"text"} />
-          <FormInput size={"half"} label={"Location"} placeholder={""} name={"location"} type={"text"} />   */}
-
+          {/* <FormLocationSelector /> */}
         </FormHalfContainer>
 
         <FormSectionDivider content={"Work Experience"} />
 
-        <FormWorkGroup addWorkGroup={addWorkGroup}/>
-
-        <AddButton onClick={() => addWorkGroup.current()}>
-          <p>Add Work Experience</p>
-        </AddButton>
+        <FormWorkGroup 
+          newWorkGroup ={newWorkGroup} 
+          setNewWorkGroup={setNewWorkGroup} 
+          addWorkGroup={addWorkGroup}
+          />
+        <AddGroup onClick={() => addWorkGroup.current()}
+          text={"Add Work Experience"}
+        />
         <FormSectionDivider content={"Education"} />
 
         <FormInput size={"full"} label={"College/University"} placeholder={"Harvard University"} name={"school"} type={"text"} />
@@ -126,7 +125,10 @@ const ProfileSection = () => {
           <FormInput size={"half"} label={"Graduation Year"} placeholder={"16-01-2021"} name={"gradyear"} type={"date"} />
           <FormInput size={"half"} label={"GPA"} placeholder={"4.8"} name={"gpa"} type={"date"} />
         </FormHalfContainer>
-
+        
+        <AddGroup
+          text={"Add Education"}
+        />
         <FormSectionDivider content={"Contact Information"} />
 
         <FormHalfContainer>
@@ -143,8 +145,8 @@ const ProfileSection = () => {
             <label>Alternative Phone Number</label>
             <PhoneInput
               placeholder="3 44 736 9000"
-              value={phone}
-              onChange={setPhone} 
+              value={altPhone}
+              onChange={setAltPhone} 
               />
           </FormEachPhoneContainer>
         </FormHalfContainer>

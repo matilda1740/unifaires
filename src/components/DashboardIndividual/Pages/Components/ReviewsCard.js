@@ -15,7 +15,7 @@ export const ReviewsWrapper = styled.section`
     width: 100%;
     height: 100%; 
     display: flex;
-    flex-direction: column wrap;
+    flex-flow: column wrap;
     overflow-x: scroll;
     margin: 20px 0;
     border-radius: 8px;
@@ -27,12 +27,12 @@ export const ReviewsWrapper = styled.section`
 
 export const ReviewsCardStyle = styled.div`
     width: 100%;
-    height: 160px;
+    min-height: 160px;
     padding: 12px;
     display: flex;
     flex-direction: column;
     :nth-of-type(2){
-        margin-top: 20px;
+        margin-top: 10px;
     }
     :hover { 
       cursor: pointer;
@@ -69,6 +69,11 @@ export const ReviewsCardStyle = styled.div`
         height: 100%;
         font-size: 12px;
     }
+    @media screen and (max-width: 480px) {
+        :nth-child(n+1){
+          margin-top: 10px;
+        }
+    }
 `;
 
 const RatingsWrapper = styled.div`
@@ -86,6 +91,9 @@ const RatingsWrapper = styled.div`
       &.rating_box{
         width: 20%;
         /* align-items: flex-end; */
+        @media screen and (max-width: 480px) {
+          width: 70%;
+        }
     }
     &.center {
         width: 100%;

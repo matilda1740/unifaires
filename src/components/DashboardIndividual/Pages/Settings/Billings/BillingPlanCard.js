@@ -61,7 +61,6 @@ const BillingPlanCardStyle = styled.div`
         }      
     }
 
-
 `;
 
 const BillingPlanCard = (props) => {

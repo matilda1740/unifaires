@@ -51,6 +51,9 @@ const FilterDropDownStyle = styled.div`
     &.jobs{
         margin-left: 700px;
     }
+    @media screen and (max-width: 480px) {
+        &.courses, &.jobs { margin-left: 150px }
+    }
 `;
 
 

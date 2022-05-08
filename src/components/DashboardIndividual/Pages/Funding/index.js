@@ -68,7 +68,7 @@ const FundingSection = () => {
                         <Link                                
                         href={{
                                 pathname: "/individual/funding/[id]",
-                                query: { id: job.fundingID, data: {job} },
+                                query: { id: job.fundingID},
                             }}>
                             <FundingCard
                                 key={job.fundingID} className="module_row_jobs_card"

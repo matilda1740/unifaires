@@ -45,25 +45,28 @@ export const FormSelectBoxStyle = styled.div`
 
 export default function FormSelectBox(props) {
     const { label, name, placeholder } = props;
-    const [age, setAge] = React.useState('');
-
+    const [gender, setGender] = React.useState('');
     const handleChange = (event) => {
-        setAge(event.target.value);
+        setGender(event.target.value);
     };    
-  return (
+
+    const selectionItems = ["Female", "Male"]; 
+    return (
     <FormSelectBoxStyle>
         <label>{label}</label>
         <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
-        {/* <InputLabel id="demo-simple-select-standard-label">{label}</InputLabel> */}
         <Select
             labelId="demo-simple-select-standard-label"
             id="demo-simple-select-standard"
-            value={age}
+            value={gender}
             onChange={handleChange}
             label={label}
         >
-            <MenuItem value={"female"}>Female</MenuItem>
-            <MenuItem value={"male"}>Male</MenuItem>
+        {
+            selectionItems.map( item => (
+                <MenuItem value={item}>{item}</MenuItem>
+            ))
+        }
         </Select>
         </FormControl>
     </FormSelectBoxStyle>

@@ -21,6 +21,9 @@ export const InstructorWrapper = styled.section`
     margin: 20px 0;
     border-radius: 8px;
     padding: 12px;
+    @media screen and (max-width: 480px) {
+        flex-direction: column;
+    }
 `;
 
 export const InstructorCardStyle = styled.div`
@@ -60,7 +63,11 @@ export const InstructorCardStyle = styled.div`
     }
 
     p{ font-size: 12px;}
-
+    @media screen and (max-width: 480px) {
+        :nth-child(n+1){
+          margin-top: 10px;
+        }
+    }
 `;
 
 const IconOverTextWrapper = styled.div`
@@ -87,7 +94,7 @@ const IconOverTextStyle = styled.div`
       }
 `;
 
-const IconOverText = ({icon, text}) => {
+export const IconOverText = ({icon, text}) => {
 
   return (
     <IconOverTextStyle>

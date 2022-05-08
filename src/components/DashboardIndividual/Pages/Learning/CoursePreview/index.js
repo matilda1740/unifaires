@@ -4,11 +4,12 @@ import Text from 'components/Layout/Text';
 import Heading from 'components/Layout/Heading';
 import FormSectionDivider from '../../Settings/Components/FormSectionDivider';
 import VideoPlayer from '../../Components/VideoPlayer';
-import { SectionHeading } from 'components/DashboardBusiness/business.style';
+import { ModuleSectionHeader, SectionHeading } from 'components/DashboardBusiness/business.style';
 import { ArticlesCard, BooksCard, RecommendationSectionWrapper } from '../../Components/Recommendations';
 
 import BookBg from 'public/images/dashboard/Books.png'
 import Thumbnail from 'public/images/dashboard/ThumbnailCourse.png'
+import BackURLModule from '../../Components/BackURLModule';
 
 
 export const CoursePreviewWrapper = styled.section`
@@ -100,6 +101,12 @@ export default function CoursePreview({title, video, description }) {
     }
   return (
     <CoursePreviewStyle>
+        <ModuleSectionHeader>
+            <BackURLModule 
+            text="My Courses" 
+            prevPath="/individual/learning/courses"
+            />
+        </ModuleSectionHeader>    
         <Heading as={"h5"} content={"JavaScript Complete Beginners Course For Web 2.0"} />
         {/* VIDEO */}
         <VideoPlayer 
@@ -119,12 +126,12 @@ export default function CoursePreview({title, video, description }) {
         </SectionHeading> 
 
         <RecommendationSectionWrapper>
-            {/* {
+            {
                 recommendations.books.map( book => (
                     <BooksCard url={book.url} title={book.title} author={book.author}/>
                 ))
-            } */}
-            {
+            }
+            {/* {
                 recommendations.articles.map( article => (
                     <ArticlesCard 
                         thumbnail={article.Thumbnail}
@@ -133,7 +140,7 @@ export default function CoursePreview({title, video, description }) {
                         author={article.author}
                         />
                 ))
-            }
+            } */}
         </RecommendationSectionWrapper>
     </CoursePreviewStyle>
   )

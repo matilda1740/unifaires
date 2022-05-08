@@ -60,8 +60,8 @@ const SpecificCourseSection = () => {
     <ModuleSectionWrapper>
       <ModuleSectionHeader>
         <BackURLModule 
-          // text={query.text} 
-          // prevPath={prevPath}
+          text="My Courses" 
+          prevPath="/individual/learning/courses"
         />
         <div className="right_div">
           <Link href={{
@@ -80,7 +80,13 @@ const SpecificCourseSection = () => {
           </div>
         </div>
         <div className="col2">
-          <Heading as="h5" content={"JavaScript Complete Beginners Course For Web 2.0"}/>
+          <Link href={{
+            pathname: "/individual/learning/courses/preview/[id]",
+            query: { id: router.query.id}
+            }}>
+            <Heading as="h5" content={"JavaScript Complete Beginners Course For Web 2.0"}/>          
+          </Link>
+          {/* <Heading as="h5" content={"JavaScript Complete Beginners Course For Web 2.0"}/> */}
           <Text as="p" content={"IBM is recognized as a cognitive solutions and cloud platform company with one purpose - to be essential to the world. We do this in part through innovative learning and credentialing programs that help develop and recognize the talent that fuels innovation to change the world. IBM's Digital Badge Program represents our latest endeavor for recognizing this talent through secure, verifiable digital credentials representing skill, achievement, and contribution. Earn and share your badge today!"} />
 
           <div className="selection_section">

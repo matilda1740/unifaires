@@ -24,13 +24,12 @@ export const FormEachPhoneContainer = styled.div`
       margin-right: 5px;
     }
 
-    label {
-        color: rgba(18, 53, 91, 0.5);
-    }
+  label {
+    color: rgba(18, 53, 91, 0.5);
+  }
   .PhoneInput{
-        margin: 10px 0 15px 0;
-        width: 99%;
-
+    margin: 10px 0 15px 0;
+    width: 99%;
     .PhoneInputCountry{
       .PhoneInputCountryIcon {
         box-shadow: 0 0 0 0;
@@ -45,11 +44,21 @@ export const FormEachPhoneContainer = styled.div`
         border-right: none;   
         font-weight: 500;
 
+      ::placeholder{
+          font-weight: 500;
+          color: rgba(18, 53, 91, 1);
+      }   
+      :focus {
+        color: rgba(88, 50, 218, 1);
         ::placeholder{
-            font-weight: 500;
-            color: rgba(18, 53, 91, 1);
-        }   
+          color: rgba(88, 50, 218, 1);
+        }
+      }
     }
+  }
+  @media screen and (max-width: 480px) {
+    label{ font-size: 12px; }
+    /* .PhoneInput{ width: 50%;} */
   }
 `;
 

@@ -19,12 +19,18 @@ import dashCard from 'public/images/dashboardCard.png'
 import paypal from 'public/images/partners/paypal.svg'
 import DropDownList from '../Components/DropDownList';
 import FilterDropDownComponent from '../Components/FilterDropDown';
+import SwipeableComponent from '../Components/SwipeableComponent';
 
 const StartCoursesSection = () => {
   const {userOptions} = userModule;
 
-  const [show, setShow ] = useState(false);
-  const toggleDropDown = () => setShow(!show)
+  const [showCourses, setShowCourses ] = useState(false);
+  const [showJobs, setShowJobs ] = useState(false);
+  const [showCerts, setShowCerts ] = useState(false);
+  const toggleCoursesDropDown = () => setShowCourses (!showCourses)
+  const toggleJobsDropDown = () => setShowJobs(!showJobs)
+  const toggleCertsDropDown = () => setShowCerts(!showCerts)
+
 
   return (
     <>
@@ -45,8 +51,8 @@ const StartCoursesSection = () => {
                 <div className="counter"><span>4</span></div>
             </HeadingRight>
             </div>
-
-            <div className="bottom_row">
+            <SwipeableComponent />           
+            <div className="bottom_row dashboard_slides">
                 <DashboardBadge>
                     <div className="col1">
                         <Text as="p" content={"My Learning"} />
@@ -66,6 +72,7 @@ const StartCoursesSection = () => {
                 <img src={workIcon?.src} alt="Learn" /> 
                     </div>
                 </DashboardBadge>
+                
                 <DashboardBadge>
                     <div className="col1">
                         <Text as="p" content={"My Certifications & Badges"} />
@@ -80,20 +87,20 @@ const StartCoursesSection = () => {
         </ModuleHeading>
 
         <ModuleSection>
-        <SectionHeading className="title_row">
-            <Heading as="h5" content={"My Courses"}></Heading>
-                <FilterSeeAllContainer>
-                    <FilterButton onClick={toggleDropDown} className="courses_section">
-                        <Text as="p" content={"FILTER"} />
-                        <img src={arrowDownIcon?.src}  alt="Arrow" />
-                    </FilterButton>
-                    <Link href="/">See all ></Link>
-                </FilterSeeAllContainer>
-        </SectionHeading> 
-        <FilterDropDownComponent
-            data={filterData.courses}
-            variant={ show ? "show_dropdown filter courses" : "hide_dropdown filter"}
-        /> 
+            <SectionHeading className="title_row">
+                <Heading as="h5" content={"My Courses"}></Heading>
+                    <FilterSeeAllContainer>
+                        <FilterButton onClick={toggleCoursesDropDown} className="courses_section">
+                            <Text as="p" content={"FILTER"} />
+                            <img src={arrowDownIcon?.src}  alt="Arrow" />
+                        </FilterButton>
+                        <Link href="/">See all ></Link>
+                    </FilterSeeAllContainer>
+            </SectionHeading> 
+            <FilterDropDownComponent
+                data={filterData.courses}
+                variant={ showCourses ? "show_dropdown filter courses" : "hide_dropdown filter"}
+            /> 
 
         {
             userOptions.map(( section => (
@@ -123,10 +130,6 @@ const StartCoursesSection = () => {
                         query: { id: course.courseID }
                         }}>Start Course
                     </Link>                    
-                    {/* <Link 
-                        href="/individual/learning/courses/start"
-                        >Start Course
-                    </Link>                     */}
                 </CoursesStartCard>
                 )))
                 }
@@ -142,7 +145,7 @@ const StartCoursesSection = () => {
         <SectionHeading className="title_row">
             <Heading as="h5" content={"My Job Applications"}></Heading>
             <FilterSeeAllContainer>
-                <FilterButton onClick={toggleDropDown}>
+                <FilterButton onClick={toggleJobsDropDown}>
                     <Text as="p" content={"FILTER"} />
                     <img src={arrowDownIcon?.src}  alt="Arrow" />
                 </FilterButton>
@@ -151,7 +154,7 @@ const StartCoursesSection = () => {
         </SectionHeading>  
         <FilterDropDownComponent
             data={filterData.jobs}
-            variant={ show ? "show_dropdown filter jobs" : "hide_dropdown filter"}
+            variant={ showJobs ? "show_dropdown filter jobs" : "hide_dropdown filter"}
         /> 
         {
             userOptions.map(( section => (
@@ -186,7 +189,7 @@ const StartCoursesSection = () => {
         <SectionHeading className="title_row">
             <Heading as="h5" content={"My Certifications & Badges"}></Heading>
             <FilterSeeAllContainer>
-                <FilterButton>
+                <FilterButton onClick={toggleCertsDropDown}>
                     <Text as="p" content={"FILTER"} />
                     <img src={arrowDownIcon?.src}  alt="Arrow" />
                 </FilterButton>
@@ -195,7 +198,7 @@ const StartCoursesSection = () => {
         </SectionHeading>        
         <FilterDropDownComponent
             data={filterData.jobs}
-            variant={ show ? "show_dropdown filter jobs" : "hide_dropdown filter"}
+            variant={ showCerts ? "show_dropdown filter jobs" : "hide_dropdown filter"}
         /> 
         <ModuleRowEmpty>
             <Text as="p" content={"Oops, you haven’t earned a certificate yet."} />

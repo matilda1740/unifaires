@@ -8,11 +8,17 @@ const BillingButtonStyle = styled.button`
     justify-content: center;
     margin: 0 !important;
     font-weight: 500;
+    @media screen and (max-width: 480px) {
+        &.white_btn, &.purple_btn, &.blue_btn{
+            width: 180px !important;
+            font-size: 12px;
+        }
+    }
 
     /* BILLING SECTION BUTTONS */
     &.white_btn, &.purple_btn, &.blue_btn{
         border-radius: 36px !important;
-        width: 160px !important;
+        width: 160px;
         height: 35px !important;
     }
     &.white_btn {

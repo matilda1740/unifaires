@@ -8,7 +8,7 @@ const FormRadioButtonStyle = styled.div`
     font-weight: 300 ;
     display: flex;
     label {
-        margin-right: 100px;
+        width: 200px;
         color: rgba(47, 48, 52, 1);
 
     }
@@ -35,7 +35,9 @@ const FormRadioButtonStyle = styled.div`
         width: 45px;
         height: 20px;
         position: absolute;
-        margin-left: 177px;
+        /* margin-left: 177px; */
+        margin-left: 200px;
+
         .toggle_pill{
             position: relative;
             height: 20px;
@@ -76,6 +78,10 @@ const FormRadioButtonStyle = styled.div`
         .toggle_pill {
             background: rgba(238, 234, 251, 1);
         }
+    }
+
+    @media screen and (max-width: 480px) {
+        /* .pill_container { width: 100%; } */
     }
 `;
 

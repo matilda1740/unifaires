@@ -493,6 +493,8 @@ export const userModule = {
   company: 'Unifaires',
   suite: 'Individual',
   userType: 'individual',
+  userID: 'INDIV239THUSER',
+  name: 'Andikan Bassey',
   userOptions: [
     {
     // courses: [
@@ -798,7 +800,58 @@ export const userModule = {
     messaging: [
       {
         status: 1, //Determine Deleted or not 1=active 0 =deleted
-        from: "Anna Smith",
+        name: "Anna Smith", 
+        userID: "AS239TH",
+        messages: [
+          {
+            text: "Hello I’m excited to be here. I have no idea why you might be interested",
+            createdAt: "Aug 29",
+            status: 1, // Read or not read
+            isFrom: 0
+          }, 
+          {
+            text: "Tenetur quod quidem in voluptatem corporis dolorum dicta sit ",
+            createdAt: "",
+            status: 1 , // Read or not read
+            isFrom: 1
+          }, 
+          {
+            text: "Hello I’m excited to be here. I have no idea why you might be interested",
+            createdAt: "",
+            status: 1 , // Read or not read
+            isFrom: 0
+          }, 
+          
+        ]
+      },
+      {
+        status: 1, //Determine Deleted or not 1=active 0 =deleted
+        name: "John Smith", userID: "JS239TH",
+        messages: [
+          {
+            text: "Hello I’m excited to be here. I have no idea why you might be interested",
+            createdAt: "Aug 29",
+            status: 1, // Read or not read
+            isFrom: 1
+          }, 
+          {
+            text: "Hello I’m excited to be here. I have no idea why you might be interested",
+            createdAt: "",
+            status: 1 , // Read or not read
+            isFrom: 0
+          }, 
+          {
+            text: "Hello I’m excited to be here. I have no idea why you might be interested",
+            createdAt: "",
+            status: 1 , // Read or not read
+            isFrom: 1
+          }, 
+          
+        ]
+      },
+      {
+        status: 1, //Determine Deleted or not 1=active 0 =deleted
+        from: [{ name: "John Smith", userID: "JS239TH"}],
         messages: [
           {
             text: "Hello I’m excited to be here. I have no idea why you might be interested",
@@ -823,7 +876,107 @@ export const userModule = {
       },
       {
         status: 1, //Determine Deleted or not 1=active 0 =deleted
-        from: "John Smith",
+        from: [{ name: "John Smith", userID: "JS239TH"}],
+        messages: [
+          {
+            text: "Hello I’m excited to be here. I have no idea why you might be interested",
+            createdAt: "Aug 29",
+            status: 1, // Read or not read
+            isFrom: 0
+          }, 
+          {
+            text: "Hello I’m excited to be here. I have no idea why you might be interested",
+            createdAt: "",
+            status: 1 , // Read or not read
+            isFrom: 1
+          }, 
+          {
+            text: "Hello I’m excited to be here. I have no idea why you might be interested",
+            createdAt: "",
+            status: 1 , // Read or not read
+            isFrom: 0
+          }, 
+          
+        ]
+      },
+      {
+        status: 1, //Determine Deleted or not 1=active 0 =deleted
+        from: [{ name: "John Smith", userID: "JS239TH"}],
+        messages: [
+          {
+            text: "Hello I’m excited to be here. I have no idea why you might be interested",
+            createdAt: "Aug 29",
+            status: 1, // Read or not read
+            isFrom: 0
+          }, 
+          {
+            text: "Hello I’m excited to be here. I have no idea why you might be interested",
+            createdAt: "",
+            status: 1 , // Read or not read
+            isFrom: 1
+          }, 
+          {
+            text: "Hello I’m excited to be here. I have no idea why you might be interested",
+            createdAt: "",
+            status: 1 , // Read or not read
+            isFrom: 0
+          }, 
+          
+        ]
+      },
+      {
+        status: 1, //Determine Deleted or not 1=active 0 =deleted
+        from: [{ name: "John Smith", userID: "JS239TH"}],
+        messages: [
+          {
+            text: "Hello I’m excited to be here. I have no idea why you might be interested",
+            createdAt: "Aug 29",
+            status: 1, // Read or not read
+            isFrom: 0
+          }, 
+          {
+            text: "Hello I’m excited to be here. I have no idea why you might be interested",
+            createdAt: "",
+            status: 1 , // Read or not read
+            isFrom: 1
+          }, 
+          {
+            text: "Hello I’m excited to be here. I have no idea why you might be interested",
+            createdAt: "",
+            status: 1 , // Read or not read
+            isFrom: 0
+          }, 
+          
+        ]
+      },
+      {
+        status: 1, //Determine Deleted or not 1=active 0 =deleted
+        from: [{ name: "John Smith", userID: "JS239TH"}],
+        messages: [
+          {
+            text: "Hello I’m excited to be here. I have no idea why you might be interested",
+            createdAt: "Aug 29",
+            status: 1, // Read or not read
+            isFrom: 0
+          }, 
+          {
+            text: "Hello I’m excited to be here. I have no idea why you might be interested",
+            createdAt: "",
+            status: 1 , // Read or not read
+            isFrom: 1
+          }, 
+          {
+            text: "Hello I’m excited to be here. I have no idea why you might be interested",
+            createdAt: "",
+            status: 1 , // Read or not read
+            isFrom: 0
+          }, 
+          
+        ]
+      },
+      {
+        status: 1, //Determine Deleted or not 1=active 0 =deleted
+        from: [{ name: "John Smith", userID: "JS239TH"}],
         messages: [
           {
             text: "Hello I’m excited to be here. I have no idea why you might be interested",
@@ -947,5 +1100,6 @@ export const businessModule = {
 export const filterData = {
   courses: [ "Salary", "Location", "Skills", "Experience", "Company Size" ],
   funding: [ "All", "In Progress", "Granted", "Rejected"],
-  jobs: ["New Jobs", "InProgress"]
+  jobs: ["New Jobs", "InProgress"],
+  certs_badges: ["Badges", ""]
 }

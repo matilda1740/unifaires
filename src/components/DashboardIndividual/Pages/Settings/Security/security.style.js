@@ -46,10 +46,20 @@ export const DeviceHeader = styled.div`
             font-weight: 300;
         }
     }
-
-
-    h6 {
-
+    @media screen and (max-width: 480px) {
+        height: 210px;
+        .top_div { 
+            height: 130px; 
+            flex-direction: column;
+            align-items: flex-start;
+            img {
+                width: 50%;
+            }
+            button{ 
+                width: 80%; 
+                margin: 10px 0;
+            }
+        }
     }
 
 `;

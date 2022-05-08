@@ -1,17 +1,22 @@
 import styled from 'styled-components';
 
-export const AddButton = styled.div`
-color : #5832DA;
-font-weight: 300;
-    :hover{cursor: pointer;}
-`;
-
 export const SkillsWrapper = styled.section`
     width: 100%;
     height: 100%;
     display: flex;
     flex-flow: row wrap;
     margin: 5px 0 10px 0;
+
+    @media screen and (max-width:480px){
+        flex-flow: column wrap;
+        justify-content: flex-start;
+        height: 50px;
+        overflow-x: scroll;
+        margin: -10px 0 10px 0;
+        ::-webkit-scrollbar{
+            display: none; /* This works */
+        }
+    }
 `;
 
 export const SkillsButton = styled.div`
@@ -70,3 +75,4 @@ export const Button = styled.button`
         align-self: flex-end;
     }
 `;
+

@@ -30,7 +30,7 @@ const HelpSectionWrapper = (props) => {
 
   return (
     <>
-        <ModuleHeading>
+        <ModuleHeading className="no_header_modules">
             <div className="top_row">
             <HeadingLeft>
                 <Heading as="h4" content={"Help"}/>
