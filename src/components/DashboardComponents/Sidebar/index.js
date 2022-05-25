@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import Text from 'components/Layout/Text';
 import Heading from 'components/Layout/Heading';
-import { SectionHeader } from '../../globalApp.style';
-import { SectionWrapper, SidebarCard,  ProfileCard, DashboardRow } from '../business.style' ;
+import { SectionHeader } from '../../../globalApp.style';
+import { SectionWrapper, SidebarCard,  ProfileCard, DashboardRow } from '../../../DashboardBusiness/business.style' ;
 import { businessModule } from 'common/data/appData';
 import { useRouter } from 'next/router'
 import accountIcon from 'public/images/dashboard/Dashboard/Iconly/Light-outline/Account.svg'
@@ -16,7 +16,7 @@ import settingIcon from 'public/images/dashboard/Dashboard/Iconly/Light-outline/
 import helpIcon from 'public/images/dashboard/Dashboard/Iconly/Light-outline/Help.svg'
 import feedbackIcon from 'public/images/dashboard/Dashboard/Iconly/Light-outline/Feedback.svg'
 
-import badgeIcon from 'public/images/dashboard/Dashboard/badge.svg'
+// import badgeIcon from 'public/images/dashboard/Dashboard/badge.svg'
 import profileImg from 'public/images/dashboard/Dashboard/icon.svg'
 
 
@@ -38,7 +38,7 @@ const SidebarModule = () => {
             <Text as="p" content={"info@janicesmith.com"}/>
             <Text as="p" content={"Harvard University"}/>
             </div>
-            <img className="profile_badge" src={badgeIcon?.src} alt="Badge"/> 
+            {/* <img className="profile_badge" src={badgeIcon?.src} alt="Badge"/>  */}
 
         </ProfileCard>
         <DashboardRow className="dash_row">

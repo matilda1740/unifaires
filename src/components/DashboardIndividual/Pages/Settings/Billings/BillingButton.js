@@ -8,15 +8,18 @@ const BillingButtonStyle = styled.button`
     justify-content: center;
     margin: 0 !important;
     font-weight: 500;
-    @media screen and (max-width: 480px) {
-        &.white_btn, &.purple_btn, &.blue_btn{
-            width: 180px !important;
-            font-size: 12px;
-        }
-    }
 
+    &.regular_btn {
+        border-radius: 8px;
+        border: 1px solid rgba(18, 53, 91, 1);
+        color: #12355B;
+        width: 150px !important;
+        height: 45px !important;
+        background: transparent;
+        margin: 20px 0 0 0 !important;
+    }
     /* BILLING SECTION BUTTONS */
-    &.white_btn, &.purple_btn, &.blue_btn{
+    &.white_btn, &.purple_btn, &.blue_btn, &.primary_btn{
         border-radius: 36px !important;
         width: 160px;
         height: 35px !important;
@@ -30,6 +33,10 @@ const BillingButtonStyle = styled.button`
         color: rgba(255, 255, 255, 1);
     }
 
+    &.primary_btn {
+        background-color: rgba(88, 50, 218, 1);
+        color: rgba(255, 255, 255, 1);
+    }
     /* FUNDING SECTION BUTTONS */
     &.granted_btn, &.rejected_btn, &.waiting_btn{
         width: 100px  !important;
@@ -50,14 +57,44 @@ const BillingButtonStyle = styled.button`
         border: none !important;
         background: rgba(18, 53, 91, 0.1) !important;
     }
+
+    /* SKILL MATCHING BUTTONS */
+    &.skills_btn {
+        width: 150px !important;
+        height: 48px !important;
+        border: none !important;
+        border-radius: 8px !important;
+        font-weight: 300;
+    }
+
+    /* BUTTON POSITIONS */
+    &.beginning {
+        align-self: flex-start;
+    }
+    &.end {
+        align-self: flex-end;
+    }
+    &.center {
+        align-self: center ;
+    }
+
+    @media screen and (max-width: 480px) {
+        &.regular_btn {
+            height: 80px !important;
+        }
+        &.white_btn, &.purple_btn, &.blue_btn{
+            width: 180px !important;
+            font-size: 12px;
+        }
+    }
 `;
 
 const BillingButton = (props) => {
 
-    const { variant, text, type="button"} = props;
+    const { variant, text, type="button", position} = props;
 
     return (
-        <BillingButtonStyle className={`${variant}_btn`}>{text}</BillingButtonStyle>
+        <BillingButtonStyle onClick={() => props.openModal} className={`${variant}_btn ${position}`}>{text}</BillingButtonStyle>
     );
 }
 export default BillingButton;

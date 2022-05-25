@@ -5,7 +5,7 @@ import Heading from 'components/Layout/Heading';
 
 import SectionWrapper, { FilterSeeAllContainer, FilterButton, ModuleColumn, ModuleHeading, HeadingLeft, HeadingRight,ToggleButton, OptionsRow,OptionButton, ModuleSection, SectionHeading,  ModuleRow, ModuleRowEmpty, CoursesResumeCard, CertsCard, BadgesCard, JobCard, DashboardBadge, SearchBar } from '../../../DashboardBusiness/business.style';
 
-import { userModule } from 'common/data/appData';
+import { individualModule } from 'common/data/appData';
 
 import notificationIcon from 'public/images/dashboard/Dashboard/Iconly/Light-outline/Notification.svg'
 import showIcon from 'public/images/dashboard/Dashboard/Iconly/Light-outline/Show.svg'
@@ -22,9 +22,10 @@ import cisco from 'public/images/dashboard/Resume Course/cisco.png'
 
 import bookIcon from 'public/images/dashboard/book.svg'
 import threeUsersIcon from 'public/images/dashboard/3User.svg'
+import DashboardBadges from 'components/DashboardComponents/DashboardBadge';
 
 const ResumeCoursesSection = () => {
-  const {userOptions} = userModule;
+  const {userOptions} = individualModule;
 
   const [state, setState] = useState({
   });
@@ -50,7 +51,12 @@ const ResumeCoursesSection = () => {
             </div>
 
             <div className="bottom_row">
-                <DashboardBadge>
+                <DashboardBadges 
+                    label={"My Learning"}
+                    number={980}
+                    icon={coursesIcon}
+                />
+                {/* <DashboardBadge>
                     <div className="col1">
                         <Text as="p" content={"My Learning"} />
                         <span>980</span>
@@ -58,7 +64,7 @@ const ResumeCoursesSection = () => {
                     <div className="icon">
                 <img src={coursesIcon?.src} alt="Learn" /> 
                     </div>
-                </DashboardBadge>
+                </DashboardBadge> */}
 
                 <DashboardBadge>
                     <div className="col1">

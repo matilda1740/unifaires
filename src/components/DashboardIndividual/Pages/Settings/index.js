@@ -5,13 +5,13 @@ import {useRouter} from 'next/router'
 import Text from 'components/Layout/Text';
 import Heading from 'components/Layout/Heading';
 
-import SectionWrapper, {FilterSeeAllContainer, FilterButton, ModuleColumn, ModuleHeading, HeadingLeft, HeadingRight,ToggleButton, OptionsRow,OptionButton, ModuleSection, SectionHeading,  ModuleRow, ModuleRowEmpty, CoursesStartCard, JobCard, DashboardBadge, SearchBar } from '../../../DashboardBusiness/business.style';
+import SectionWrapper, {FilterSeeAllContainer, FilterButton, ModuleColumn, ModuleHeading, HeadingLeft, HeadingRight,ToggleButton, OptionsRow,OptionButton, ModuleSection, SectionHeading,  ModuleRow, ModuleRowEmpty, CoursesStartCard, JobCard, SearchBar } from '../../../DashboardBusiness/business.style';
 
 import { MessagingSectionWrapper, BoxWrapper, ChatForm, ColumnConversation, ColumnChat, ConversationHeading, ConversationLinks, DaySectionDivider } from '../Messaging/messaging.style';
 
 import ConversationBox from '../Messaging/ConversationBox';
 
-import { userModule } from 'common/data/appData';
+import { individualModule } from 'common/data/appData';
 
 import notificationIcon from 'public/images/dashboard/Dashboard/Iconly/Light-outline/Notification.svg'
 import showIcon from 'public/images/dashboard/Dashboard/Iconly/Light-outline/Show.svg'
@@ -24,10 +24,10 @@ import searchIcon from 'public/images/dashboard/Dashboard/search.svg'
 import settingsIcon from 'public/images/dashboard/settings/Setting.svg'
 import { ModuleHeader, ProfileForm } from './settings.style';
 import ProfileSection from './Profile';
-import TabBottomNavigation from '../Components/TabBottomNavigation'
+import TabBottomNavigation from '../../Components/TabBottomNavigation'
 
 const SettingsSection = (props) => {
-  const {userOptions} = userModule;
+  const {userOptions} = individualModule;
 
     const router = useRouter();
 

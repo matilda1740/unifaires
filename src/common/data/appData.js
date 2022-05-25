@@ -1,7 +1,7 @@
 
 import logo from 'common/assets/images/logoUnifaires.svg'
-import paypal from 'public/images/partners/paypal.svg'
-
+// import paypal from 'public/images/partners/paypal.svg'
+import paypal from 'common/assets/images/tesla.svg'
 /* -------- About Us data section --------- */
 
 export const aboutUs = {
@@ -78,8 +78,6 @@ export const aboutUs = {
     description: 'We’ll never tell your current company or a third-party recruiter about your job search, we respect your privacy. And it’s completely free to search.'
     },  ]
 }
-
-
 /* -------- Contact Card data section --------- */
 export const contactCard = {
   heading: 'Need our help?',
@@ -449,14 +447,6 @@ export const pricingFeatures = {
     }
   ]
 };
-// /* ------------------------------------ */
-// // Collaborators data section
-// /* ------------------------------------ */
-// import microsoft from 'common/assets/image/appClassic/microsoft1.svg';
-// import coursera from 'common/assets/image/appClassic/coursera.svg';
-// import tesla from 'common/assets/image/appClassic/tesla.svg';
-// import emory from 'common/assets/image/appClassic/emory-university.svg';
-// import ibm from 'common/assets/image/appClassic/ibm.svg';
 
 /* -------- Login data section --------- */
 export const login = {
@@ -487,9 +477,16 @@ export const forgotPass = {
   buttonText: 'Send Reset Link'
 }
 
-/* -------- USER MODULE --------- */
+export const userDetails = {
+  userID: 'BUSI239THUSER',
+  firstname: 'Matilda',
+  lastname: "Mwendwa",
+  // userType: "individual",
+  userType: "business",
+}
+/* -------- INDIVIDUAL MODULE --------- */
 
-export const userModule = {
+export const individualModule = {
   company: 'Unifaires',
   suite: 'Individual',
   userType: 'individual',
@@ -1079,19 +1076,227 @@ export const businessModule = {
   company: 'Unifaires',
   suite: 'Business Suite',
   userType: 'business',
+  userID: 'BUSI239THUSER',
+  firstname: 'Matilda',
+  lastname: "Mwendwa",
+  accounts: [
+    { id: "C1", title: "courses", number: 873 },
+    { id: "O2", title: "organizations", number: 412 },
+    { id: "I1", title: "instructors", number: 21 },
+    { id: "S1", title: "students", number: 2321 },
+    { id: "I2", title: "invites", number: 12 },
+  ],
   userOptions: [{
-    courses: [
+    invites: [
       {
-        title: "Data Science for IoT",
-        dateAdded: "12th Jan 2021",
-        thumbnail: "",
-        views: "",
-        members: ""
-      }
+        id: "OADW519",
+        name: "Oreoluwa Adeyemi",
+        email: "oreoluwanimi@yahoo.com",
+        role: "Instructor",
+        status: "accepted",
+        image: ""
+      },
+      {
+        id: "RFQP432",
+        name: "Robert Fox",
+        email: "robert.fox@yahoo.com",
+        role: "Student",
+        status: "pending",
+        image: ""
+      },
+      {
+        id: "9OAS765",
+        name: "Serena Van Der Woodsen",
+        email: "serena@yahoo.com",
+        role: "Instructor",
+        status: "rejected",
+        image: ""
+      },
+      {
+        id: "BKL555T",
+        name: "Nathaniel Archibald",
+        email: "nate42archibald@yahoo.com",
+        role: "Instructor",
+        status: "accepted",
+        image: ""
+      },
     ],
-    jobs: [],
-    scholarships: [],
-    badges: []
+    students: [
+      {
+        id: "STUD4123",
+        image: "",
+        name: "Simon Mudessar",
+        degree: "Law Student",
+        description: "Simon is a top instructure with over 12 years experienc in Law.",
+        coursesNo: 12,
+        certificatesNo: 7,
+      },
+      {
+        id: "STUD4124",
+        image: "",
+        name: "Simon Mudessar",
+        degree: "Law Student",
+        description: "Simon is a top instructure with over 12 years experienc in Law.",
+        coursesNo: 12,
+        certificatesNo: 7,
+      },      
+      {
+        id: "STUD4125",
+        image: "",
+        name: "Simon Mudessar",
+        degree: "Law Student",
+        description: "Simon is a top instructure with over 12 years experienc in Law.",
+        coursesNo: 12,
+        certificatesNo: 7,
+      },
+      {
+        id: "STUD4126",
+        image: "",
+        name: "Simon Mudessar",
+        degree: "Law Student",
+        description: "Simon is a top instructure with over 12 years experienc in Law.",
+        coursesNo: 12,
+        certificatesNo: 7,
+      },
+      {
+        id: "STUD4127",
+        image: "",
+        name: "Simon Mudessar",
+        degree: "Law Student",
+        description: "Simon is a top instructure with over 12 years experienc in Law.",
+        coursesNo: 12,
+        certificatesNo: 7,
+      },
+      {
+        id: "STUD4128",
+        image: "",
+        name: "Simon Mudessar",
+        degree: "Law Student",
+        description: "Simon is a top instructure with over 12 years experienc in Law.",
+        coursesNo: 12,
+        certificatesNo: 7,
+      },
+      {
+        id: "STUD4129",
+        image: "",
+        name: "Simon Mudessar",
+        degree: "Law Student",
+        description: "Simon is a top instructure with over 12 years experienc in Law.",
+        coursesNo: 12,
+        certificatesNo: 7,
+      },
+
+    ],
+    instructors: [
+      {
+        id: "SIM8585",
+        image: "",
+        name: "Simon Mudessar",
+        role: "Top Instructor",
+        company: "Google",
+        preview: "IBM is recognized as a cognitive solutions and cloud platform company with one purpose - to be essential to the world.",
+        registeredNumber: "5K",
+        rating: 4.4,
+        coursesNumber: 12
+      },
+      {
+        id: "SIM8586",
+        image: "",
+        name: "Simon Mudessar",
+        role: "Top Instructor",
+        company: "Google",
+        preview: "IBM is recognized as a cognitive solutions and cloud platform company with one purpose - to be essential to the world.",
+        registeredNumber: "5K",
+        rating: 4.4,
+        coursesNumber: 12
+      },
+      {
+        id: "SIM8587",
+        image: "",
+        name: "Simon Mudessar",
+        role: "Top Instructor",
+        company: "Google",
+        preview: "IBM is recognized as a cognitive solutions and cloud platform company with one purpose - to be essential to the world.",
+        registeredNumber: "5K",
+        rating: 4.4,
+        coursesNumber: 12
+      },
+      {
+        id: "SIM8588",
+        image: "",
+        name: "Simon Mudessar",
+        role: "Top Instructor",
+        company: "Google",
+        preview: "IBM is recognized as a cognitive solutions and cloud platform company with one purpose - to be essential to the world.",
+        registeredNumber: "5K",
+        rating: 4.4,
+        coursesNumber: 12
+      },
+      {
+        id: "SIM8589",
+        image: "",
+        name: "Simon Mudessar",
+        role: "Top Instructor",
+        company: "Google",
+        preview: "IBM is recognized as a cognitive solutions and cloud platform company with one purpose - to be essential to the world.",
+        registeredNumber: "5K",
+        rating: 4.4,
+        coursesNumber: 12
+      },
+      {
+        id: "SIM8590",
+        image: "",
+        name: "Simon Mudessar",
+        role: "Top Instructor",
+        company: "Google",
+        preview: "IBM is recognized as a cognitive solutions and cloud platform company with one purpose - to be essential to the world.",
+        registeredNumber: "5K",
+        rating: 4.4,
+        coursesNumber: 12
+      },
+    ],
+    organizations: [
+      {
+        id: "TECH5109",
+        type: "Technology",
+        company: "google",
+        image: "",
+        staffNo: 32,
+        adminNo: 9,
+      },
+      {
+        id: "TECH4343",
+        type: "Technology",
+        company: "ibm",
+        image: "",
+        staffNo: 32,
+        adminNo: 9,
+      },
+      {
+        id: "TECH3892",
+        type: "Technology",
+        company: "microsoft",
+        image: "",
+        staffNo: 32,
+        adminNo: 9,
+      },
+      {
+        id: "TECH62229",
+        type: "Technology",
+        company: "facebook",
+        image: "",
+        staffNo: 32,
+        adminNo: 9,
+      },
+      {
+        id: "TECH5147",
+        type: "Technology",
+        company: "tesla",
+        image: "",
+        staffNo: 32,
+        adminNo: 9,
+      },
+    ],
   }]
 }
 
@@ -1103,3 +1308,105 @@ export const filterData = {
   jobs: ["New Jobs", "InProgress"],
   certs_badges: ["Badges", ""]
 }
+
+// STATIC DATA TO BE DELETED AFTER DB CONNECTION
+
+export const courses = [
+  // STATUS ZERO INDICATES ALL COURSES NOT STARTED, 1 MEANS IN PROGESS
+      {
+        courseID: 'AK561GH',
+        title: "Introduction to AI",
+        category: "DESIGN",
+        description: "We are looking for an Accountant to manage all financial transactions... ",
+        dateAdded: "12th Jan 2021",
+        thumbnail: 'public/images/dashboardCard.png',
+        lessons: "9",
+        time: "150",
+        students: 12562,
+        status: 0, percentage: 0
+      },
+      {
+        courseID: 'DE561GH',
+        title: "Introduction to AI",
+        category: "DESIGN",
+        description: "We are looking for an Accountant to manage all financial transactions... ",
+        dateAdded: "12th Jan 2021",
+        thumbnail: 'public/images/dashboardCard.png',
+        lessons: "9",
+        time: "150",
+        students: 2,
+        status: 0, percentage: 0
+      },
+        {
+        courseID: 'TECH561GH',
+        title: "Data Mining and Data Science",
+        category: "TECHNOLOGY",
+        description: "We are looking for an Accountant to manage all financial transactions... ",
+        dateAdded: "12th Jan 2021",
+        thumbnail: 'public/images/dashboardCard.png',
+        lessons: "9",
+        time: "150",
+        students: 78,
+        status: 0, percentage: 0
+      },
+      {
+        courseID: 'AK561GH',
+        title: "UI/UX Design using Figma",
+        category: "DESIGN",
+        description: "We are looking for an Accountant to manage all financial transactions... ",
+        dateAdded: "12th Jan 2021",
+        thumbnail: 'public/images/dashboardCard.png',
+        lessons: "9",
+        time: "150",
+        students: 12562,
+        status: 0, percentage: 0
+      },        
+      {
+        courseID: 'MATH561GH',
+        title: "Probability and Statistics",
+        category: "MATHEMATICS",
+        description: "We are looking for an Accountant to manage all financial transactions... ",
+        dateAdded: "12th Jan 2021",
+        thumbnail: "",
+        lessons: "9",
+        time: "150",
+        students: 156,
+        status: 1, percentage: 10
+      },        
+      {
+        courseID: 'PH561GH',
+        title: "Introduction to Philosopy",
+        category: "PHILOSOPY",
+        description: "We are looking for an Accountant to manage all financial transactions... ",
+        dateAdded: "12th Jan 2021",
+        thumbnail: "",
+        lessons: "9",
+        time: "150",
+        students: 789,
+        status: 1, percentage: 33
+      },
+      {
+        courseID: 'QG561GH',
+        title: "Quantitative Analysis",
+        category: "SURVEY",
+        description: "We are looking for an Accountant to manage all financial transactions... ",
+        dateAdded: "12th Jan 2021",
+        thumbnail: "",
+        lessons: "9",
+        time: "150",
+        students: 12562,
+        status: 1, percentage: 55
+      },
+      {
+        courseID: 'PX561GH',
+        title: "Web Development",
+        category: "TECHNOLOGY",
+        description: "We are looking for an Accountant to manage all financial transactions...",
+        dateAdded: "12th Jan 2021",
+        thumbnail: "",
+        lessons: "9",
+        time: "150",
+        students: 262,
+        status: 1, percentage: 47
+      }
+]

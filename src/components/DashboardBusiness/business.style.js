@@ -1,6 +1,29 @@
 import styled from 'styled-components';
 import { themeGet } from '@styled-system/theme-get';
 
+export const SeeAllStyle = styled.div`
+display: flex;
+height: 50px;
+width: 50%;
+justify-content: flex-end;
+align-items: center;
+transition: all 0.3s ease-in-out;
+
+    p,svg {
+        color: rgba(173, 168, 190, 1);
+    }
+    p{ margin-bottom: 0px; }
+    svg {
+        margin: 0 12px 0 8px;
+        width: 12px;
+        height: 10px;
+    }
+
+    :hover{ 
+        cursor: pointer;
+        p,svg { color:rgba(88, 50, 218, 1) ;}
+        }
+`;
 
 export const ModuleSectionWrapper = styled.section`
         /* background: rgba(255, 255, 255, 1); */
@@ -495,14 +518,14 @@ h5{
         justify-content: center;
 
         span{
-color: #12355B; 
+            color: #12355B; 
         }
     }
     a {
-color: rgba(88, 50, 218, 1);
-font-size: 14px;
-line-height: 180%;
-text-transform: uppercase;
+        color: rgba(88, 50, 218, 1);
+        font-size: 14px;
+        line-height: 180%;
+        text-transform: uppercase;
     }
 }
 `;
@@ -1231,10 +1254,12 @@ export const HelpBottomOptions = styled.div`
 export const ModuleColumn = styled.div`
     display:flex;
     flex-direction: column; 
-    background-color: #f8f8f8;
+    /* background-color: #f8f8f8; */
+    background-color: #ffffff;
     padding:40px 30px;
     width: 70%;
     /* height:1400px; */
+    border-right: 4px solid #F3F5F7;
 
     .module_row_jobs {
         height: 100%;

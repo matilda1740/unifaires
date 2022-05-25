@@ -15,7 +15,7 @@ import { DeviceContainer, DeviceHeader } from './security.style';
 import DeviceComponent from './DeviceComponent';
 
 // DATA
-import { userModule } from 'common/data/appData';
+import { individualModule } from 'common/data/appData';
 
 // ICONS
 import settingsIcon from 'public/images/dashboard/settings/Setting.svg'
@@ -27,7 +27,7 @@ import dotIcon from 'public/images/dashboard/dotIcon.svg'
 
 // MAIN FUNCTION
 const SecuritySection = () => {
-  const {userOptions} = userModule;
+  const {userOptions} = individualModule;
 
   const [state, setState] = useState({
   });

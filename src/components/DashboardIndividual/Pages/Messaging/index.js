@@ -9,9 +9,9 @@ import ChatBubble from './ChatBubble';
 import ChatHeading from './ChatHeading';
 import ConversationBox from './ConversationBox';
 
-import SectionWrapper, {FilterSeeAllContainer, FilterButton, ModuleColumn, ModuleHeading, HeadingLeft, HeadingRight,ToggleButton, OptionsRow,OptionButton, ModuleSection, SectionHeading,  ModuleRow, ModuleRowEmpty, CoursesStartCard, JobCard, DashboardBadge, SearchBar, ModuleSectionHeader } from '../../../DashboardBusiness/business.style';
+import SectionWrapper, {FilterSeeAllContainer, FilterButton, ModuleColumn, ModuleHeading, HeadingLeft, HeadingRight,ToggleButton, OptionsRow,OptionButton, ModuleSection, SectionHeading,  ModuleRow, ModuleRowEmpty, CoursesStartCard, JobCard, SearchBar, ModuleSectionHeader } from '../../../DashboardBusiness/business.style';
 
-import { userModule } from 'common/data/appData';
+import { individualModule } from 'common/data/appData';
 
 // UTILITY FUNCTIONS
 
@@ -33,13 +33,13 @@ import optionsIcon from 'public/images/dashboard/dotIcon.svg'
 import readIcon from 'public/images/dashboard/tick.svg'
 import SpecificChatSection from './SpecificChat';
 import useWindowSize from 'hooks/useWindowSize';
-import BackURLModule from '../Components/BackURLModule';
+import BackURLModule from '../../Components/BackURLModule';
 
 // import use
 
 
 const MessagingSection = () => {
-    const {userOptions} = userModule;
+    const {userOptions} = individualModule;
     const [senderID, setSenderID] = useState("AS239TH");
     const sizeWindow = useWindowSize();
     // console.log(sizeWindow)

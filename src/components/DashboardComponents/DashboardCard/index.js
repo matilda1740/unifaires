@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import Text from 'components/Layout/Text';
 import Heading from 'components/Layout/Heading';
-import { SectionHeader } from '../../globalApp.style';
+import { SectionHeader } from '../../../globalApp.style';
 
 const DashboardCard = (props) => {
 

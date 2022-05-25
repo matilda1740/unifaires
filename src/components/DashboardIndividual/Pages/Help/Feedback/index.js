@@ -4,7 +4,7 @@ import Text from 'components/Layout/Text';
 import Heading from 'components/Layout/Heading';
 
 import {HelpHeading, HelpEmojiRow, HelpEmojiDiv} from '../../../../DashboardBusiness/business.style';
-import { userModule } from 'common/data/appData';
+import { individualModule } from 'common/data/appData';
 
 import helpBG from 'public/images/dashboard/Dashboard/helpcenterBG.svg';
 // Emojis
@@ -20,7 +20,7 @@ import emojiChecked from 'public/images/dashboard/emojis/emojiChecked.svg';
 
 
 const HelpFeedback = () => {
-  const {userOptions} = userModule;
+  const {userOptions} = individualModule;
 
   const [state, setState] = useState({
   });

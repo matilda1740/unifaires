@@ -68,17 +68,58 @@ export const InstructorCardStyle = styled.div`
           margin-top: 10px;
         }
     }
+
+
+    /* BUSINESS DASHBOARD */
+    &.business_instructor_card, &.business_org_card{ 
+      width: 280px;
+      height: 290px;
+      padding: 16px;
+      :nth-child(n+1){ margin-right:25px;}
+      :nth-child(n+4){ margin-top: 25px;}
+    }
+    &.business_org_card{
+      background: rgba(173, 168, 190, 0.08);
+      border: 1px solid rgba(18, 53, 91, 0.08);
+      border-radius: 16px;
+      height: 230px;
+
+        .image_container{
+          width: 70%;
+
+          img {
+
+          }
+        }
+
+        h6 { 
+          color: #ADA8BE;
+          letter-spacing: 0.02em;
+          text-transform: uppercase;
+          font-size: 10px;
+         }
+        h5 { 
+          color: #12355B;
+          text-transform: uppercase;
+          font-size: 16px;
+          font-weight: 500;
+         }
+
+    }
 `;
 
-const IconOverTextWrapper = styled.div`
+export const ImageOverTextWrapper = styled.div`
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
       width:80%;
+      &.wrapper_row{
+        width: 100%;
+      }
 `;
 
-const IconOverTextStyle = styled.div`
+export const ImageOverTextStyle = styled.div`
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -94,21 +135,62 @@ const IconOverTextStyle = styled.div`
       }
 `;
 
-export const IconOverText = ({icon, text}) => {
+
+export const ImageOverText = ({icon, text}) => {
 
   return (
-    <IconOverTextStyle>
+    <ImageOverTextStyle>
       <img src={icon?.src} alt="Icon" />
-      <Text as={"p"} content={text} />
+      <p>{text}</p> 
+    </ImageOverTextStyle>
+  );
+}
+
+export const IconOverTextStyle = styled.div`
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;  
+      margin: 10px 0;
+
+      /* ELLIPSE */
+      .icon {
+      height: 32px;
+      width: 32px;
+      border-radius: 50%;
+      background: rgba(88, 50, 218, 0.1);
+      display: flex;
+      justify-content: center;
+      align-items: center;  
+      }
+      svg{
+        width: 50%;
+        height: 50%;
+      }
+      &.row_icon_div {
+        flex-direction: row;
+        p{
+          margin-left: 8px;
+        }
+      }
+`;
+
+export const IconOverText = ({variant, Icon, number, text}) => {
+
+  return (
+    <IconOverTextStyle className={variant}>
+      <div className="icon">{Icon}</div>
+      <p>{number} {text}</p> 
     </IconOverTextStyle>
   );
 }
 
 
-const InstructorCard = ({image={InstructorBg}, name, role, company, preview, registeredNumber, rating, coursesNumber}) => {
+const InstructorCard = ({variant, image={InstructorBg}, name, role, company, preview, registeredNumber, rating, coursesNumber}) => {
+
   
   return (
-    <InstructorCardStyle>
+    <InstructorCardStyle className={variant}>
         <div className="top_container">
           <div className="image_container">
             <img src={InstructorBg?.src} alt="Instructor" />
@@ -120,11 +202,11 @@ const InstructorCard = ({image={InstructorBg}, name, role, company, preview, reg
         <p>{role}, {company}</p>
         <p>{preview}</p>
 
-        <IconOverTextWrapper>
-          <IconOverText icon={StudentsEnrolledIcon} text={registeredNumber} />
-          <IconOverText icon={StarFullIcon} text={rating} />
-          <IconOverText icon={CoursesIcon} text={coursesNumber} />
-        </IconOverTextWrapper>
+        <ImageOverTextWrapper>
+          <ImageOverText icon={StudentsEnrolledIcon} text={registeredNumber} />
+          <ImageOverText icon={StarFullIcon} text={rating} />
+          <ImageOverText icon={CoursesIcon} text={coursesNumber} />
+        </ImageOverTextWrapper>
     </InstructorCardStyle>
   )
 }

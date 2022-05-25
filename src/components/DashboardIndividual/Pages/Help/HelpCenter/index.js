@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Text from 'components/Layout/Text';
 import Heading from 'components/Layout/Heading';
 import { HelpHeading, HelpOptionsRow, HelpCard, HelpBottomSection, HelpBottomOptions } from '../../../../DashboardBusiness/business.style';
-import { userModule } from 'common/data/appData';
+import { individualModule } from 'common/data/appData';
 
 import helpBG from 'public/images/dashboard/Dashboard/helpcenterBG.svg';
 import helpIcon from 'public/images/dashboard/Dashboard/helpcenter.svg';
@@ -11,7 +11,7 @@ import arrowRight from 'public/images/dashboard/Dashboard/ArrowRight.svg';
 import arrowDown from 'public/images/dashboard/Dashboard/ArrowDown.svg';
 
 const HelpCenter = () => {
-    const {userOptions} = userModule;
+    const {userOptions} = individualModule;
 
     const [state, setState] = useState({
     });

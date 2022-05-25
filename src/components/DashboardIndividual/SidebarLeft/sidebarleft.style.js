@@ -44,10 +44,10 @@ const SidebarCard = styled.section`
     filter: invert(16%) sepia(97%) saturate(3077%) hue-rotate(252deg) brightness(98%) contrast(95%);        }
     }
     h4 {
-        margin: 20px 0 0 35px;
+        margin: 20px 0 0 35px !important;
     }
     h5 {
-        margin: 0px 0 0px 36.25px;
+        margin: 0px 0 0px 36.25px !important;
         opacity: 0.5;
     }
 
