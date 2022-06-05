@@ -4,7 +4,7 @@ import Text from 'components/Layout/Text';
 import Heading from 'components/Layout/Heading';
 
 import SectionWrapper, {FilterSeeAllContainer, FilterButton, ModuleColumn, ModuleHeading, HeadingLeft, HeadingRight,ToggleButton, OptionsRow,OptionButton, ModuleSection, SectionHeading,  ModuleRow, ModuleRowEmpty, CoursesStartCard, JobCard, DashboardBadge, SearchBar } from '../../../DashboardBusiness/business.style';
-import { userModule, filterData } from 'common/data/appData';
+import { individualModule, filterData } from 'common/data/appData';
 
 import notificationIcon from 'public/images/dashboard/Dashboard/Iconly/Light-outline/Notification.svg'
 import showIcon from 'public/images/dashboard/Dashboard/Iconly/Light-outline/Show.svg'
@@ -17,22 +17,24 @@ import badgeIcon from 'public/images/dashboard/Group.svg'
 import workIcon from 'public/images/dashboard/Dashboard/Work.svg'
 import dashCard from 'public/images/dashboardCard.png'
 import paypal from 'public/images/partners/paypal.svg'
-import DropDownList from '../Components/DropDownList';
-import FilterDropDownComponent from '../Components/FilterDropDown';
-import SwipeableComponent from '../Components/SwipeableComponent';
+import DropDownList from 'components/DashboardComponents/DropDownList';
+import FilterDropDownComponent from 'components/DashboardComponents/FilterDropDown';
+import SwipeableComponent from 'components/DashboardComponents/SwipeableComponent';
+
+import SkillsMatchingModal from '../../SkillsMatching'
 
 const StartCoursesSection = () => {
-  const {userOptions} = userModule;
+    const {userOptions} = individualModule;
 
-  const [showCourses, setShowCourses ] = useState(false);
-  const [showJobs, setShowJobs ] = useState(false);
-  const [showCerts, setShowCerts ] = useState(false);
-  const toggleCoursesDropDown = () => setShowCourses (!showCourses)
-  const toggleJobsDropDown = () => setShowJobs(!showJobs)
-  const toggleCertsDropDown = () => setShowCerts(!showCerts)
+    const [showCourses, setShowCourses ] = useState(false);
+    const [showJobs, setShowJobs ] = useState(false);
+    const [showCerts, setShowCerts ] = useState(false);
+    const toggleCoursesDropDown = () => setShowCourses (!showCourses)
+    const toggleJobsDropDown = () => setShowJobs(!showJobs)
+    const toggleCertsDropDown = () => setShowCerts(!showCerts)
 
 
-  return (
+    return (
     <>
         <ModuleHeading>
             <div className="top_row">
@@ -205,8 +207,9 @@ const StartCoursesSection = () => {
         </ModuleRowEmpty>                
 
         </ModuleSection>
+        
     </>
-  );
+    );
 };
 
 export default StartCoursesSection;

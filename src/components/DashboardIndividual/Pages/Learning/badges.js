@@ -5,13 +5,13 @@ import Heading from 'components/Layout/Heading';
 import { SectionHeader } from '../../../globalApp.style';
 import SectionWrapper, { ModuleRow, ModuleRowEmpty, BadgesCard } from '../../../DashboardBusiness/business.style';
 
-import { userModule } from 'common/data/appData';
+import { individualModule } from 'common/data/appData';
 
 import goldMedal from 'public/images/dashboard/Dashboard/My Learning/GoldMedal.svg'
 import silverMedal from 'public/images/dashboard/Dashboard/My Learning/SilverMedal.svg'
 import bronzeMedal from 'public/images/dashboard/Dashboard/My Learning/BronzeMedal.svg'
 const BadgesSection = () => {
-  const {userOptions} = userModule;
+  const {userOptions} = individualModule;
 
   const [state, setState] = useState({
   });

@@ -36,7 +36,7 @@ const SidebarCard = styled.section`
     height:1000px;
     .dash_selected {
         border-left: 4px solid rgba(88, 50, 218, 1);
-        p{
+        p, svg{
             color: rgba(88, 50, 218, 1);
         }
         img{
@@ -44,11 +44,12 @@ const SidebarCard = styled.section`
     filter: invert(16%) sepia(97%) saturate(3077%) hue-rotate(252deg) brightness(98%) contrast(95%);        }
     }
     h4 {
-        margin: 20px 0 0 35px;
+        margin: 20px 0 0 35px !important;
     }
     h5 {
-        margin: 0px 0 0px 36.25px;
+        margin: 0px 0 0px 36.25px !important;
         opacity: 0.5;
+        text-transform: capitalize;
     }
 
   @media screen and (max-width: 480px) {

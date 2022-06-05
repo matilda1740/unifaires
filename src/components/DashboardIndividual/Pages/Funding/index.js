@@ -5,7 +5,7 @@ import Heading from 'components/Layout/Heading';
 
 import SectionWrapper, {FilterSeeAllContainer, FilterButton, ModuleColumn, ModuleHeading, HeadingLeft, HeadingRight,ToggleButton, OptionsRow,OptionButton, ModuleSection, SectionHeading,  ModuleRow, ModuleRowEmpty, CoursesStartCard, FundingCard, DashboardBadge, SearchBar } from '../../../DashboardBusiness/business.style';
 
-import { userModule, filterData } from 'common/data/appData';
+import { individualModule, filterData } from 'common/data/appData';
 
 import notificationIcon from 'public/images/dashboard/Dashboard/Iconly/Light-outline/Notification.svg'
 import showIcon from 'public/images/dashboard/Dashboard/Iconly/Light-outline/Show.svg'
@@ -18,10 +18,10 @@ import badgeIcon from 'public/images/dashboard/Group.svg'
 import workIcon from 'public/images/dashboard/Dashboard/Work.svg'
 import dashCard from 'public/images/dashboardCard.png'
 import paypal from 'public/images/partners/paypal.svg'
-import FilterDropDownComponent from '../Components/FilterDropDown';
+import FilterDropDownComponent from 'components/DashboardComponents/FilterDropDown';
 
 const FundingSection = () => {
-    const {userOptions} = userModule;
+    const {userOptions} = individualModule;
 
     const [show, setShow ] = useState(false);
     const toggleDropDown = () => setShow(!show)

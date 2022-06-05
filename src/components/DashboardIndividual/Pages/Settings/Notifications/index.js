@@ -10,7 +10,7 @@ import FormSectionDivider from '../Components/FormSectionDivider';
 import Form from '../Components/Form';
 
 // DATA
-import { userModule } from 'common/data/appData';
+import { individualModule } from 'common/data/appData';
 
 // ICONS
 import settingsIcon from 'public/images/dashboard/settings/Setting.svg'
@@ -21,7 +21,7 @@ import FormRadioButton from '../Components/FormRadioButton';
 
 // MAIN FUNCTION
 const NotiificationsSection = () => {
-  const {userOptions} = userModule;
+  const {userOptions} = individualModule;
 
   const [state, setState] = useState({
   });

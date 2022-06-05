@@ -7,11 +7,12 @@ import { useRouter } from 'next/router';
 
 import { SectionHeader } from '../../../../globalApp.style';
 import SectionWrapper, { ModuleRow, ModuleRowEmpty, BadgesCard, ModuleSectionHeader, ModuleSectionContainer, ModuleSectionWrapper, SectionDivider, HelpBottomOptions, WhereToSection, HelpBottomSection, InformationContainer, InstructorsWrapper, InstructorsCard, RecommendationsWrapper, SectionTitle, CoursesStartCard } from '../../../../DashboardBusiness/business.style';
-import InstructorCard, { InstructorWrapper } from '../../Components/InstructorCard';
-import ReviewsCard, { ReviewsWrapper } from '../../Components/ReviewsCard';
-import RatingsSection from '../../Components/RatingsSection'
+import InstructorCard, { InstructorWrapper } from 'components/DashboardComponents/InstructorCard';
+import ReviewsCard, { ReviewsWrapper } from 'components/DashboardComponents/ReviewsCard';
+import RatingsSection from 'components/DashboardComponents/RatingsSection'
+import BackURLModule from 'components/DashboardComponents/BackURLModule';
 
-import { userModule } from 'common/data/appData';
+import { individualModule } from 'common/data/appData';
 
 
 import arrowLeft from 'public/images/dashboard/Dashboard/ArrowLeft.svg'
@@ -21,11 +22,10 @@ import BookIcon from 'public/images/dashboard/book.svg'
 import ClockIcon from 'public/images/dashboard/clock.svg'
 import dashCard from 'public/images/dashboardCard.png'
 import workIcon from 'public/images/dashboard/Dashboard/Work.svg'
-import BackURLModule from '../../Components/BackURLModule';
 
 
 const SpecificCourseSection = () => {
-  const {userOptions} = userModule;
+  const {userOptions} = individualModule;
 
   // TO ACCESS DATA PASSED IN FROM PREVIOUS LINK PARAMETERS (Import userouter from Next)
   const router = useRouter();

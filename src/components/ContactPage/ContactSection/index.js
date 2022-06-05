@@ -8,11 +8,11 @@ import SectionWrapper, {
     ContactArea,ContactAreaLeft,ContactAreaRight,ContactCard,CardFormRow
 } from '../contactcard.style.js';
 
-import crown from 'common/assets/images/crown.svg';
-import facebook from 'common/assets/images/socials/facebook.svg';
-import instagram from 'common/assets/images/socials/instagram.svg'
-import twitter from 'common/assets/images/socials/twitter.svg'
-import youtube from 'common/assets/images/socials/youtube.svg'
+import crown from 'public/images/crown.svg';
+import facebook from 'public/images/socials/facebook.svg';
+import instagram from 'public/images/socials/instagram.svg'
+import twitter from 'public/images/socials/twitter.svg'
+import youtube from 'public/images/socials/youtube.svg'
 
 import emailIcon from 'public/images/email.svg'
 import msgChatIcon from 'public/images/messages_chat.svg'

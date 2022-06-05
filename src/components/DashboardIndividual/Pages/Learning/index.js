@@ -12,7 +12,7 @@ import SectionWrapper, { ModuleColumn, ModuleHeading, HeadingLeft, HeadingRight,
 import SidebarLeft from '../../SidebarLeft';
 import SidebarRight from '../../SidebarRight';
 
-import { userModule } from 'common/data/appData';
+import { individualModule } from 'common/data/appData';
 
 import notificationIcon from 'public/images/dashboard/Dashboard/Iconly/Light-outline/Notification.svg'
 import showIcon from 'public/images/dashboard/Dashboard/Iconly/Light-outline/Show.svg'
@@ -30,7 +30,7 @@ import bookIcon from 'public/images/dashboard/book.svg'
 import threeUsersIcon from 'public/images/dashboard/3User.svg'
 
 const LearningSection = (props, {children, href}) => {
-    const {userOptions} = userModule;
+    const {userOptions} = individualModule;
 
     const router = useRouter();
   return (

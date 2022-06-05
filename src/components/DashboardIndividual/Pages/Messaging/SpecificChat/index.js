@@ -3,9 +3,9 @@ import Link from 'next/link';
 import Text from 'components/Layout/Text';
 import Heading from 'components/Layout/Heading';
 
-import { userModule } from 'common/data/appData';
+import { individualModule } from 'common/data/appData';
 import { useRouter } from "next/router";
-import BackURLModule from '../../Components/BackURLModule';
+import BackURLModule from 'components/DashboardComponents/BackURLModule';
 import ChatHeading from '../ChatHeading';
 import ChatBubble from '../ChatBubble';
 import { BoxWrapper } from '../messaging.style';
@@ -15,7 +15,7 @@ import optionsIcon from 'public/images/dashboard/dotIcon.svg'
 
 
 const SpecificChatSection = ({chatObject}) => {
-    const {userOptions} = userModule;
+    const {userOptions} = individualModule;
 
     const { name, userID, messages} = chatObject;
     

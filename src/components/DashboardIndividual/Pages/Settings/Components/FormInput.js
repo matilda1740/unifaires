@@ -17,7 +17,7 @@ const FormStyleInput = styled.div`
         border-left: none;
         border-right: none;   
         font-weight: 500;
-
+        background: transparent;
         ::placeholder{
             font-weight: 500;
             color: rgba(18, 53, 91, 0.9);

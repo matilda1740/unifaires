@@ -23,7 +23,6 @@ export const FormEachPhoneContainer = styled.div`
     :first-of-type{
       margin-right: 5px;
     }
-
   label {
     color: rgba(18, 53, 91, 0.5);
   }
@@ -56,6 +55,26 @@ export const FormEachPhoneContainer = styled.div`
       }
     }
   }
+
+      /* BUSINESS FORMS */
+    &.business_phone_input{
+      width: 50%;
+      .PhoneInput{
+        background: rgba(243, 245, 247, 1);
+        padding: 10px 14px;
+        border-radius: 6px;
+        margin: 4px 0 15px 0;
+        input {
+        outline: none;
+        border: none;
+        background: rgba(243, 245, 247, 1);
+          ::placeholder {
+            color: rgba(128, 128, 128, 1);
+
+          }
+        }
+      }
+    }
   @media screen and (max-width: 480px) {
     label{ font-size: 12px; }
     /* .PhoneInput{ width: 50%;} */

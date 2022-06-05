@@ -4,7 +4,7 @@ import Text from 'components/Layout/Text';
 import Heading from 'components/Layout/Heading';
 
 import SectionWrapper, {FilterSeeAllContainer,FilterButton, ModuleColumn, ModuleHeading, HeadingLeft, HeadingRight,ToggleButton, OptionsRow,OptionButton, ModuleSection, SectionHeading,  ModuleRow, HelpSectionDiv, HelpHeading, DashboardBadge, SearchBar } from '../../../DashboardBusiness/business.style';
-import { userModule } from 'common/data/appData';
+import { individualModule } from 'common/data/appData';
 
 import notificationIcon from 'public/images/dashboard/Dashboard/Iconly/Light-outline/Notification.svg'
 import showIcon from 'public/images/dashboard/Dashboard/Iconly/Light-outline/Show.svg'
@@ -23,7 +23,7 @@ import helpBG from 'public/images/dashboard/Dashboard/helpcenterBG.svg';
 
 
 const HelpSectionWrapper = (props) => {
-  const {userOptions} = userModule;
+  const {userOptions} = individualModule;
 
   const [state, setState] = useState({
   });

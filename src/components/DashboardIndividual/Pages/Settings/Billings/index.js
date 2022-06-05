@@ -12,7 +12,7 @@ import Form from '../Components/Form';
 import FormRadioButton from '../Components/FormRadioButton';
 import BillingPlanCard from './BillingPlanCard';
 // DATA
-import { userModule } from 'common/data/appData';
+import { individualModule } from 'common/data/appData';
 
 // ICONS
 import creditCard from '../../../../../public/images/dashboard/settings/creditCard.png'
@@ -33,7 +33,7 @@ const PaymentWrapper = styled.div`
 
 // MAIN FUNCTION
 const BillingsSection = () => {
-  const {userOptions} = userModule;
+  const {userOptions} = individualModule;
 
   const [state, setState] = useState({
   });

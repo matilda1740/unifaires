@@ -21,17 +21,17 @@ import AccountCard, { AccountsWrapper } from '../Components/AccountCard';
 import FormSelectBox from '../Components/FormSelectBox';
 
 // DATA
-import { userModule } from 'common/data/appData';
+import { individualModule } from 'common/data/appData';
 
 // ICONS
 import settingsIcon from 'public/images/dashboard/settings/Setting.svg'
 import closeIcon from 'public/images/dashboard/settings/close.svg'
-import AddGroup from '../../Components/AddGroup';
+import AddGroup from 'components/DashboardComponents/ToggleGroups';
 
 
 // MAIN FUNCTION
 const ProfileSection = () => {
-  const {userOptions} = userModule;
+  const {userOptions} = individualModule;
 
   const [phone, setPhone] = useState()
   const [altPhone, setAltPhone] = useState()
@@ -65,10 +65,7 @@ const ProfileSection = () => {
 
   const [newWorkGroup, setNewWorkGroup] = useState(false);
 
-  const addWorkGroup = React.useRef(null)
-  // const addWorkGroup = () => {
-  //   console.log("From Main Form")
-  // }
+  const workGroupAddRef = React.useRef(null)
 
   const skills = [
     { title: "Product Design" },
@@ -108,12 +105,22 @@ const ProfileSection = () => {
 
         <FormSectionDivider content={"Work Experience"} />
 
+        <FormInput size={"full"} label={"Company Name"} placeholder={"Microsoft"} name={"companyname"} type={"text"} />
+        <FormInput size={"full"} label={"Role"} placeholder={"Product Designer"} name={"role"} type={"text"} />
+        <FormInput size={"full"} label={"Description"} placeholder={"https://dribbble.com/shots/15186840-Setting-page-example"} name={"description"} type={"text"} />
+
+        <FormHalfContainer>
+        <FormInput size={"half"} label={"Start Date"} placeholder={"16-01-2021"} name={"startdate"} type={"date"} />
+        <FormInput size={"half"} label={"End Date"} placeholder={"16-01-2021"} name={"enddate"} type={"date"} />
+        </FormHalfContainer>
+
         <FormWorkGroup 
           newWorkGroup ={newWorkGroup} 
           setNewWorkGroup={setNewWorkGroup} 
-          addWorkGroup={addWorkGroup}
+          workGroupAddRef={workGroupAddRef}
           />
-        <AddGroup onClick={() => addWorkGroup.current()}
+        <AddGroup 
+          // onClick={() => workGroupAddRef.current()}
           text={"Add Work Experience"}
         />
         <FormSectionDivider content={"Education"} />
@@ -126,9 +133,7 @@ const ProfileSection = () => {
           <FormInput size={"half"} label={"GPA"} placeholder={"4.8"} name={"gpa"} type={"date"} />
         </FormHalfContainer>
         
-        <AddGroup
-          text={"Add Education"}
-        />
+        <AddGroup text={"Add Education"} />
         <FormSectionDivider content={"Contact Information"} />
 
         <FormHalfContainer>
