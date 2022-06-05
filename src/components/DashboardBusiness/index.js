@@ -16,7 +16,7 @@ const BusinessWrapper = ({content}) => {
 
     return (
     <SectionWrapper>
-        <SidebarLeft userType={"Business"}/>
+        <SidebarLeft userType={"business"}/>
         <ModuleColumn>{content}</ModuleColumn>
         
         <SidebarRight/>

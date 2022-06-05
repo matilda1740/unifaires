@@ -26,7 +26,7 @@ import { individualModule } from 'common/data/appData';
 // ICONS
 import settingsIcon from 'public/images/dashboard/settings/Setting.svg'
 import closeIcon from 'public/images/dashboard/settings/close.svg'
-import AddGroup from '../../../Components/ToggleGroups';
+import AddGroup from 'components/DashboardComponents/ToggleGroups';
 
 
 // MAIN FUNCTION

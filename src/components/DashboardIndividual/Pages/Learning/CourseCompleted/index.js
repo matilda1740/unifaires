@@ -3,10 +3,10 @@ import styled from 'styled-components';
 import Text from 'components/Layout/Text';
 import Heading from 'components/Layout/Heading';
 import { BadgesCard, CertsCard, ModuleSectionHeader, SectionHeading } from 'components/DashboardBusiness/business.style';
-
-import BackURLModule from '../../../Components/BackURLModule';
 import CelebrationImage from 'public/images/dashboard/CompletedCourse.svg'
-import ReviewForm from '../../../Components/ReviewForm'
+
+import BackURLModule from 'components/DashboardComponents/BackURLModule';
+import ReviewForm from 'components/DashboardComponents/ReviewForm'
 import BillingButton from '../../Settings/Billings/BillingButton'
  
 export const CourseCompletedStyle = styled.div`

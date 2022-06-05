@@ -1,6 +1,6 @@
 import React, {useState, useRef, useEffect} from 'react';
 import styled from 'styled-components';
-import { RemoveGroup } from '../../../Components/ToggleGroups';
+import { RemoveGroup } from 'components/DashboardComponents/ToggleGroups';
 import { FormHalfContainer } from './Form';
 import FormInput from './FormInput';
 // import { FormHalfContainer } from './';

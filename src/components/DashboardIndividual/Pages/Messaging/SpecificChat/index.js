@@ -5,7 +5,7 @@ import Heading from 'components/Layout/Heading';
 
 import { individualModule } from 'common/data/appData';
 import { useRouter } from "next/router";
-import BackURLModule from '../../../Components/BackURLModule';
+import BackURLModule from 'components/DashboardComponents/BackURLModule';
 import ChatHeading from '../ChatHeading';
 import ChatBubble from '../ChatBubble';
 import { BoxWrapper } from '../messaging.style';

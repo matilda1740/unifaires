@@ -4,9 +4,10 @@ import Text from 'components/Layout/Text';
 import Heading from 'components/Layout/Heading';
 import { SectionHeader } from '../../../../globalApp.style';
 import SectionWrapper, {ModuleSection, ModuleRow, ModuleRowEmpty, BadgesCard, ModuleSectionHeader, ModuleSectionContainer, ModuleSectionWrapper, SectionDivider, HelpBottomOptions, WhereToSection, HelpBottomSection, InformationContainer, SectionTitle,  } from '../../../../DashboardBusiness/business.style';
-import RecommendedFundingCard, { FundingSectionWrapper } from '../../../Components/RecommendedFunding'
-import BillingButton from '../../Settings/Billings/BillingButton';
-import DropDownList from '../../../Components/DropDownList';
+import RecommendedFundingCard, { FundingSectionWrapper } from 'components/DashboardComponents/RecommendedFunding'
+import BillingButton from 'components/DashboardIndividual/Pages/Settings/Billings/BillingButton';
+import DropDownList from '.components/DashboardComponents/DropDownList';
+import BackURLModule from 'components/DashboardComponents/BackURLModule';
 
 import { individualModule } from 'common/data/appData';
 
@@ -19,7 +20,6 @@ import FundingThumbnail from 'public/images/dashboard/fundingCompany.png'
 import FundingBG from 'public/images/dashboard/VideoControls/VideoBG.png'
 
 import { useRouter } from "next/router";
-import BackURLModule from '../../../Components/BackURLModule';
 
 const SpecificFundingSection = () => {
   const {userOptions} = individualModule;

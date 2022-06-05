@@ -23,6 +23,8 @@ import SearchIcon from 'public/images/dashboard/Search.svg'
 import MenuBarIcon from 'public/images/dashboard/MenuBar.svg'
 
 
+import { AccountBalance, AccountBalanceOutlined, CheckCircleOutlined } from '@mui/icons-material';
+
 // import badgeIcon from 'public/images/dashboard/Dashboard/badge.svg'
 import profileImg from 'public/images/dashboard/Dashboard/icon.svg'
 import SidebarCard, { MobileHeader }  from './sidebarleft.style';
@@ -52,8 +54,8 @@ const SidebarLeft = ({userType, isNavOpen, setIsNavOpen}) => {
         <Heading as="h4" content={company}/>
         <Heading as="h5" content={userType}/>
         <div className="dash_sectionOne">
-            <Link href="/individual/dashboard">
-                <DashboardRow className={router.pathname === "/individual/dashboard" ? "dash_row dash_selected" : "dash_row"}>
+            <Link href={`/${userType}/dashboard`}>
+                <DashboardRow className={router.pathname === "/individual/dashboard" || router.pathname === "/business/dashboard"  ? "dash_row dash_selected" : "dash_row"}>
                     <img src={homeIcon?.src} alt="Dashboard" /> 
                     <Text as="p" content={"Dashboard"}/>
                 </DashboardRow>
@@ -83,6 +85,23 @@ const SidebarLeft = ({userType, isNavOpen, setIsNavOpen}) => {
                     <Text as="p" content={"Messages"}/>
                 </DashboardRow>
             </Link>
+            {
+                userType === "business" &&
+                <>
+                <Link href={`/${userType}/accountmanagement`}>
+                <DashboardRow className={ router.pathname === `/business/accountmanagement/courses` || router.pathname === `/business/accountmanagement/organizations` || router.pathname === `/business/accountmanagement/instructors` || router.pathname === `/business/accountmanagement/invites` || router.pathname === `/business/accountmanagement/students` ? "dash_row dash_selected" : "dash_row"}>
+                    <AccountBalanceOutlined />
+                    <Text as="p" content={"Manage Account"}/>
+                </DashboardRow>
+                </Link> 
+                <Link href={`/${userType}/vettedtalent`}>
+                <DashboardRow className={ router.pathname === `/${userType}/vettedtalent` ? "dash_row dash_selected" : "dash_row"}>
+                    <CheckCircleOutlined />
+                    <Text as="p" content={"Vetted Talent"}/>
+                </DashboardRow>
+                </Link>              
+                </>
+            }
 
         </div>         
 

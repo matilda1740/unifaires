@@ -773,13 +773,19 @@ transition:all 0.3s ease-in-out;
 :hover{
     border-left: 4px solid rgba(88, 50, 218, 1);
     cursor: pointer;
+    svg {
+        color : rgba(88, 50, 218, 1);
+    }
     img{
     /* filter: invert(25%) sepia(93%) saturate(1986%) hue-rotate(243deg) brightness(81%) contrast(111%); */
     filter: invert(16%) sepia(97%) saturate(3077%) hue-rotate(252deg) brightness(98%) contrast(95%);
-]    }
+    }
 }
+    svg {
+        color : #12355B;
+    }
 
-img{
+img, svg{
     margin-right:10px;
 }
 p{
@@ -1462,7 +1468,11 @@ box-sizing: border-box;
 border-radius: 34px;
 width: 430px;
 height: 60px;
+ svg { 
+     margin-left: 2%;
+    color: rgba(18, 53, 91, 0.5);
 
+    }
 img {
     width: 3%;
     margin: 0px 2% 0px 3%;

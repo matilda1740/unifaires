@@ -8,6 +8,7 @@ import ResetCSS from 'common/assets/css/style';
 // Page Sections
 import BusinessWrapper from 'components/DashboardBusiness';
 import AccountsManagement from 'components/DashboardBusiness/Pages/Home/AccountManagement';
+import CoursesSection from 'components/DashboardBusiness/Pages/Home/AccountManagement/AccountsContent/courses';
 
 const Main = () => {
   return (
@@ -23,7 +24,7 @@ const Main = () => {
         <AppWrapper>
           <Sticky top={0} innerZ={9999} activeClass="sticky-nav-active">
           </Sticky>
-          <BusinessWrapper content={<AccountsManagement/>}/>    
+          <BusinessWrapper content={<AccountsManagement content={<CoursesSection />} />}/>    
         </AppWrapper>
       </Fragment>
     </ThemeProvider>

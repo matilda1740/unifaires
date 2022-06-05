@@ -2,14 +2,15 @@ import React from 'react'
 import styled from 'styled-components';
 import Text from 'components/Layout/Text';
 import Heading from 'components/Layout/Heading';
-import FormSectionDivider from '../../Settings/Components/FormSectionDivider';
-import VideoPlayer from '../../../Components/VideoPlayer';
+
 import { ModuleSectionHeader, SectionHeading } from 'components/DashboardBusiness/business.style';
-import { ArticlesCard, BooksCard, RecommendationSectionWrapper } from '../../../Components/Recommendations';
+import FormSectionDivider from '../../Settings/Components/FormSectionDivider';
+import VideoPlayer from 'components/DashboardComponents/VideoPlayer';
+import { ArticlesCard, BooksCard, RecommendationSectionWrapper } from 'components/DashboardComponents/Recommendations';
+import BackURLModule from 'components/DashboardComponents/BackURLModule';
 
 import BookBg from 'public/images/dashboard/Books.png'
 import Thumbnail from 'public/images/dashboard/ThumbnailCourse.png'
-import BackURLModule from '../../../Components/BackURLModule';
 
 
 export const CoursePreviewWrapper = styled.section`

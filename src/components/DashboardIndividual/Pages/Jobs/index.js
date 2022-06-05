@@ -18,7 +18,7 @@ import badgeIcon from 'public/images/dashboard/Group.svg'
 import workIcon from 'public/images/dashboard/Dashboard/Work.svg'
 import dashCard from 'public/images/dashboardCard.png'
 import paypal from 'public/images/partners/paypal.svg'
-import FilterDropDownComponent from '../../Components/FilterDropDown';
+import FilterDropDownComponent from 'components/DashboardComponents/FilterDropDown';
 
 const JobsSection = () => {
   const {userOptions} = individualModule;

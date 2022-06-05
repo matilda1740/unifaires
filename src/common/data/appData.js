@@ -2,6 +2,8 @@
 import logo from 'common/assets/images/logoUnifaires.svg'
 // import paypal from 'public/images/partners/paypal.svg'
 import paypal from 'common/assets/images/tesla.svg'
+import { ArrowForwardIos, AutoStories, PersonOutlined, CorporateFareOutlined, SchoolOutlined, MarkAsUnreadOutlined } from '@mui/icons-material';
+
 /* -------- About Us data section --------- */
 
 export const aboutUs = {
@@ -1080,11 +1082,11 @@ export const businessModule = {
   firstname: 'Matilda',
   lastname: "Mwendwa",
   accounts: [
-    { id: "C1", title: "courses", number: 873 },
-    { id: "O2", title: "organizations", number: 412 },
-    { id: "I1", title: "instructors", number: 21 },
-    { id: "S1", title: "students", number: 2321 },
-    { id: "I2", title: "invites", number: 12 },
+    { id: "C1", title: "courses", number: 873, icon: <AutoStories/> },
+    { id: "O2", title: "organizations", number: 412, icon: <CorporateFareOutlined/> },
+    { id: "I1", title: "instructors", number: 21, icon: <SchoolOutlined/> },
+    { id: "S1", title: "students", number: 2321, icon: <PersonOutlined/> },
+    { id: "I2", title: "invites", number: 12, icon: <MarkAsUnreadOutlined/> },
   ],
   userOptions: [{
     invites: [
@@ -1323,7 +1325,7 @@ export const courses = [
         lessons: "9",
         time: "150",
         students: 12562,
-        status: 0, percentage: 0
+        status: 0, percentage: 0,
       },
       {
         courseID: 'DE561GH',
@@ -1334,7 +1336,7 @@ export const courses = [
         thumbnail: 'public/images/dashboardCard.png',
         lessons: "9",
         time: "150",
-        students: 2,
+        students: 289,
         status: 0, percentage: 0
       },
         {
@@ -1410,3 +1412,298 @@ export const courses = [
         status: 1, percentage: 47
       }
 ]
+
+
+
+export const instructors = [
+  {
+    id: "SIM8585",
+    image: "",
+    name: "Simon Mudessar",
+    email: "simon45@gmail.com",
+    phone: "555-189-5789",
+    role: "Top Instructor",
+    company: "Google",
+    preview: "IBM is recognized as a cognitive solutions and cloud platform company with one purpose - to be essential to the world.",
+    registeredNumber: "5K",
+    rating: 4.4,
+    coursesNumber: 12,
+    status: 1,
+  },
+  {
+    id: "SIM8586",
+    image: "",
+    name: "Simon Mudessar",
+    email: "simon45@gmail.com",
+    phone: "555-189-5789",
+    role: "Top Instructor",
+    company: "Google",
+    preview: "IBM is recognized as a cognitive solutions and cloud platform company with one purpose - to be essential to the world.",
+    registeredNumber: "5K",
+    rating: 4.4,
+    coursesNumber: 12,
+    status: 1
+  },
+  {
+    id: "SIM8587",
+    image: "",
+    name: "Simon Mudessar",
+    email: "simon45@gmail.com",
+    phone: "555-189-5789",
+    role: "Top Instructor",
+    company: "Google",
+    preview: "IBM is recognized as a cognitive solutions and cloud platform company with one purpose - to be essential to the world.",
+    registeredNumber: "5K",
+    rating: 4.4,
+    coursesNumber: 12,
+    status: 0
+  },
+  {
+    id: "SIM8588",
+    image: "",
+    name: "Simon Mudessar",
+    phone: "555-189-5789",
+    email: "simon45@gmail.com",
+    role: "Top Instructor",
+    company: "Google",
+    preview: "IBM is recognized as a cognitive solutions and cloud platform company with one purpose - to be essential to the world.",
+    registeredNumber: "5K",
+    rating: 4.4,
+    coursesNumber: 12,
+    status: 1
+  },
+  {
+    id: "SIM8589",
+    image: "",
+    name: "Simon Mudessar",
+    phone: "555-189-5789",
+    email: "simon45@gmail.com",
+    role: "Top Instructor",
+    company: "Google",
+    preview: "IBM is recognized as a cognitive solutions and cloud platform company with one purpose - to be essential to the world.",
+    registeredNumber: "5K",
+    rating: 4.4,
+    coursesNumber: 12,
+    status: 1
+  },
+  {
+    id: "SIM8590",
+    image: "",
+    name: "Simon Mudessar",
+    phone: "555-189-5789",
+    email: "simon45@gmail.com",
+    role: "Top Instructor",
+    company: "Google",
+    preview: "IBM is recognized as a cognitive solutions and cloud platform company with one purpose - to be essential to the world.",
+    registeredNumber: "5K",
+    rating: 4.4,
+    coursesNumber: 12,
+    status: 1
+  },
+  {
+    id: "SIM8590",
+    image: "",
+    name: "Simon Mudessar",
+    phone: "555-189-5789",
+    email: "simon45@gmail.com",
+    role: "Top Instructor",
+    company: "Google",
+    preview: "IBM is recognized as a cognitive solutions and cloud platform company with one purpose - to be essential to the world.",
+    registeredNumber: "5K",
+    rating: 4.4,
+    coursesNumber: 12,
+    status: 1
+  },
+  {
+    id: "SIM8590",
+    image: "",
+    name: "Simon Mudessar",
+    phone: "555-189-5789",
+    email: "simon45@gmail.com",
+    role: "Top Instructor",
+    company: "Google",
+    preview: "IBM is recognized as a cognitive solutions and cloud platform company with one purpose - to be essential to the world.",
+    registeredNumber: "5K",
+    rating: 4.4,
+    coursesNumber: 12,
+    status: 1
+  },
+  {
+    id: "SIM8590",
+    image: "",
+    name: "Simon Mudessar",
+    phone: "555-189-5789",
+    email: "simon45@gmail.com",
+    role: "Top Instructor",
+    company: "Google",
+    preview: "IBM is recognized as a cognitive solutions and cloud platform company with one purpose - to be essential to the world.",
+    registeredNumber: "5K",
+    rating: 4.4,
+    coursesNumber: 12
+  },
+  {
+    id: "SIM8590",
+    image: "",
+    name: "Simon Mudessar",
+    phone: "555-189-5789",
+    email: "simon45@gmail.com",
+    role: "Top Instructor",
+    company: "Google",
+    preview: "IBM is recognized as a cognitive solutions and cloud platform company with one purpose - to be essential to the world.",
+    registeredNumber: "5K",
+    rating: 4.4,
+    coursesNumber: 12
+  },
+  {
+    id: "SIM8590",
+    image: "",
+    name: "Simon Mudessar",
+    phone: "555-189-5789",
+    email: "simon45@gmail.com",
+    role: "Top Instructor",
+    company: "Google",
+    preview: "IBM is recognized as a cognitive solutions and cloud platform company with one purpose - to be essential to the world.",
+    registeredNumber: "5K",
+    rating: 4.4,
+    coursesNumber: 12,
+    status: 1
+  },
+  {
+    id: "SIM8590",
+    image: "",
+    name: "Simon Mudessar",
+    phone: "555-189-5789",
+    email: "simon45@gmail.com",
+    role: "Top Instructor",
+    company: "Google",
+    preview: "IBM is recognized as a cognitive solutions and cloud platform company with one purpose - to be essential to the world.",
+    registeredNumber: "5K",
+    rating: 4.4,
+    coursesNumber: 12,
+    status: 1
+  },
+  {
+    id: "SIM8590",
+    image: "",
+    name: "Simon Mudessar",
+    email: "simon45@gmail.com",
+    phone: "555-189-5789",
+    role: "Top Instructor",
+    company: "Google",
+    preview: "IBM is recognized as a cognitive solutions and cloud platform company with one purpose - to be essential to the world.",
+    registeredNumber: "5K",
+    rating: 4.4,
+    coursesNumber: 12,
+    status: 1
+  },
+  {
+    id: "SIM8590",
+    image: "",
+    name: "Simon Mudessar",
+    phone: "555-189-5789",
+    email: "simon45@gmail.com",
+    role: "Top Instructor",
+    company: "Google",
+    preview: "IBM is recognized as a cognitive solutions and cloud platform company with one purpose - to be essential to the world.",
+    registeredNumber: "5K",
+    rating: 4.4,
+    coursesNumber: 12,
+    status: 1
+  },
+  {
+    id: "SIM8590",
+    image: "",
+    name: "Simon Mudessar",
+    phone: "555-189-5789",
+    email: "simon45@gmail.com",
+    role: "Top Instructor",
+    company: "Google",
+    preview: "IBM is recognized as a cognitive solutions and cloud platform company with one purpose - to be essential to the world.",
+    registeredNumber: "5K",
+    rating: 4.4,
+    coursesNumber: 12,
+    status: 1
+  },
+  {
+    id: "SIM8590",
+    image: "",
+    name: "Simon Mudessar",
+    phone: "555-189-5789",
+    email: "simon45@gmail.com",
+    role: "Top Instructor",
+    company: "Google",
+    preview: "IBM is recognized as a cognitive solutions and cloud platform company with one purpose - to be essential to the world.",
+    registeredNumber: "5K",
+    rating: 4.4,
+    coursesNumber: 12,
+    status: 1
+  },
+  {
+    id: "SIM8590",
+    image: "",
+    name: "Simon Mudessar",
+    phone: "555-189-5789",
+    email: "simon45@gmail.com",
+    role: "Top Instructor",
+    company: "Google",
+    preview: "IBM is recognized as a cognitive solutions and cloud platform company with one purpose - to be essential to the world.",
+    registeredNumber: "5K",
+    rating: 4.4,
+    coursesNumber: 12,
+    status: 1
+  }
+];
+
+export const instructorColumns = [
+    { field: 'id', headerName: 'ID', width: 80 },
+    {
+        field: 'name',
+        headerName: 'Account Name',
+        description: '',
+        sortable: false,
+        width: 160,
+    },
+    {
+        field: 'email',
+        headerName: 'Email',
+        description: '',
+        sortable: false,
+        width: 160,
+    }, 
+    {
+        field: 'position',
+        headerName: 'Position',
+        description: '',
+        sortable: false,
+        width: 180,
+        valueGetter: (params) =>`${params.row.role || ''} | ${params.row.company || ''}`,
+    }, 
+    {
+        field: 'email',
+        headerName: 'Email',
+        description: '',
+        sortable: false,
+        width: 160,
+    },
+    {
+        field: 'email',
+        headerName: 'Email',
+        description: '',
+        sortable: false,
+        width: 160,
+    },   
+    {
+        field: 'email',
+        headerName: 'Email',
+        description: '',
+        sortable: false,
+        width: 160,
+    },
+    {
+        field: 'status',
+        headerName: 'Status',
+        description: '',
+        sortable: false,
+        width: 100,
+    }, 
+];

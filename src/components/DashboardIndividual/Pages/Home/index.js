@@ -17,9 +17,9 @@ import badgeIcon from 'public/images/dashboard/Group.svg'
 import workIcon from 'public/images/dashboard/Dashboard/Work.svg'
 import dashCard from 'public/images/dashboardCard.png'
 import paypal from 'public/images/partners/paypal.svg'
-import DropDownList from '../../Components/DropDownList';
-import FilterDropDownComponent from '../../Components/FilterDropDown';
-import SwipeableComponent from '../../../DashboardComponents/SwipeableComponent';
+import DropDownList from 'components/DashboardComponents/DropDownList';
+import FilterDropDownComponent from 'components/DashboardComponents/FilterDropDown';
+import SwipeableComponent from 'components/DashboardComponents/SwipeableComponent';
 
 import SkillsMatchingModal from '../../SkillsMatching'
 

@@ -1,8 +1,5 @@
 import styled from 'styled-components';
 import { variant } from 'styled-system';
-import { themeGet } from '@styled-system/theme-get';
-import { colorStyle } from '../../../../customVariant';
-import { base } from '../../../../base';
 
 const ConversationBoxStyle = styled.a`
     padding: 10px;
@@ -68,9 +65,6 @@ const ConversationBoxStyle = styled.a`
 
   }
 
-  /* Style system custome color variant */
-  ${colorStyle}
-  ${base}
 `;
 
 // prop types can also be added from the style functions

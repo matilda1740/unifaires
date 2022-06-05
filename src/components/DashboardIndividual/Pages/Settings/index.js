@@ -24,7 +24,7 @@ import searchIcon from 'public/images/dashboard/Dashboard/search.svg'
 import settingsIcon from 'public/images/dashboard/settings/Setting.svg'
 import { ModuleHeader, ProfileForm } from './settings.style';
 import ProfileSection from './Profile';
-import TabBottomNavigation from '../../Components/TabBottomNavigation'
+import TabBottomNavigation from 'components/DashboardComponents/TabBottomNavigation'
 
 const SettingsSection = (props) => {
   const {userOptions} = individualModule;

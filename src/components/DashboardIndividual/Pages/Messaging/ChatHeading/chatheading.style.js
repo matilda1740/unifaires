@@ -1,8 +1,5 @@
 import styled from 'styled-components';
 import { variant } from 'styled-system';
-import { themeGet } from '@styled-system/theme-get';
-import { colorStyle } from '../../../../customVariant';
-import { base } from '../../../../base';
 
 const ChatHeadingStyle = styled.div`
     background: rgba(247, 245, 253, 1);

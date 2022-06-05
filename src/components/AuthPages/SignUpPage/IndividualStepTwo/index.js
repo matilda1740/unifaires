@@ -7,10 +7,10 @@ import { SectionHeader } from '../../../globalApp.style';
 import {ContactAreaLeft,ContactAreaRight,CardFormRow} from '../../../ContactPage/contactcard.style';
 import SectionWrapper, {BackgroundArea, SignUpCard, AuthCardCol} from '../../auth.style';
 
-import facebook from 'common/assets/images/socials/facebook.svg';
-import instagram from 'common/assets/images/socials/instagram.svg'
-import twitter from 'common/assets/images/socials/twitter.svg'
-import youtube from 'common/assets/images/socials/youtube.svg'
+import facebook from 'public/images/socials/facebook.svg';
+import instagram from 'public/images/socials/instagram.svg'
+import twitter from 'public/images/socials/twitter.svg'
+import youtube from 'public/images/socials/youtube.svg'
 
 import { signup } from 'common/data/appData';
 

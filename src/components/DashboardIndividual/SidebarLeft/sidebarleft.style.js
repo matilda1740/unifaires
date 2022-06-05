@@ -36,7 +36,7 @@ const SidebarCard = styled.section`
     height:1000px;
     .dash_selected {
         border-left: 4px solid rgba(88, 50, 218, 1);
-        p{
+        p, svg{
             color: rgba(88, 50, 218, 1);
         }
         img{
@@ -49,6 +49,7 @@ const SidebarCard = styled.section`
     h5 {
         margin: 0px 0 0px 36.25px !important;
         opacity: 0.5;
+        text-transform: capitalize;
     }
 
   @media screen and (max-width: 480px) {

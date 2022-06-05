@@ -7,7 +7,6 @@ import { GlobalStyle, AppWrapper } from 'components/globalApp.style';
 import ResetCSS from 'common/assets/css/style';
 import { DrawerProvider } from 'common/contexts/DrawerContext';
 // Page Sections
-import Navbar from "components/LandingPage/Navbar";
 import UserWrapper from 'components/DashboardIndividual';
 import LearningSection from 'components/DashboardIndividual/Pages/Learning';
 import SpecificFundingSection from 'components/DashboardIndividual/Pages/Funding/SpecificFunding';

@@ -33,7 +33,7 @@ import optionsIcon from 'public/images/dashboard/dotIcon.svg'
 import readIcon from 'public/images/dashboard/tick.svg'
 import SpecificChatSection from './SpecificChat';
 import useWindowSize from 'hooks/useWindowSize';
-import BackURLModule from '../../Components/BackURLModule';
+import BackURLModule from 'components/DashboardComponents/BackURLModule';
 
 // import use
 
