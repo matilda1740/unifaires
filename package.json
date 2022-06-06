@@ -1,5 +1,5 @@
 {
-  "name": "Unifaires Landing",
+  "name": "UnifairesLanding",
   "version": "10.0.1",
   "private": true,
   "main": "firebaseFunctions.js",
@@ -88,6 +88,8 @@
   },
   "devDependencies": {
     "babel-plugin-styled-components": "^1.11.1",
+    "eslint": "^8.17.0",
+    "eslint-config-next": "12.1.6",
     "firebase-tools": "^9.10.0",
     "imagemin-optipng": "^8.0.0",
     "imagemin-svgo": "^10.0.0"
