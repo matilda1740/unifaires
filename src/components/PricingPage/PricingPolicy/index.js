@@ -10,7 +10,7 @@ import SectionWrapper, {PricingSectionHeader, ButtonGroup,PricingArea,InnerWrapp
 // import PricingSliderSection from '../PricingLinearProgress'
 import PricingSliderSection from '../PricingSlider'
 
-import crown from 'public/images/crown.svg';
+// import crown from 'public/images/crown.svg';
 import checkmark from 'public/images/checkmark.svg';
 
 

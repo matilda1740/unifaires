@@ -8,7 +8,7 @@ import SectionWrapper, {
     ContactArea,ContactAreaLeft,ContactAreaRight,ContactCard,CardFormRow
 } from '../contactcard.style.js';
 
-import crown from 'public/images/crown.svg';
+// import crown from 'public/images/crown.svg';
 import facebook from 'public/images/socials/facebook.svg';
 import instagram from 'public/images/socials/instagram.svg'
 import twitter from 'public/images/socials/twitter.svg'

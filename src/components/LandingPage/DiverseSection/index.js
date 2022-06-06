@@ -259,7 +259,7 @@ const DiverseSection = () => {
             <FlexBox>
               <BoxThree>
                 <Flex>
-                  <img src="./images/cardthree.svg" alt="image" />
+                  <img src="./images/cardtwo.svg" alt="image" />
                 </Flex>
                 <InnerWrapper>
                   <BoxButton>Sewanee University</BoxButton>
@@ -285,7 +285,7 @@ const DiverseSection = () => {
             <FlexBox>
               <BoxThree>
                 <Flex>
-                  <img src="./images/cardthree.svg" alt="image" />
+                  <img src="./images/cardtwo.svg" alt="image" />
                 </Flex>
                 <InnerWrapper>
                   <BoxButton>Sewanee University</BoxButton>
