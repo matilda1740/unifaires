@@ -28,7 +28,11 @@ export default class CustomDocument extends Document {
   render() {
     return (
       <Html lang="en">
-        <Head><link rel="icon" href="/logo.png" /></Head>
+        <Head>
+        <link rel="icon" href="/unifairesfavicon.ico" />
+        <link href="http://fonts.cdnfonts.com/css/maison-neue" rel="stylesheet"/>       
+
+        </Head>
         <body>
           <Main />
           <NextScript />

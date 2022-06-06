@@ -20,7 +20,7 @@ import GlobalStyle, {
   ContentWrapper,
 } from "components/LandingPage/landingPageStyles";
 import SalesSection from "components/LandingPage/SalesSection";
-import Navbar from "components/LandingPage/NavBar";
+// import NavBar from "components/LandingPage/NavBar";
 
 export default function LandingPage() {
   return (
@@ -62,7 +62,7 @@ export default function LandingPage() {
         {/* start app creative landing */}
         <AppWrapper>
           <DrawerProvider>
-            <Navbar />
+            {/* <NavBar /> */}
           </DrawerProvider>
           <ContentWrapper>
             <Banner />

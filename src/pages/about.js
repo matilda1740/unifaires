@@ -7,7 +7,6 @@ import { GlobalStyle, AppWrapper } from 'components/globalApp.style';
 import ResetCSS from 'common/assets/css/style';
 import { DrawerProvider } from 'common/contexts/DrawerContext';
 // Page Sections
-import Navbar from "components/LandingPage/Navbar";
 import AboutModule from 'components/AboutPage';
 
 const Main = () => {
@@ -24,11 +23,9 @@ const Main = () => {
         <AppWrapper>
           <Sticky top={0} innerZ={9999} activeClass="sticky-nav-active">
             <DrawerProvider>
-              {/* <Navbar /> */}
             </DrawerProvider>
           </Sticky>
           <AboutModule/>
-          {/* <Footer /> */}
         </AppWrapper>
       </Fragment>
     </ThemeProvider>
