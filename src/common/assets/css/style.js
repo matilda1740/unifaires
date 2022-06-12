@@ -8,7 +8,7 @@ const ResetCSS = createGlobalStyle`
 
   html {
     box-sizing: border-box;
-    -ms-overflow-style: scrollbar;
+    -ms-overflow-style: bar;
   }
 
   *,

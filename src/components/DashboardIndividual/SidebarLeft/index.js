@@ -88,7 +88,7 @@ const SidebarLeft = ({userType, isNavOpen, setIsNavOpen}) => {
             {
                 userType === "business" &&
                 <>
-                <Link href={`/${userType}/accountmanagement`}>
+                <Link href={`/${userType}/accountmanagement/courses`}>
                 <DashboardRow className={ router.pathname === `/business/accountmanagement/courses` || router.pathname === `/business/accountmanagement/organizations` || router.pathname === `/business/accountmanagement/instructors` || router.pathname === `/business/accountmanagement/invites` || router.pathname === `/business/accountmanagement/students` ? "dash_row dash_selected" : "dash_row"}>
                     <AccountBalanceOutlined />
                     <Text as="p" content={"Manage Account"}/>

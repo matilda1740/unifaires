@@ -12,14 +12,14 @@ const AddNewWrapper = ({content}) => {
         <AddWrapperOverlay>
             <AddWrapperStyle>
                 <AddNavigationRow>
-                    <Link href="/business/dashboard/organizations/create">
-                    <NavSelection className={ router.pathname === "/business/dashboard/organizations/create" ? "active" : ""}>Organization/Business</NavSelection>
+                    <Link href="/business/accountmanagement/create/organizations">
+                    <NavSelection className={ router.pathname === "/business/accountmanagement/create/organizations" ? "active" : ""}>Organization/Business</NavSelection>
                     </Link>
-                    <Link href="/business/dashboard/instructors/create">
-                    <NavSelection className={ router.pathname === "/business/dashboard/instructors/create" ? "active" : ""}>Instructor/Admin</NavSelection>
+                    <Link href="/business/accountmanagement/create/instructors">
+                    <NavSelection className={ router.pathname === "/business/accountmanagement/create/instructors" ? "active" : ""}>Instructor/Admin</NavSelection>
                     </Link>
-                    <Link href="/business/dashboard/students/create">
-                    <NavSelection className={ router.pathname === "/business/dashboard/students/create" ? "active" : ""}>Student/Staff</NavSelection>
+                    <Link href="/business/accountmanagement/create/students">
+                    <NavSelection className={ router.pathname === "/business/accountmanagement/create/students" ? "active" : ""}>Student/Staff</NavSelection>
                     </Link>
                 </AddNavigationRow>
 

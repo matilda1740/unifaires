@@ -35,7 +35,7 @@ const AccountsManagement = ({content}) => {
     const openModal = () => setIsOpen(true);
     const closeModal = () => setIsOpen(false);
 
-    console.log("Modal: ", isOpen)
+    // console.log("Modal: ", isOpen)
     return (
     <>
         <ModuleHeading>

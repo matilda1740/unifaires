@@ -7,24 +7,30 @@ import { GlobalStyle, AppWrapper } from 'components/globalApp.style';
 import ResetCSS from 'common/assets/css/style';
 // Page Sections
 import BusinessWrapper from 'components/DashboardBusiness';
-import ManageAccounts from 'components/DashboardBusiness/Pages/ManageAccounts';
-import ManageCourses from 'components/DashboardBusiness/Pages/ManageAccounts/Courses';
+import VettedTalent from 'components/DashboardBusiness/Pages/VettedTalent';
+import VettedRequests from 'components/DashboardBusiness/Pages/VettedTalent/VettedRequests';
+import VettedProfiles from 'components/DashboardBusiness/Pages/VettedTalent/VettedProfiles';
 
 const Main = () => {
   return (
     <ThemeProvider theme={theme}>
       <Fragment>
         <Head>
-          <title>Unifaires | Manage Accounts</title>
+          <title>Unifaires | Vetted Talent</title>
           <meta name="theme-color" content="#10ac84" />
           <meta name="Description" content="React next landing page" />
-          <link href="http://fonts.cdnfonts.com/css/maison-neue" rel="stylesheet"/>      
+          <link href="http://fonts.cdnfonts.com/css/maison-neue" rel="stylesheet"/>       
+     
         </Head>
         <ResetCSS />
         <AppWrapper>
           <Sticky top={0} innerZ={9999} activeClass="sticky-nav-active">
           </Sticky>
-          <BusinessWrapper content={<ManageAccounts content={<ManageCourses />} />}/>    
+          <BusinessWrapper 
+              content={<VettedTalent 
+                requestContent={<VettedRequests />} 
+                profileContent={<VettedProfiles />}
+              />} />    
         </AppWrapper>
       </Fragment>
     </ThemeProvider>

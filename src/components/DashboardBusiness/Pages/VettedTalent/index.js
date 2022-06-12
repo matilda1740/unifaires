@@ -13,12 +13,12 @@ import { AccountsContentSection, AccountsHeadSection } from 'components/Dashboar
 // --------------- STYLES -------------------
 
 // -----------------------------------------
-import { ToolBarEach, ToolBarWrapper } from './manageaccounts.style';
+import { ToolBarEach, ToolBarWrapper } from '../ManageAccounts/manageaccounts.style';
 import BillingButton from 'components/DashboardIndividual/Pages/Settings/Billings/BillingButton';
 
-const ManageAccounts = ({content}) => {
-    const {firstname, accounts, userOptions} = businessModule;
-    const [instructors, setInstructors] = useState();
+const VettedTalent = ({requestContent, profileContent}) => {
+    const {firstname, vettedtalents, userOptions} = businessModule;
+
     const router = useRouter();
 
     const [isOpen, setIsOpen] = useState(false);
@@ -26,13 +26,15 @@ const ManageAccounts = ({content}) => {
     const openModal = () => setIsOpen(true);
     const closeModal = () => setIsOpen(false);
 
+    const [currentView, setCurrentView] = useState("requests");
+
     return (
     <>
         <ModuleHeading>
             <div className="top_row">
             <HeadingLeft>
-                <Heading as="h4" content={"Account Management"}/>
-                <Text as="p" content={`Welcome ${firstname}, manage your accounts here`}/>
+                <Heading as="h4" content={"Vetted Talent"}/>
+                <Text as="p" content={`Welcome ${firstname}, vet talents here`}/>
             </HeadingLeft>
             <HeadingRight>
                 <SearchBar>
@@ -46,29 +48,15 @@ const ManageAccounts = ({content}) => {
         </ModuleHeading>
 
         <AccountsHeadSection>
-            <div className="title_row">
-                <Heading as="h5" content={"Accounts"}></Heading>
-                <div className="right_div">
-                    <Link href="/business/accountmanagement/create/instructor">
-                    <BillingButton 
-                    variant={"primary"}
-                    position={""}
-                    text={"Add New User"}
-                    // openModal={openModal}
-                    // isOpen={isOpen}
-                    />
-                    </Link>
-                </div>
-            </div>
 
             <ToolBarWrapper>
-                { accounts.map( account => (
-                <Link href={`/business/accountmanagement/${account.title}`} key={account.id}>
-                    <ToolBarEach className={router.pathname === `/business/accountmanagement/${account.title}` ? "active" : ""}>
-                    {account.icon}
-                    <h6>{account.title}</h6>
+                { vettedtalents.map( vettedtalent => (
+                <div onClick={() => setCurrentView(vettedtalent.reference)} key={vettedtalent.id}>
+                    <ToolBarEach className={ currentView === vettedtalent.reference ? "active" : ""}>
+                    {vettedtalent.icon}
+                    <h6>{vettedtalent.title}</h6>
                     </ToolBarEach>
-                </Link>
+                </div>
                 ))}
             </ToolBarWrapper>            
         </AccountsHeadSection>
@@ -76,11 +64,16 @@ const ManageAccounts = ({content}) => {
 
         <ModuleSection>
             <AccountsContentSection>
-                {content}
+                {
+                    currentView === "profiles" ? 
+                     profileContent
+                    : 
+                    requestContent
+                }
             </AccountsContentSection>
         </ModuleSection>  
     </>
     );
 };
 
-export default ManageAccounts;
+export default VettedTalent;

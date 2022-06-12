@@ -3,11 +3,11 @@ import NProgress from "nprogress";
 import Router from "next/router";
 import "@redq/reuse-modal/es/index.css";
 import "common/assets/css/flaticon.css";
-import "../../public/fonts/remixicon.css";
-import "../../public/css/bootstrap.min.css";
-import "../../public/css/style.css";
-import "../../public/css/nprogress.css";
-import "../../public/css/responsive.css";
+import "public/fonts/remixicon.css";
+import "public/css/bootstrap.min.css";
+import "public/css/style.css";
+import "public/css/nprogress.css";
+import "public/css/responsive.css";
 // import "antd/dist/antd.css";
 
 import "common/assets/css/icon-example-page.css";

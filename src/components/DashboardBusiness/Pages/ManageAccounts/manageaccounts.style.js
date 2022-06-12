@@ -14,7 +14,9 @@ export const ToolBarWrapper = styled.section`
 export const ToolBarEach = styled.div`
     display: flex;
     /* border: 1px solid #EEEAFB; */
-    width: 200px;
+    /* width: 200px; */
+    min-width: 200px;
+    width: fit-content;
     height: 100%;
     padding: 12px 0 12px 20px;
     border-radius: 0px;

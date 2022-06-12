@@ -7,24 +7,24 @@ import { GlobalStyle, AppWrapper } from 'components/globalApp.style';
 import ResetCSS from 'common/assets/css/style';
 // Page Sections
 import BusinessWrapper from 'components/DashboardBusiness';
-import ManageAccounts from 'components/DashboardBusiness/Pages/ManageAccounts';
-import ManageCourses from 'components/DashboardBusiness/Pages/ManageAccounts/Courses';
+import AddStudent from 'components/DashboardBusiness/Pages/Home/AddNew/Student';
+import AddNewWrapper from 'components/DashboardBusiness/Pages/Home/AddNew';
 
 const Main = () => {
   return (
     <ThemeProvider theme={theme}>
       <Fragment>
         <Head>
-          <title>Unifaires | Manage Accounts</title>
+          <title>Unifaires | Add Student</title>
           <meta name="theme-color" content="#10ac84" />
           <meta name="Description" content="React next landing page" />
-          <link href="http://fonts.cdnfonts.com/css/maison-neue" rel="stylesheet"/>      
+          <link href="http://fonts.cdnfonts.com/css/maison-neue" rel="stylesheet"/>   
         </Head>
         <ResetCSS />
         <AppWrapper>
           <Sticky top={0} innerZ={9999} activeClass="sticky-nav-active">
           </Sticky>
-          <BusinessWrapper content={<ManageAccounts content={<ManageCourses />} />}/>    
+          <BusinessWrapper content={<AddNewWrapper content={<AddStudent />} />}/>    
         </AppWrapper>
       </Fragment>
     </ThemeProvider>
