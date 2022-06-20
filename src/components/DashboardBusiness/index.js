@@ -9,6 +9,7 @@ import SidebarRight from 'components/DashboardIndividual/SidebarRight';
 import { MobileHeader } from 'components/DashboardIndividual/SidebarLeft/sidebarleft.style';
 import SearchIcon from 'public/images/dashboard/Search.svg'
 import MenuBarIcon from 'public/images/dashboard/MenuBar.svg'
+import { MenuOutlined, SearchOutlined } from '@mui/icons-material';
 
 // --------------- STYLES -------------------
 
@@ -26,10 +27,10 @@ const BusinessWrapper = ({content}) => {
         isNavOpen &&
         <MobileHeader className="mobile_header">
             <div className="ellipse" onClick={() => setIsNavOpen(!isNavOpen)}>
-                <img src={MenuBarIcon?.src} alt="Menu" />
+                <MenuOutlined />
             </div>
             <div className="ellipse">
-            <img src={SearchIcon?.src} alt="Search" />
+            <SearchOutlined />
             </div>
         </MobileHeader>
         }        

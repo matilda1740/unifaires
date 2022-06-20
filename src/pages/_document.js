@@ -30,6 +30,7 @@ export default class CustomDocument extends Document {
       <Html lang="en">
         <Head>
         <link rel="icon" href="/unifairesfavicon.ico" />
+        <link rel="preconnect" href="http://fonts.cdnfonts.com" crossorigin />
         <link href="http://fonts.cdnfonts.com/css/maison-neue" rel="stylesheet"/>       
 
         </Head>

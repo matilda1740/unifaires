@@ -34,14 +34,16 @@ const SidebarCard = styled.section`
     background: linear-gradient(180deg, rgba(176, 214, 255, 0.1) 0%, rgba(163, 189, 217, 0.1) 100%);
     width:25%;
     height:1000px;
+    svg { 
+        font-size: 1.25rem;
+        /* path { stroke-linecap: round; } */
+        
+    }
     .dash_selected {
         border-left: 4px solid rgba(88, 50, 218, 1);
         p, svg{
             color: rgba(88, 50, 218, 1);
         }
-        img{
-            /* filter: invert(25%) sepia(93%) saturate(1986%) hue-rotate(243deg) brightness(80%) contrast(111%); */
-    filter: invert(16%) sepia(97%) saturate(3077%) hue-rotate(252deg) brightness(98%) contrast(95%);        }
     }
     h4 {
         margin: 20px 0 0 35px !important;

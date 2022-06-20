@@ -4,7 +4,7 @@ import Link from 'next/link';
 import {useRouter} from 'next/router'
 import { AddWrapperOverlay, AddWrapperStyle, AddNavigationRow, NavSelection, DetailsSection, ImageColumn, FormColumn, AddButtonsRow, Buttons } from './addnew.style';
 
-const AddNewWrapper = ({content}) => {
+const AddNewWrapper = ({isOpen, updateModalType, modalType, closeModal, orgContent, insContent, stdContent}) => {
 
     const router = useRouter();
     
@@ -12,20 +12,23 @@ const AddNewWrapper = ({content}) => {
         <AddWrapperOverlay>
             <AddWrapperStyle>
                 <AddNavigationRow>
-                    <Link href="/business/accountmanagement/create/organizations">
-                    <NavSelection className={ router.pathname === "/business/accountmanagement/create/organizations" ? "active" : ""}>Organization/Business</NavSelection>
-                    </Link>
-                    <Link href="/business/accountmanagement/create/instructors">
-                    <NavSelection className={ router.pathname === "/business/accountmanagement/create/instructors" ? "active" : ""}>Instructor/Admin</NavSelection>
-                    </Link>
-                    <Link href="/business/accountmanagement/create/students">
-                    <NavSelection className={ router.pathname === "/business/accountmanagement/create/students" ? "active" : ""}>Student/Staff</NavSelection>
-                    </Link>
+                    <NavSelection onClick={updateModalType("organization")} className={ modalType === "organization" ? "active" : ""}>Organization/Business</NavSelection>
+                    <NavSelection onClick={updateModalType("instructor")}  className={ modalType === "instructor" ? "active" : ""}>Instructor/Admin</NavSelection>
+                    <NavSelection onClick={updateModalType("student")}  className={ modalType === "student" ? "active" : ""}>Student/Staff</NavSelection>
                 </AddNavigationRow>
 
                 <DetailsSection>
-                    {content}
+                    {
+                        modalType === "student" ? stdContent :
+                        modalType === "instructor" ? insContent
+                        : orgContent
+                    }
                 </DetailsSection>
+
+                <AddButtonsRow>
+                    <Buttons className="primary">Add User</Buttons>
+                    <Buttons className="secondary" onClick={closeModal}>Cancel</Buttons>
+                </AddButtonsRow>                
             </AddWrapperStyle>
         </AddWrapperOverlay>
     );

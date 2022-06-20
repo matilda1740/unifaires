@@ -15,6 +15,11 @@ import { AccountsContentSection, AccountsHeadSection } from 'components/Dashboar
 // -----------------------------------------
 import { ToolBarEach, ToolBarWrapper } from './manageaccounts.style';
 import BillingButton from 'components/DashboardIndividual/Pages/Settings/Billings/BillingButton';
+import AddNewWrapper from '../Home/AddNew';
+import AddOrganization from '../Home/AddNew/Organization';
+import AddInstructor from '../Home/AddNew/Instructor';
+import AddStudent from '../Home/AddNew/Student';
+
 
 const ManageAccounts = ({content}) => {
     const {firstname, accounts, userOptions} = businessModule;
@@ -25,6 +30,9 @@ const ManageAccounts = ({content}) => {
 
     const openModal = () => setIsOpen(true);
     const closeModal = () => setIsOpen(false);
+
+    const [modalType, setModalType] = useState("organization");
+    const updateModalType = (type) => () => setModalType(type);
 
     return (
     <>
@@ -49,15 +57,14 @@ const ManageAccounts = ({content}) => {
             <div className="title_row">
                 <Heading as="h5" content={"Accounts"}></Heading>
                 <div className="right_div">
-                    <Link href="/business/accountmanagement/create/instructor">
+                    {/* <Link href="/business/accountmanagement/create/instructor"> */}
                     <BillingButton 
                     variant={"primary"}
                     position={""}
                     text={"Add New User"}
-                    // openModal={openModal}
-                    // isOpen={isOpen}
+                    openModal={openModal}
                     />
-                    </Link>
+                    {/* </Link> */}
                 </div>
             </div>
 
@@ -79,6 +86,19 @@ const ManageAccounts = ({content}) => {
                 {content}
             </AccountsContentSection>
         </ModuleSection>  
+
+        {
+            isOpen &&
+            <AddNewWrapper 
+                isOpen={isOpen}
+                closeModal={closeModal} 
+                modalType={modalType}
+                updateModalType={updateModalType}
+                orgContent={<AddOrganization />}
+                insContent={<AddStudent />}
+                stdContent={<AddInstructor />}
+            /> 
+        }
     </>
     );
 };
