@@ -54,12 +54,6 @@ const AddStudent = () => {
             <FormInput size={"full"} label={"Invitation Message"} placeholder={"Optional"} name={"invitemessage"} type={"text"} />
 
         </FormColumn>
-
-        <AddButtonsRow>
-            <Buttons>Preview Profile</Buttons>
-            <Buttons>Cancel</Buttons>
-
-        </AddButtonsRow>
         </>
     );
 };

@@ -6,7 +6,7 @@ import { SectionHeader } from '../../../../globalApp.style';
 import SectionWrapper, {ModuleSection, ModuleRow, ModuleRowEmpty, BadgesCard, ModuleSectionHeader, ModuleSectionContainer, ModuleSectionWrapper, SectionDivider, HelpBottomOptions, WhereToSection, HelpBottomSection, InformationContainer, SectionTitle,  } from '../../../../DashboardBusiness/business.style';
 import RecommendedFundingCard, { FundingSectionWrapper } from 'components/DashboardComponents/RecommendedFunding'
 import BillingButton from 'components/DashboardIndividual/Pages/Settings/Billings/BillingButton';
-import DropDownList from '.components/DashboardComponents/DropDownList';
+import DropDownList from 'components/DashboardComponents/DropDownList';
 import BackURLModule from 'components/DashboardComponents/BackURLModule';
 
 import { individualModule } from 'common/data/appData';

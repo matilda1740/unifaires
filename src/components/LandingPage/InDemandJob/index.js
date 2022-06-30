@@ -196,7 +196,7 @@ const ChooseUs = () => {
             <FlexBox>
               <Box>
                 <Flex>
-                  <img src="./images/job1.svg" alt="image" />
+                  <img src="./images/Hero.svg" alt="image" />
                 </Flex>
                 <InnerWrapper>
                   <BoxButton>Meta</BoxButton>
@@ -221,7 +221,7 @@ const ChooseUs = () => {
             <FlexBox>
               <BoxTwo>
                 <Flex>
-                  <img src="./images/job2.svg" alt="image" />
+                  <img src="./images/Hero.svg" alt="image" />
                 </Flex>
                 <InnerWrapper>
                   <BoxButton>Google</BoxButton>
@@ -247,7 +247,7 @@ const ChooseUs = () => {
             <FlexBox>
               <BoxThree>
                 <Flex>
-                  <img src="./images/cardthree.svg" alt="image" />
+                  <img src="./images/cardtwo.svg" alt="image" />
                 </Flex>
                 <InnerWrapper>
                   <BoxButton>IBM</BoxButton>
@@ -272,7 +272,7 @@ const ChooseUs = () => {
             <FlexBox>
               <BoxThree>
                 <Flex>
-                  <img src="./images/cardthree.svg" alt="image" />
+                  <img src="./images/cardtwo.svg" alt="image" />
                 </Flex>
                 <InnerWrapper>
                   <BoxButton>IBM</BoxButton>

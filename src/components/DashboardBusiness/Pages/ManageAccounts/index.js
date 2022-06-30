@@ -6,21 +6,19 @@ import Heading from 'components/Layout/Heading';
 import {useRouter} from 'next/router'
 
 import { businessModule } from 'common/data/appData';
-import { HeadingLeft, HeadingRight, ModuleHeading, ModuleSection, SearchBar, SectionHeading, SeeAllStyle } from 'components/DashboardBusiness/business.style';
-import SwipeableComponent from 'components/DashboardComponents/SwipeableComponent';
-import { Search, Notifications, NotificationsOutlined } from '@material-ui/icons'
-import DashboardBadges from 'components/DashboardComponents/DashboardBadge';
-import { ArrowForwardIos, AutoStories, PersonOutlined, CorporateFareOutlined, SchoolOutlined, MarkAsUnreadOutlined } from '@mui/icons-material';
-import { AccountsBarEach, AccountsBarWrapper, AccountsContentSection, AccountsHeadSection } from 'components/DashboardBusiness/Pages/Home/AccountManagement/accounts.styles';
+import { HeadingLeft, HeadingRight, ModuleHeading, ModuleSection, SearchBar} from 'components/DashboardBusiness/business.style';
+import { Search, NotificationsOutlined } from '@material-ui/icons';
+import { AccountsContentSection, AccountsHeadSection } from 'components/DashboardBusiness/Pages/Home/AccountManagement/accounts.styles';
 
 // --------------- STYLES -------------------
 
 // -----------------------------------------
-
-import CoursesIcon from 'public/images/dashboard/Courses.svg'
-import JobIcon from 'public/images/dashboard/Dashboard/Work.svg'
-import MedalIcon from 'public/images/dashboard/Group.svg'
 import { ToolBarEach, ToolBarWrapper } from './manageaccounts.style';
+import BillingButton from 'components/DashboardIndividual/Pages/Settings/Billings/BillingButton';
+import AddNewWrapper from '../Home/AddNew';
+import AddOrganization from '../Home/AddNew/Organization';
+import AddInstructor from '../Home/AddNew/Instructor';
+import AddStudent from '../Home/AddNew/Student';
 
 
 const ManageAccounts = ({content}) => {
@@ -32,6 +30,9 @@ const ManageAccounts = ({content}) => {
 
     const openModal = () => setIsOpen(true);
     const closeModal = () => setIsOpen(false);
+
+    const [modalType, setModalType] = useState("organization");
+    const updateModalType = (type) => () => setModalType(type);
 
     return (
     <>
@@ -50,6 +51,23 @@ const ManageAccounts = ({content}) => {
                 <div className="counter"><span>4</span></div>
             </HeadingRight>
             </div>
+        </ModuleHeading>
+
+        <AccountsHeadSection>
+            <div className="title_row">
+                <Heading as="h5" content={"Accounts"}></Heading>
+                <div className="right_div">
+                    {/* <Link href="/business/accountmanagement/create/instructor"> */}
+                    <BillingButton 
+                    variant={"primary"}
+                    position={""}
+                    text={"Add New User"}
+                    openModal={openModal}
+                    />
+                    {/* </Link> */}
+                </div>
+            </div>
+
             <ToolBarWrapper>
                 { accounts.map( account => (
                 <Link href={`/business/accountmanagement/${account.title}`} key={account.id}>
@@ -59,14 +77,28 @@ const ManageAccounts = ({content}) => {
                     </ToolBarEach>
                 </Link>
                 ))}
-            </ToolBarWrapper>
-        </ModuleHeading>
+            </ToolBarWrapper>            
+        </AccountsHeadSection>
+        
 
         <ModuleSection>
             <AccountsContentSection>
                 {content}
             </AccountsContentSection>
         </ModuleSection>  
+
+        {
+            isOpen &&
+            <AddNewWrapper 
+                isOpen={isOpen}
+                closeModal={closeModal} 
+                modalType={modalType}
+                updateModalType={updateModalType}
+                orgContent={<AddOrganization />}
+                insContent={<AddStudent />}
+                stdContent={<AddInstructor />}
+            /> 
+        }
     </>
     );
 };

@@ -23,7 +23,8 @@ const DashboardBadges = ({ label, number, icon, className, isMaterial, children,
             <span>{number}</span>
         </div>
         <div className="icon">
-            <img src={icon?.src} alt="icon" /> 
+            {/* <img src={icon?.src} alt="icon" />  */}
+            {icon}
         </div>
     </DashboardBadgeStyle>
   );

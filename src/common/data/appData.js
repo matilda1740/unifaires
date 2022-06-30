@@ -2,7 +2,7 @@
 import logo from 'common/assets/images/logoUnifaires.svg'
 // import paypal from 'public/images/partners/paypal.svg'
 import paypal from 'common/assets/images/tesla.svg'
-import { ArrowForwardIos, AutoStories, PersonOutlined, CorporateFareOutlined, SchoolOutlined, MarkAsUnreadOutlined } from '@mui/icons-material';
+import { ArrowForwardIos, AutoStories, PersonOutlined, CorporateFareOutlined, SchoolOutlined, MarkAsUnreadOutlined, FlakyOutlined, GroupOutlined } from '@mui/icons-material';
 
 /* -------- About Us data section --------- */
 
@@ -1087,6 +1087,11 @@ export const businessModule = {
     { id: "I1", title: "instructors", number: 21, icon: <SchoolOutlined/> },
     { id: "S1", title: "students", number: 2321, icon: <PersonOutlined/> },
     { id: "I2", title: "invites", number: 12, icon: <MarkAsUnreadOutlined/> },
+  ],
+    vettedtalents: [
+    { id: "V1", reference: "requests", title: "vetted talent requests", number: 873, icon: <MarkAsUnreadOutlined/> },
+    { id: "T2", reference: "talents", title: "vet talents", number: 412, icon: <FlakyOutlined/> },
+    { id: "P8", reference: "profiles", title: "vetted profile", number: 21, icon: <GroupOutlined/> },
   ],
   userOptions: [{
     invites: [

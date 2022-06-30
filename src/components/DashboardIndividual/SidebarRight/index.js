@@ -8,7 +8,7 @@ import { SectionHeader } from '../../globalApp.style';
 import { ProfileCard, ProfileCardSkills} from '../../DashboardBusiness/business.style' ;
 
 import avatarIcon from 'public/images/dashboard/Dashboard/avatarIcon.svg'
-import verifiedIcon from 'public/images/dashboard/verifiedIcon.svg'
+import verifiedIcon from 'public/images/dashboard/VerifiedIcon.svg'
 const SidebarRight = ({togglePopUp}) => {
   const {company, suite} = individualModule;
   const [state, setState] = useState({

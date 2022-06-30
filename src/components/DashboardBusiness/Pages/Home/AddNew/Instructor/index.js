@@ -11,7 +11,7 @@ import ImageInput from 'components/DashboardIndividual/Pages/Settings/Components
 import { FormEachPhoneContainer, FormHalfContainer } from 'components/DashboardIndividual/Pages/Settings/Components/Form';
 import FormInput from '../Components/FormInput';
 import avatarBoxProfile from 'public/images/dashboard/avatarBoxProfile.png'
-const AddInstructor = () => {
+const AddInstructor = ({closeModal}) => {
 
     const router = useRouter();
     const [phone, setPhone] = useState()
@@ -52,12 +52,6 @@ const AddInstructor = () => {
             <FormInput size={"full"} label={"Invitation Message"} placeholder={"Optional"} name={"invitemessage"} type={"text"} />
 
         </FormColumn>
-
-        <AddButtonsRow>
-            <Buttons>Preview Profile</Buttons>
-            <Buttons>Cancel</Buttons>
-
-        </AddButtonsRow>
         </>
     );
 };

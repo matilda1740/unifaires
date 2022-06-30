@@ -44,10 +44,6 @@ const AddOrganization = ({isOpen, closeModal}) => {
 
             <FormInput size={"full"} label={"Invitation Message"} placeholder={"Optional"} name={"invitemessage"} type={"text"} />
 
-            <AddButtonsRow>
-                <Buttons className="primary">Preview Profile</Buttons>
-                <Buttons className="secondary" onClick={() => closeModal}>Cancel</Buttons>
-            </AddButtonsRow>
         </FormColumn>
 
 

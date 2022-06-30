@@ -94,7 +94,7 @@ const BillingButton = (props) => {
     const { variant, text, type="button", position} = props;
 
     return (
-        <BillingButtonStyle onClick={() => props.openModal} className={`${variant}_btn ${position}`}>{text}</BillingButtonStyle>
+        <BillingButtonStyle onClick={props.openModal} className={`${variant}_btn ${position}`}>{text}</BillingButtonStyle>
     );
 }
 export default BillingButton;

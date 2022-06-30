@@ -2,10 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import NextImage from "common/components/NextImage";
 
-import Instructor from "../../../public/images/instructor.svg";
-import Ratings from "../../../public/images/ratings.svg";
-import OnlineSvg from "../../../public/images/OnlineSvg.svg";
-import Adoption from "../../../public/images/adoptionImage.svg";
+import Instructor from "public/images/instructor.svg";
+import Ratings from "public/images/ratings.svg";
+import OnlineSvg from "public/images/OnlineSvg.svg";
+import Adoption from "public/images/adoptionImage.svg";
 import { Heading, HeadingText, Text } from "common/style";
 
 const ContainerStyle = styled.div`

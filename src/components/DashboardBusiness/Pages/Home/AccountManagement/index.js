@@ -8,9 +8,8 @@ import {useRouter} from 'next/router'
 import { businessModule } from 'common/data/appData';
 import { HeadingLeft, HeadingRight, ModuleHeading, ModuleSection, SearchBar, SectionHeading, SeeAllStyle } from 'components/DashboardBusiness/business.style';
 import SwipeableComponent from 'components/DashboardComponents/SwipeableComponent';
-import { Search, Notifications } from '@material-ui/icons'
 import DashboardBadges from 'components/DashboardComponents/DashboardBadge';
-import { ArrowForwardIos, AutoStories } from '@mui/icons-material';
+import { ArrowForwardIos, AutoStoriesOutlined, HomeRepairServiceOutlined, MilitaryTechOutlined, NotificationsOutlined, SearchOutlined } from '@mui/icons-material';
 import { AccountsBarEach, AccountsBarWrapper, AccountsContentSection, AccountsHeadSection } from './accounts.styles';
 
 // --------------- STYLES -------------------
@@ -24,6 +23,7 @@ import BillingButton from 'components/DashboardIndividual/Pages/Settings/Billing
 
 import AddNewWrapper from '../AddNew';
 import AddOrganization from '../AddNew/Organization'
+// import ModuleHeading from 'components/DashboardComponents/ModuleHeading';
 
 const AccountsManagement = ({content}) => {
     const {firstname, accounts, userOptions} = businessModule;
@@ -35,9 +35,14 @@ const AccountsManagement = ({content}) => {
     const openModal = () => setIsOpen(true);
     const closeModal = () => setIsOpen(false);
 
-    console.log("Modal: ", isOpen)
+    // console.log("Modal: ", isOpen)
     return (
     <>
+        {/* <ModuleHeading
+            heading={"My Dashboard"}
+            subheading={`Welcome ${firstname}, here are your daily analytics`}
+            bottomRow={true}
+        /> */}
         <ModuleHeading>
             <div className="top_row">
             <HeadingLeft>
@@ -46,10 +51,10 @@ const AccountsManagement = ({content}) => {
             </HeadingLeft>
             <HeadingRight>
                 <SearchBar>
-                    <Search />
+                    <SearchOutlined />
                     <input type="text" placeholder="Search for anything" name="searchBar" className="searchBar"></input>
                 </SearchBar>
-                <div className="icon_ellipse"> <Notifications /></div>
+                <div className="icon_ellipse"> <NotificationsOutlined /></div>
                 <div className="counter"><span>4</span></div>
             </HeadingRight>
             </div>
@@ -58,19 +63,21 @@ const AccountsManagement = ({content}) => {
                 <DashboardBadges 
                     label={"Posted Courses"}
                     number={980}
-                    // icon={<AutoStories/>}
-                    icon={CoursesIcon}
+                    icon={<AutoStoriesOutlined />}
+                    // icon={CoursesIcon}
 
                 />
                 <DashboardBadges 
                     label={"Posted Jobs"}
                     number={980}
-                    icon={JobIcon}
+                    // icon={JobIcon}
+                    icon={<HomeRepairServiceOutlined />}
                 />
                 <DashboardBadges 
                     label={"Awarded Certifications & Badges"}
                     number={980}
-                    icon={MedalIcon}
+                    // icon={MedalIcon}
+                    icon={<MilitaryTechOutlined />}
                 />                               
             </div>
 
@@ -78,22 +85,6 @@ const AccountsManagement = ({content}) => {
 
         <ModuleSection>
             <AccountsHeadSection>
-                <div className="title_row">
-                <Heading as="h5" content={"Accounts"}></Heading>
-                <div className="right_div">
-                    <BillingButton 
-                    variant={"primary"}
-                    position={""}
-                    text={"Add New User"}
-                    openModal={openModal}
-                    isOpen={isOpen}
-                    />
-                    <SeeAllStyle>
-                        <p>See All</p>
-                        <ArrowForwardIos />
-                    </SeeAllStyle>
-                </div>
-                </div>
 
                 <AccountsBarWrapper>
                     { accounts.map( account => (

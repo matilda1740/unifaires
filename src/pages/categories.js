@@ -14,7 +14,7 @@ import Statistics from "components/Categories/Statistics";
 import BreadCrumbs from "components/Categories/BreadCrumbs";
 import Jobs from "components/Categories/Jobs";
 import { DrawerProvider } from "common/contexts/DrawerContext";
-import NavBar from "components/LandingPage/NavBar";
+// import NavBar from "components/LandingPage/NavBar";
 import Footer from "components/LandingPage/Footer";
 import DegreeCourse from "components/Categories/DegreeCourse";
 import Funding from "components/Categories/Funding";
@@ -52,7 +52,7 @@ export default function CategoriesPage() {
         {/* start category */}
         <AppWrapper>
           <DrawerProvider>
-            <NavBar />
+            {/* <NavBar /> */}
           </DrawerProvider>
           <ContentWrapper>
             <BreadCrumbs />

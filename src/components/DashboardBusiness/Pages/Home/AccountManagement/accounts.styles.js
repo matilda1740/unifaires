@@ -3,8 +3,8 @@ import styled from 'styled-components';
 
 export const AccountsHeadSection = styled.section`
     width: 100%;
-    height: 160px;
-    margin-bottom: 24px;
+    /* height: 160px;
+    margin-bottom: 24px; */
 
     .title_row {
         display: flex;

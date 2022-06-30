@@ -17,7 +17,7 @@ import PlaySpeed from 'public/images/dashboard/VideoControls/PlaySpeed.svg'
 import FullScreen from 'public/images/dashboard/VideoControls/FullScreen.svg'
 // ----------------
 
-import videoBG from 'public/images/dashboard/VideoControls/videoBG.png'
+import videoBG from 'public/images/dashboard/VideoControls/VideoBG.png'
 
 export const VideoPlayerWrapper = styled.section`
     /* width: 100%;
