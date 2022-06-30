@@ -57,7 +57,7 @@ const FilterDropDownStyle = styled.div`
 `;
 
 
-export default function FilterDropDownComponent({data, variant}) {
+const FilterDropDownComponent = ({data, variant}) => {
 
   return (
     <FilterDropDownStyle className={`${variant}`}>
@@ -71,3 +71,5 @@ export default function FilterDropDownComponent({data, variant}) {
     </FilterDropDownStyle>
   )
 }
+
+export default FilterDropDownComponent

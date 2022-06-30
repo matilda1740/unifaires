@@ -9,12 +9,20 @@ justify-content: flex-end;
 align-items: center;
 transition: all 0.3s ease-in-out;
 
+&.start {
+justify-content: flex-start;
+svg {
+    font-size: 1rem;
+    margin: 0 8px 0 12px;
+    width: 1em;
+    height: 1em;
+}
+}
     p,svg {
         color: rgba(173, 168, 190, 1);
     }
     p{ margin-bottom: 0px; }
     svg {
-        margin: 0 12px 0 8px;
         width: 12px;
         height: 10px;
     }
@@ -532,9 +540,9 @@ h5{
 
 export const JobCard = styled.div`
 background-color: rgba(192, 118, 84, 0.05);
-    /* border: rgba(192, 118, 84, 0.05); */
-height: 316px;
-width: 332px;
+
+height: 256px;
+width: 262px;
 border-radius: 12px;
 padding: 16px;
 display: flex;
@@ -547,28 +555,28 @@ transition: all 0.3s ease-in-out;
     transform: scale(1.01);
 }
 :nth-child(n+1) {
-    margin-right: 31px;
+    margin-right: 16px;
 }
 
 h6 {
     color: rgba(173, 168, 190, 1);
     font-size: 12px;
-    margin: 16px 0 0px 0;
-    line-height: 180%;
+    margin: 8px 0 0px 0;
+    line-height: 140%;
     letter-spacing: 0.02em;
     text-transform: uppercase;
 }
 h5{
-    margin: 1px 0 12px 0 !important;
+    margin: 8px 0 8px 0 !important;
     color:  rgba(192, 118, 84, 1) !important;
-    line-height: 140%;
+    line-height: 100%;
+    font-size: 16px;
 }
 .company_logo_div{
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), linear-gradient(141.54deg, #D4FAEA 7.01%, #B79FD4 96.64%);
-    width: 64px;
-    height: 64px;
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
-;
     display: flex;
     align-items: center;
     justify-content:center;
@@ -585,14 +593,16 @@ h5{
     width: 100%;
     button {
         background: rgba(173, 168, 190, 0.1);
-        border-radius: 19px;
-        padding: 10px 18px;
-        font-size: 14px;
+        border-radius: 16px;
+        padding: 0px 18px;
+        font-size: 13px;
+        font-weight: 500;
         line-height: 150%;
-        width: 90px;
-        height: 38px;
+        height: 30px;
         color: #12355B;
-        margin: 0px 16px 16px 0;
+        margin: 4px 16px 16px 0;
+        width: fit-content;
+        min-width: 90px;
     }
 }
 
@@ -602,9 +612,14 @@ a{
     text-transform: uppercase;
     line-height: 180%;
 }
+p:last-of-type{
+    color: #C07654;
+    text-transform: capitalize;
+    font-weight: 500;
+}
 @media screen and (max-width: 480px) {
     :nth-child(n+1) {
-    margin-right: 31px;
+    margin-right: 24px;
 }
 }
 `;
@@ -911,12 +926,16 @@ export const FilterButton = styled.div`
     :hover{
         cursor: pointer;
     }
+    svg, p { 
+    color: rgba(18, 53, 91, 1);
+    }
+    svg {
+        font-size: 1rem;
+    }
     p{
         width: 100%;
         height: 50%;
     margin: 0 0px 10px 0;
-    color: rgba(18, 53, 91, 1);
-
     }
     img {
         width: 8px;
@@ -1260,11 +1279,11 @@ export const HelpBottomOptions = styled.div`
 export const ModuleColumn = styled.div`
     display:flex;
     flex-direction: column; 
-    /* background-color: #f8f8f8; */
     background-color: #ffffff;
     padding:40px 30px;
-    width: 70%;
-    /* height:1400px; */
+    /* width: 75%; */
+    width: 80%;
+
     border-right: 4px solid #F3F5F7;
 
     .module_row_jobs {
@@ -1319,6 +1338,9 @@ export const ModuleSection = styled.div`
     /* padding: 20px 0 0 0px; */
     overflow-y: scroll;
     font-weight: 300;
+    ::-webkit-scrollbar {
+        display: none;
+    }
 
     .courses_row{
         height: 286px;
@@ -1343,6 +1365,11 @@ export const ModuleSection = styled.div`
             font-size: 1rem;
         }
     }
+    &.business_job_section{
+        /* width: 104%; */
+        width: 100%;
+
+    }
     @media screen and (max-width: 480px) {
         .each_cert_card{
             padding: 0;
@@ -1359,7 +1386,7 @@ export const ModuleRow = styled.div`
     flex-flow: column wrap;
     overflow-x:scroll;
 
-    .module_row_jobs_card:nth-child(n+3){
+    .module_row_jobs_card:nth-child(n+4){
             margin-top: 20px;
     }
 
@@ -1516,6 +1543,10 @@ export const SectionHeading = styled.div`
        color: rgba(18, 53, 91, 0.9);
     }
 
+    &.job_section{
+        margin-right: 20px;
+    }
+
     @media screen and (max-width: 480px) {
         h5 {
             font-size: 16px;
@@ -1616,7 +1647,7 @@ button:hover,.profile_card:hover, .icon_ellipse:hover {
 
 export const ProfileCard = styled.section`
     /* background: linear-gradient(180deg, rgba(176, 214, 255, 0.1) 0%, rgba(163, 189, 217, 0.1) 100%); */background: #ffffff;
-    width: 25%;
+    width: 22.5%;
     height:1000px;
     padding: 0 0 0 25px;
     h4 {

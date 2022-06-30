@@ -21,7 +21,7 @@ import JobIcon from 'public/images/dashboard/Dashboard/Work.svg'
 import MedalIcon from 'public/images/dashboard/Group.svg'
 import BillingButton from 'components/DashboardIndividual/Pages/Settings/Billings/BillingButton';
 
-import AddNewWrapper from '../AddNew';
+import ModalWrapper from '../AddNew';
 import AddOrganization from '../AddNew/Organization'
 // import ModuleHeading from 'components/DashboardComponents/ModuleHeading';
 
@@ -106,7 +106,7 @@ const AccountsManagement = ({content}) => {
 
         {
             isOpen &&
-            <AddNewWrapper 
+            <ModalWrapper 
                 content={<AddOrganization isOpen={isOpen}  closeModal={closeModal}/>}
             />              
         }

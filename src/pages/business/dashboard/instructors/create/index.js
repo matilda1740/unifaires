@@ -8,7 +8,7 @@ import ResetCSS from 'common/assets/css/style';
 // Page Sections
 import BusinessWrapper from 'components/DashboardBusiness';
 import AddInstructor from 'components/DashboardBusiness/Pages/Home/AddNew/Instructor';
-import AddNewWrapper from 'components/DashboardBusiness/Pages/Home/AddNew';
+import ModalWrapper from 'components/DashboardBusiness/Pages/Home/AddNew';
 
 const Main = () => {
   return (
@@ -24,7 +24,7 @@ const Main = () => {
         <AppWrapper>
           <Sticky top={0} innerZ={9999} activeClass="sticky-nav-active">
           </Sticky>
-          <BusinessWrapper content={<AddNewWrapper content={<AddInstructor />} />}/>    
+          <BusinessWrapper content={<ModalWrapper content={<AddInstructor />} />}/>    
         </AppWrapper>
       </Fragment>
     </ThemeProvider>
