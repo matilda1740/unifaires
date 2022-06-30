@@ -15,7 +15,7 @@ import { AccountsContentSection, AccountsHeadSection } from 'components/Dashboar
 // -----------------------------------------
 import { ToolBarEach, ToolBarWrapper } from './manageaccounts.style';
 import BillingButton from 'components/DashboardIndividual/Pages/Settings/Billings/BillingButton';
-import AddNewWrapper from '../Home/AddNew';
+import ModalWrapper from '../Home/AddNew';
 import AddOrganization from '../Home/AddNew/Organization';
 import AddInstructor from '../Home/AddNew/Instructor';
 import AddStudent from '../Home/AddNew/Student';
@@ -89,7 +89,7 @@ const ManageAccounts = ({content}) => {
 
         {
             isOpen &&
-            <AddNewWrapper 
+            <ModalWrapper 
                 isOpen={isOpen}
                 closeModal={closeModal} 
                 modalType={modalType}

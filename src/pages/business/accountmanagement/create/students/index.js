@@ -4,7 +4,7 @@ import Head from 'next/head';
 // Page Sections
 import BusinessWrapper from 'components/DashboardBusiness';
 import AddStudent from 'components/DashboardBusiness/Pages/Home/AddNew/Student';
-import AddNewWrapper from 'components/DashboardBusiness/Pages/Home/AddNew';
+import ModalWrapper from 'components/DashboardBusiness/Pages/Home/AddNew';
 
 const Main = () => {
   return (
@@ -12,7 +12,7 @@ const Main = () => {
       <Head>
         <title>Unifaires | Add Student</title>
       </Head>
-      <BusinessWrapper content={<AddNewWrapper content={<AddStudent />} />}/>    
+      <BusinessWrapper content={<ModalWrapper content={<AddStudent />} />}/>    
     </Fragment>
   );
 };

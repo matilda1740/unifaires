@@ -34,7 +34,7 @@ border: 1px solid rgba(18, 53, 91, 0.1);
     button {
     width: 30px;
     height: 30px;
-    margin: 0px 0px 0 25px !important;
+    margin: 0px 0px 0 10px !important;
     background-color: rgba(88, 50, 218, 0.2);
     visibility: visible;
     svg { 

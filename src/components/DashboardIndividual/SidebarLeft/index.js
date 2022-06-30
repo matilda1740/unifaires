@@ -21,6 +21,8 @@ const SidebarLeft = ({userType, isNavOpen, setIsNavOpen}) => {
     });
     const router = useRouter();
 
+    const accmangPathName = "/business/accountmanagement/";
+
     // CONTROL MOBILE NAV BAR
 
     return (
@@ -40,7 +42,7 @@ const SidebarLeft = ({userType, isNavOpen, setIsNavOpen}) => {
         <Heading as="h5" content={userType}/>
         <div className="dash_sectionOne">
             <Link href={`/${userType}/dashboard`}>
-                <DashboardRow className={router.pathname === "/individual/dashboard" || router.pathname === "/business/dashboard"  ? "dash_row dash_selected" : "dash_row"}>
+                <DashboardRow className={router.pathname === `/${userType}/dashboard` ? "dash_row dash_selected" : "dash_row"}>
                     <HomeOutlined />
                     <Text as="p" content={"Dashboard"}/>
                 </DashboardRow>
@@ -51,14 +53,14 @@ const SidebarLeft = ({userType, isNavOpen, setIsNavOpen}) => {
                     <Text as="p" content={"My Learning"}/>
                 </DashboardRow>
             </Link>
-            <Link href="/individual/jobs">
-                <DashboardRow className={ router.pathname === "/individual/jobs" ? "dash_row dash_selected" : "dash_row"}>
+            <Link href={`/${userType}/jobs`}>
+                <DashboardRow className={ router.pathname === `/${userType}/jobs` ? "dash_row dash_selected" : "dash_row"}>
                     <HomeRepairServiceOutlined /> 
                     <Text as="p" content={"Jobs"}/>
                 </DashboardRow>
             </Link>
 
-            <Link href="/individual/funding">
+            <Link href={`${userType}/funding`}>
                 <DashboardRow className={ router.pathname === "/individual/funding" ? "dash_row dash_selected" : "dash_row"}>
                     <AccountBalanceWalletOutlined /> 
                     <Text as="p" content={"Funding"}/>
@@ -74,7 +76,7 @@ const SidebarLeft = ({userType, isNavOpen, setIsNavOpen}) => {
                 userType === "business" &&
                 <>
                 <Link href={`/${userType}/accountmanagement/courses`}>
-                <DashboardRow className={ router.pathname === `/business/accountmanagement/courses` || router.pathname === `/business/accountmanagement/organizations` || router.pathname === `/business/accountmanagement/instructors` || router.pathname === `/business/accountmanagement/invites` || router.pathname === `/business/accountmanagement/students` ? "dash_row dash_selected" : "dash_row"}>
+                <DashboardRow className={ router.pathname.indexOf(accmangPathName) >= 0  ? "dash_row dash_selected" : "dash_row"}>
                     <AccountBalanceOutlined />
                     <Text as="p" content={"Manage Account"}/>
                 </DashboardRow>

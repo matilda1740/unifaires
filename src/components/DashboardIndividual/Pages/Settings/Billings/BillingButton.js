@@ -56,6 +56,7 @@ const BillingButtonStyle = styled.button`
     &.waiting_btn{
         border: none !important;
         background: rgba(18, 53, 91, 0.1) !important;
+        color: #12355B;
     }
 
     /* SKILL MATCHING BUTTONS */

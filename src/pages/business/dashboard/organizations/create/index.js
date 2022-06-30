@@ -7,7 +7,7 @@ import { GlobalStyle, AppWrapper } from 'components/globalApp.style';
 import ResetCSS from 'common/assets/css/style';
 // Page Sections
 import BusinessWrapper from 'components/DashboardBusiness';
-import AddNewWrapper from 'components/DashboardBusiness/Pages/Home/AddNew';
+import ModalWrapper from 'components/DashboardBusiness/Pages/Home/AddNew';
 import AddOrganization from 'components/DashboardBusiness/Pages/Home/AddNew/Organization';
 
 const Main = () => {
@@ -24,7 +24,7 @@ const Main = () => {
         <AppWrapper>
           <Sticky top={0} innerZ={9999} activeClass="sticky-nav-active">
           </Sticky>
-          <BusinessWrapper content={<AddNewWrapper content={<AddOrganization />} />}/>    
+          <BusinessWrapper content={<ModalWrapper content={<AddOrganization />} />}/>    
         </AppWrapper>
       </Fragment>
     </ThemeProvider>

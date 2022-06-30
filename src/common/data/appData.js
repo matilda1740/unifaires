@@ -517,7 +517,7 @@ export const individualModule = {
     // ]
     courses: [
       {
-        courseID: 'AK561GH',
+        courseID: 'pK5619H',
         title: "Introduction to AI",
         category: "DESIGN",
         description: "We are looking for an Accountant to manage all financial transactions... ",
@@ -559,55 +559,76 @@ export const individualModule = {
     ],
     jobs: [
       {
+        id: "PP712XT",
         company: "Paypal",
         logo: paypal,
         title: "Senior Product Designer",
         description: "We are looking for an Accountant to manage all financial transactions...",
-        current: 0      
+        current: 0,
+        location: "On-Site",
+        duration: "Part-Time",     
       },
-            {
-        company: "Paypal",
+      {
+        id: "FB712XT",
+        company: "Facebook",
         logo: paypal,
         title: "Senior Product Designer",
         description: "We are looking for an Accountant to manage all financial transactions...",
-        current: 0
+        current: 0,
+        location: "On-Site",
+        duration: "Full-Time",  
       },
-            {
-        company: "Paypal",
+      {
+        id: "JK712XT",
+        company: "Microsoft",
         logo: paypal,
         title: "Senior Product Designer",
         description: "We are looking for an Accountant to manage all financial transactions...",
-        current: 0
+        current: 0,
+        location: "Remote",
+        duration: "Part-Time",  
       },
-            {
-        company: "Paypal",
+      {
+        id: "TT712XT",
+        company: "Tesla",
         logo: paypal,
         title: "Senior Product Designer",
         description: "We are looking for an Accountant to manage all financial transactions...",
-        current: 1
+        current: 1,
+        location: "Remote",
+        duration: "Full-Time",  
       },
-            {
-        company: "Paypal",
+      {
+        id: "MF712XT",
+        company: "Meta",
         logo: paypal,
         title: "Senior Product Designer",
         description: "We are looking for an Accountant to manage all financial transactions...",
-        current: 0
+        current: 0,
+        location: "On-Site",
+        duration: "Full-Time",  
       }
       ,
-            {
-        company: "Paypal",
+      {
+        id: "GS712XT",
+        company: "Goldman & Sachs",
         logo: paypal,
         title: "Senior Product Designer",
         description: "We are looking for an Accountant to manage all financial transactions...",
-        current: 1
+        current: 1,
+        location: "Remote",
+        duration: "Part-Time",  
       }
       ,
-            {
-        company: "Paypal",
+      {
+        id: "JS712XT",
+        company: "Johnsons",
         logo: paypal,
         title: "Senior Product Designer",
         description: "We are looking for an Accountant to manage all financial transactions...",
-        current: 0
+        current: 0,
+        location: "On-Site",
+        duration: "Part-Time",  
       }
     ],
     scholarships: [
@@ -1321,7 +1342,7 @@ export const filterData = {
 export const courses = [
   // STATUS ZERO INDICATES ALL COURSES NOT STARTED, 1 MEANS IN PROGESS
       {
-        courseID: 'AK561GH',
+        courseID: 'PK5619H',
         title: "Introduction to AI",
         category: "DESIGN",
         description: "We are looking for an Accountant to manage all financial transactions... ",
@@ -1683,27 +1704,6 @@ export const instructorColumns = [
         width: 180,
         valueGetter: (params) =>`${params.row.role || ''} | ${params.row.company || ''}`,
     }, 
-    {
-        field: 'email',
-        headerName: 'Email',
-        description: '',
-        sortable: false,
-        width: 160,
-    },
-    {
-        field: 'email',
-        headerName: 'Email',
-        description: '',
-        sortable: false,
-        width: 160,
-    },   
-    {
-        field: 'email',
-        headerName: 'Email',
-        description: '',
-        sortable: false,
-        width: 160,
-    },
     {
         field: 'status',
         headerName: 'Status',

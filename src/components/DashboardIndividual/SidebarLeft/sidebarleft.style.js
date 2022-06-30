@@ -32,7 +32,8 @@ export const MobileHeader = styled.div`
 
 const SidebarCard = styled.section`
     background: linear-gradient(180deg, rgba(176, 214, 255, 0.1) 0%, rgba(163, 189, 217, 0.1) 100%);
-    width:25%;
+    width: 22.5%;
+    /* width:30%; */
     height:1000px;
     svg { 
         font-size: 1.25rem;
@@ -77,7 +78,7 @@ const SidebarCard = styled.section`
         h4 { margin: 20px 0 0 23px;}
         h5 { margin: 0px 0 0 23.25px;}
         .dash_row{ padding: 0 30px 0 14px;}
-        .dash_sectionTwo button{ margin: 40px 30px 40px 14px; }
+        .dash_sectionTwo button{ margin: 20px 30px 40px 14px; }
   }
 
 `;
