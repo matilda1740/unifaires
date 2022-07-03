@@ -9,6 +9,16 @@ const FormStyle = styled.form`
     padding: 20px;
     overflow-y: scroll;
 
+    &.job_form{
+    padding: 10px 5px;
+    margin: -20px 0 0 0;
+    .business_job_section{
+      height: 20px;
+      margin: 10px 5px 10px 5px;
+    }
+    }
+
+
 `;
 
 export const FormHalfContainer = styled.div`
@@ -88,7 +98,7 @@ export const FormContext = React.createContext({
 
 export default function Form(props) {
 
-  const { children, initialValues } = props;
+  const { children, initialValues, className, handleSubmit = () => {}  } = props;
   const [form, setForm] = useState(initialValues);
 
   const handleFormChange = (event) => {
@@ -100,7 +110,7 @@ export default function Form(props) {
   };
 
   return (
-    <FormStyle>
+    <FormStyle className={className}>
       <FormContext.Provider value={{
         form,
         handleFormChange

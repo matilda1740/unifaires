@@ -4,6 +4,11 @@ import logo from 'common/assets/images/logoUnifaires.svg'
 import paypal from 'common/assets/images/tesla.svg'
 import { ArrowForwardIos, AutoStories, PersonOutlined, CorporateFareOutlined, SchoolOutlined, MarkAsUnreadOutlined, FlakyOutlined, GroupOutlined } from '@mui/icons-material';
 
+
+export const mockJobData = {
+  title: "Product Designer, Documentation, USA based",
+  description: "GitHub is looking for an experienced Documentation Designer to join our Product Design team. In this role, you’ll work on ensuring our customers can make the most of our products via documentation.",
+}
 /* -------- About Us data section --------- */
 
 export const aboutUs = {
@@ -563,7 +568,7 @@ export const individualModule = {
         company: "Paypal",
         logo: paypal,
         title: "Senior Product Designer",
-        description: "We are looking for an Accountant to manage all financial transactions...",
+        description: "Paypal is looking for an experienced Documentation Designer to join our Product Design team. In this role, you’ll work on ensuring our customers can make the most of our products via documentation.",
         current: 0,
         location: "On-Site",
         duration: "Part-Time",     
@@ -572,8 +577,8 @@ export const individualModule = {
         id: "FB712XT",
         company: "Facebook",
         logo: paypal,
-        title: "Senior Product Designer",
-        description: "We are looking for an Accountant to manage all financial transactions...",
+        title: "Junior Software Engineer",
+        description: "Facebook is looking for an experienced Documentation Designer to join our Product Design team. In this role, you’ll work on ensuring our customers can make the most of our products via documentation.",
         current: 0,
         location: "On-Site",
         duration: "Full-Time",  

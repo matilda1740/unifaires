@@ -10,7 +10,7 @@ const JobsWrapper = ({content}) => {
 
     return (
         <>
-        <ModuleHeading>
+        <ModuleHeading className="shorter_heading">
             <div className="top_row">
             <HeadingLeft>
                 <Heading as="h4" content={"My Jobs"}/>

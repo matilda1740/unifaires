@@ -13,7 +13,7 @@ transition: all 0.3s ease-in-out;
 justify-content: flex-start;
 svg {
     font-size: 1rem;
-    margin: 0 8px 0 12px;
+    margin: 0 8px 0 8px;
     width: 1em;
     height: 1em;
 }
@@ -555,9 +555,11 @@ transition: all 0.3s ease-in-out;
     transform: scale(1.01);
 }
 :nth-child(n+1) {
-    margin-right: 16px;
+    margin-right: 24px;
 }
-
+:nth-child(n+4) {
+    margin-top: 12px;
+}
 h6 {
     color: rgba(173, 168, 190, 1);
     font-size: 12px;
@@ -611,6 +613,15 @@ a{
     align-self: flex-end;
     text-transform: uppercase;
     line-height: 180%;
+}
+p:first-of-type {
+    display: -webkit-box;
+    word-break: break-word;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 240px;
 }
 p:last-of-type{
     color: #C07654;
@@ -1300,7 +1311,9 @@ export const ModuleHeading = styled.div`
 width: 100%;
 display:flex;
 flex-direction: column;
-
+&.shorter_heading{
+    height: 50px;
+}
 .top_row{
 display:flex;
 flex-flow:row wrap;
@@ -1368,6 +1381,7 @@ export const ModuleSection = styled.div`
     &.business_job_section{
         /* width: 104%; */
         width: 100%;
+        margin: 10px 0 0 -7.5px;
 
     }
     @media screen and (max-width: 480px) {

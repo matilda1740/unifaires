@@ -30,8 +30,6 @@ const SpecificCourseSection = () => {
   // TO ACCESS DATA PASSED IN FROM PREVIOUS LINK PARAMETERS (Import userouter from Next)
   const router = useRouter();
 
-  console.log(router);
-
   const [imgExpanded, setImgExpanded] = useState(false);
 
   const handleExpansion = (e) => {

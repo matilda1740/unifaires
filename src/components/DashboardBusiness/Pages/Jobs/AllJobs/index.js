@@ -12,10 +12,11 @@ import BillingButton from 'components/DashboardIndividual/Pages/Settings/Billing
 import FilterDropDownComponent from 'components/DashboardComponents/FilterDropDown';
 import ModalWrapper from '../../Home/AddNew';
 
+import { useRouter } from 'next/router'
 
 const AllJobsSection = ({content}) => {
 
-  const {userOptions} = individualModule;
+    const {userOptions} = individualModule;
 
     const [show, setShow ] = useState(false);
     const toggleDropDown = () => setShow(!show)
@@ -32,16 +33,17 @@ const AllJobsSection = ({content}) => {
         setIsViewJob(false)
     };
 
+    const router = useRouter(); 
+
     return (
         <>
         <SectionHeading className="title_row position_dropdown job_section">
-            <Link href="/business/jobs/create">
-                <BillingButton 
-                text={"Create Job"}
-                variant={"white"}
-                position={"end"}
-                />
-            </Link>
+            <BillingButton 
+            text={"Create Job"}
+            variant={"white"}
+            position={"end"}
+            openModal={() => router.push("/business/jobs/create")}
+            />
             <FilterButton onClick={toggleDropDown} className="only_element">
                 <Text as="p" content={"FILTER"} />
                 <KeyboardArrowDown />
@@ -52,9 +54,9 @@ const AllJobsSection = ({content}) => {
             variant={ show ? "show_dropdown filter" : "hide_dropdown filter"} />
          
         {
-            userOptions.map(( section => (
+            userOptions.map(( (section, i) => (
                 section.jobs?.length > 0 &&
-                <ModuleRow className="module_row_jobs">
+                <ModuleRow key={i} className="module_row_jobs">
                     {
                         section.jobs.map(( job => (
                             <JobCard key={job.id} onClick={handleJobDetails(job)} className="module_row_jobs_card">

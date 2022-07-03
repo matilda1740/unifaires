@@ -21,7 +21,10 @@ const SidebarLeft = ({userType, isNavOpen, setIsNavOpen}) => {
     });
     const router = useRouter();
 
-    const accmangPathName = "/business/accountmanagement/";
+    const customPathNames = {
+        accountmanagement: `/${userType}/accountmanagement`,
+        jobs: `/${userType}/jobs`
+    }
 
     // CONTROL MOBILE NAV BAR
 
@@ -54,7 +57,7 @@ const SidebarLeft = ({userType, isNavOpen, setIsNavOpen}) => {
                 </DashboardRow>
             </Link>
             <Link href={`/${userType}/jobs`}>
-                <DashboardRow className={ router.pathname === `/${userType}/jobs` ? "dash_row dash_selected" : "dash_row"}>
+                <DashboardRow className={ router.pathname.indexOf(customPathNames.jobs) >= 0 ? "dash_row dash_selected" : "dash_row"}>
                     <HomeRepairServiceOutlined /> 
                     <Text as="p" content={"Jobs"}/>
                 </DashboardRow>
@@ -76,7 +79,7 @@ const SidebarLeft = ({userType, isNavOpen, setIsNavOpen}) => {
                 userType === "business" &&
                 <>
                 <Link href={`/${userType}/accountmanagement/courses`}>
-                <DashboardRow className={ router.pathname.indexOf(accmangPathName) >= 0  ? "dash_row dash_selected" : "dash_row"}>
+                <DashboardRow className={ router.pathname.indexOf(customPathNames.accountmanagement) >= 0  ? "dash_row dash_selected" : "dash_row"}>
                     <AccountBalanceOutlined />
                     <Text as="p" content={"Manage Account"}/>
                 </DashboardRow>

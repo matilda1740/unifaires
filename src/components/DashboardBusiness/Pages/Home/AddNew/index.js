@@ -9,7 +9,7 @@ import BillingButton from 'components/DashboardIndividual/Pages/Settings/Billing
 import { Close } from '@mui/icons-material';
 // import { JobCard } from 'components/DashboardBusiness/business.style';
 
-const ModalWrapper = ({isOpen, updateModalType, modalType, closeModal, orgContent, insContent, stdContent, details}) => {
+const ModalWrapper = ({isOpen, updateModalType, modalType, closeModal, orgContent, insContent, stdContent, details, content}) => {
 
     const router = useRouter();
     
@@ -18,6 +18,8 @@ const ModalWrapper = ({isOpen, updateModalType, modalType, closeModal, orgConten
     useEffect(() => {
         if(modalType === "student" || modalType === "instructor" || modalType === "organization" ){
             setModalFunc("addnew")
+        }else if(modalType === "msg_app"){
+            setModalFunc("msg_app")
         }
     }, [modalFunc])
     return (
@@ -45,6 +47,10 @@ const ModalWrapper = ({isOpen, updateModalType, modalType, closeModal, orgConten
                             <Buttons className="secondary" onClick={closeModal}>Cancel</Buttons>
                         </AddButtonsRow>  
                     </>
+                    : modalType === "msg_app" ?
+                    <DetailsSection>
+                        { content }
+                    </DetailsSection>
                     :
                     <DetailsSection className="popup">
                     {
@@ -69,20 +75,20 @@ const ModalWrapper = ({isOpen, updateModalType, modalType, closeModal, orgConten
                                     <button>{job.duration}</button>
                                 </div>                        
                                 <Text as="p" content={job.description}></Text>
-                                
-                                <Link 
+                                <div className="timing_row">
+                                    <Link 
                                     href={{
-                                    pathname: "/business/jobs/[id]/applicants",
+                                    pathname: "/business/jobs/[id]",
                                     query: { id: job.id }
                                     }}
-                                >
-View Applicants
-                                    {/* <BillingButton 
-                                    text={"View Applicants"}
-                                    variant={"regular"}
-                                    position={"end"}
-                                    /> */}
-                                </Link>                            
+                                    >View Job</Link>                                
+                                    <Link 
+                                        href={{
+                                        pathname: "/business/jobs/[id]/applicants",
+                                        query: { id: job.id }
+                                        }}
+                                    >View Applicants</Link>                                 
+                                </div>                           
                             </PopUpViewCard>
                         ))
                     }

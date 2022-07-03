@@ -26,7 +26,6 @@ const SpecificFundingSection = () => {
 
   const router = useRouter();
   const { query, state } = router;
-  console.log(router, query, state)
 
   const fundingStatus = {
       granted: false,

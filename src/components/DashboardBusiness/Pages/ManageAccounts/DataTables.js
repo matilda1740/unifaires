@@ -132,16 +132,17 @@ p { margin-bottom: 0px !important; }
 `;
 
 
-const DataTables = ({type, datarows, datacols}) => {
+const DataTables = ({type, datarows, datacols, isCheckBoxGrid, getSelectedApplicants}) => {
+
     const [pageSize, setPageSize] = React.useState(10);
-    // console.log("Columns: ", datacols, "Rows: ", datarows)
-    
+    const [selectedApplicants, setSelectedApplicants] = React.useState([]);
+
     return (
     <TableCustomStyle style={{ display: 'flex', height: 600, width: '100%'}}>
         <DataGrid
             rows={datarows}
             columns={datacols}
-            // checkboxSelection
+            checkboxSelection={isCheckBoxGrid}
             pageSize={pageSize}
             onPageSizeChange={(newPageSize) => setPageSize(newPageSize)}
             rowsPerPageOptions={[10, 20, 30]}
@@ -162,6 +163,16 @@ const DataTables = ({type, datarows, datacols}) => {
                 }
             })}
             components={{ Toolbar: GridToolbar }}
+
+            onSelectionModelChange={(ids) => {
+                const selectedIDs = new Set(ids);
+                const selectedRowData = datarows.filter((row) =>
+                    selectedIDs.has(row.id.toString())
+                );
+                getSelectedApplicants(selectedRowData)
+                console.log(selectedRowData);
+                // set
+            }}
         />
     </TableCustomStyle>
     );

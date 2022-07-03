@@ -16,10 +16,10 @@ export const FormSectionDividerStyle = styled.div`
 
 
 export default function FormSectionDivider(props) {
-    const { content } = props;
+    const { content, className } = props;
 
   return (
-    <FormSectionDividerStyle>
+    <FormSectionDividerStyle className={className}>
         <p>{content}</p>
     </FormSectionDividerStyle>
   )

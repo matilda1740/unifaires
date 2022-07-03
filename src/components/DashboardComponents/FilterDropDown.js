@@ -63,8 +63,8 @@ const FilterDropDownComponent = ({data, variant}) => {
     <FilterDropDownStyle className={`${variant}`}>
         <ul>
             {
-                data?.map((item) => (
-                    <li>{item}</li>
+                data?.map((item, i) => (
+                    <li key={i}>{item}</li>
                 ))
             }
         </ul>

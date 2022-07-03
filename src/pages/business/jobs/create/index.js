@@ -5,14 +5,15 @@ import BusinessWrapper from 'components/DashboardBusiness';
 import JobsWrapper from 'components/DashboardBusiness/Pages/Jobs';
 import SpecificJobSection from 'components/DashboardBusiness/Pages/Jobs/SpecificJobs';
 
+
 const Main = () => {
   return (
   <Fragment>
-    <Head><title>Unifaires | Jobs</title></Head>
+    <Head><title>Unifaires | Create Job</title></Head>
     <BusinessWrapper 
       content={
       <JobsWrapper
-        content={<SpecificJobSection formMode={"update"}/>}
+        content={<SpecificJobSection/>}
       />} />    
   </Fragment>
   );

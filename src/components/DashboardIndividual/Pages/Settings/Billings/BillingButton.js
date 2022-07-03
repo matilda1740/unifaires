@@ -19,7 +19,7 @@ const BillingButtonStyle = styled.button`
         margin: 20px 0 0 0 !important;
     }
     /* BILLING SECTION BUTTONS */
-    &.white_btn, &.purple_btn, &.blue_btn, &.primary_btn{
+    &.white_btn, &.purple_btn, &.blue_btn, &.primary_btn, &.red_btn{
         border-radius: 36px !important;
         width: 160px;
         height: 35px !important;
@@ -45,7 +45,7 @@ const BillingButtonStyle = styled.button`
         border: none !important;
         align-self: center !important;
     }
-    &.rejected_btn {
+    &.rejected_btn, &.red_btn {
         background: rgba(255, 12, 62, 0.1)  !important;
         color: #FF0C3E  !important;
     }
@@ -90,12 +90,12 @@ const BillingButtonStyle = styled.button`
     }
 `;
 
-const BillingButton = (props) => {
+const BillingButton = React.forwardRef((props, innerRef) => {
 
-    const { variant, text, type="button", position} = props;
+    const { variant, text, type="button", position, href} = props;
 
     return (
-        <BillingButtonStyle onClick={props.openModal} className={`${variant}_btn ${position}`}>{text}</BillingButtonStyle>
+        <BillingButtonStyle ref={innerRef} onClick={props.openModal} className={`${variant}_btn ${position}`}>{text}</BillingButtonStyle>
     );
-}
+});
 export default BillingButton;

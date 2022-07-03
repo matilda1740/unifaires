@@ -94,11 +94,15 @@ a{
         width: 150px ;
         height: 45px ;
         background: transparent;
-        margin: 10px 0 0 auto !important;   
         text-decoration: none;
         padding: 12.5px 15px;
-        align-self: flex-end; 
         text-align: center;
+}
+a:first-of-type{
+    margin: 20px 0 0 0!important;   
+}
+a:last-of-type{
+    margin: 20px 0 0 auto !important;   
 }
 `;
 
