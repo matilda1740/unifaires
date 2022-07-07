@@ -8,6 +8,7 @@ const BillingButtonStyle = styled.button`
     justify-content: center;
     margin: 0 !important;
     font-weight: 500;
+    text-transform: capitalize;
 
     &.regular_btn {
         border-radius: 8px;
@@ -79,7 +80,7 @@ const BillingButtonStyle = styled.button`
         align-self: center ;
     }
 
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 786px) {
         &.regular_btn {
             height: 80px !important;
         }
@@ -87,15 +88,19 @@ const BillingButtonStyle = styled.button`
             width: 180px !important;
             font-size: 12px;
         }
+        &.smaller_btn {
+            width: 180px !important;
+            
+        }
     }
 `;
 
-const BillingButton = React.forwardRef((props, innerRef) => {
+const BillingButton = (props) => {
 
-    const { variant, text, type="button", position, href} = props;
+    const { variant, text, type="button", position, href, size} = props;
 
     return (
-        <BillingButtonStyle ref={innerRef} onClick={props.openModal} className={`${variant}_btn ${position}`}>{text}</BillingButtonStyle>
+        <BillingButtonStyle onClick={props.openModal} className={`${variant}_btn ${position} ${size}`}>{text}</BillingButtonStyle>
     );
-});
+};
 export default BillingButton;

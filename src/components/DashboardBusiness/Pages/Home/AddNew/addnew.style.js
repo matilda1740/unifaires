@@ -184,10 +184,10 @@ export const ImageColumn = styled.div`
     width: 30%;
     display: flex;
     flex-direction: column;
-    .image_container{
-        border-radius: 16px;
-        width: 160px;
-        height: 160px;
+    padding-top: 10px;
+
+    @media screen and (max-width: 786px) {
+        width: 100%;
     }
 `;
 
@@ -196,6 +196,9 @@ export const FormColumn = styled.div`
     width: 67.5%;
     display: flex;
     flex-direction: column;
+    @media screen and (max-width: 786px) {
+    width: 100%;
+    }
 `;
 
 export const AddButtonsRow = styled.div`

@@ -17,8 +17,6 @@ const FormStyle = styled.form`
       margin: 10px 5px 10px 5px;
     }
     }
-
-
 `;
 
 export const FormHalfContainer = styled.div`

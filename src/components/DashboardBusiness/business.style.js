@@ -21,7 +21,10 @@ svg {
     p,svg {
         color: rgba(173, 168, 190, 1);
     }
-    p{ margin-bottom: 0px; }
+    p{ 
+        margin-bottom: 0px; 
+        text-transform: capitalize;
+    }
     svg {
         width: 12px;
         height: 10px;
@@ -890,8 +893,11 @@ a:last-of-type{
     margin-right: 0;
 }
 @media screen and (max-width: 480px) {
-margin-top: 0px;
+    margin-top: 0px;
+    a{
+    margin-right: 24px; 
 
+    }
 }
 `;
 
@@ -1328,7 +1334,7 @@ flex-flow:row wrap;
 p{
     color:rgba(128, 128, 128, 0.9);
 }
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 480px) and (min-width: 768px) {
         .bottom_row{
             /* display: none; */
         }

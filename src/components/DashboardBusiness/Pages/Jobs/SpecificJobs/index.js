@@ -3,7 +3,7 @@ import Heading from 'components/Layout/Heading';
 import Text from 'components/Layout/Text';
 import Link from 'next/link';
 import { useRouter } from "next/router";
-import { mockJobData,  } from "common/data/appData";
+import { mockJobData } from "common/data/appData";
 import FormTextArea from 'components/DashboardIndividual/Pages/Settings/Components/FormTextArea';
 import { ArrowBack } from '@mui/icons-material';
 import { SectionHeading, SeeAllStyle } from 'components/DashboardBusiness/business.style';
@@ -103,23 +103,22 @@ const SpecificJobSection = ({formMode}) => {
                         value={formMode === "update" ? `${jobDetails?.description}` : ""}
                     />
                 </Form>
-        
+            </JobFormStyle>  
 
-                <div className="button_row">
-                    <BillingButton 
-                        text={ formMode === "update" ? "Create" : "Update" + "Job Posting" }
-                        variant={"primary"}
-                    />
-                    <BillingButton 
-                        text={"Save Posting Draft"}
-                        variant={"white"}
-                    />
-                    <BillingButton 
-                        text={"Delete Job Posting"}
-                        variant={"red"}
-                    />
-                </div>
-            </JobFormStyle>                      
+        <div className="button_row">
+            <BillingButton 
+                text={ formMode === "update" ? "Create" : "Update" + "Job Posting" }
+                variant={"primary"}
+            />
+            <BillingButton 
+                text={"Save Posting Draft"}
+                variant={"white"}
+            />
+            <BillingButton 
+                text={"Delete Job Posting"}
+                variant={"red"}
+            />
+        </div>                    
         </>
     );
 }

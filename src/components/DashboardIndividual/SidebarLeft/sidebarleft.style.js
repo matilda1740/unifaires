@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const MobileHeader = styled.div`
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 480px){
         height: 38px;
         display: flex;
         flex-direction: row;
