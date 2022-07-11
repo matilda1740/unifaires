@@ -13,6 +13,9 @@ import MenuBarIcon from 'public/images/dashboard/MenuBar.svg'
 import {AccountBalanceOutlined, AccountBalanceWalletOutlined, CheckCircleOutlined, GroupOutlined, HomeRepairServiceOutlined, HomeOutlined, MessageOutlined, CloseOutlined, SearchOutlined, SettingsOutlined, HelpOutlineOutlined } from '@mui/icons-material';
 
 import profileImg from 'public/images/dashboard/Dashboard/icon.svg'
+import unifairesLogo from 'public/images/unifaireslogofull.svg'
+
+import UserSelectBox from 'components/DashboardComponents/UserSelectBox';
 
 
 const SidebarLeft = ({userType, isNavOpen, setIsNavOpen}) => {
@@ -41,8 +44,12 @@ const SidebarLeft = ({userType, isNavOpen, setIsNavOpen}) => {
         </MobileHeader>
 
 
-        <Heading as="h4" content={company}/>
-        <Heading as="h5" content={userType}/>
+        {/* <Heading as="h4" content={company}/> */}
+        {/* <Heading as="h5" content={userType}/> */}
+        <div className="logo_div">
+            <img src={unifairesLogo?.src} alt="logo" />
+        </div>
+        <UserSelectBox userType={userType}/>
         <div className="dash_sectionOne">
             <Link href={`/${userType}/dashboard`}>
                 <DashboardRow className={router.pathname === `/${userType}/dashboard` ? "dash_row dash_selected" : "dash_row"}>

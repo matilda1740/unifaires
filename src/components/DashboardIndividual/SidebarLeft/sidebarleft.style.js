@@ -54,6 +54,10 @@ const SidebarCard = styled.section`
         opacity: 0.5;
         text-transform: capitalize;
     }
+    .logo_div{
+        margin: 20px 0 10px 25px !important;
+
+    }
 
   @media screen and (max-width: 480px) {
     background: #fff;
@@ -75,7 +79,7 @@ const SidebarCard = styled.section`
             margin-top: 30px; 
         } 
         /* Reposition Dashboard Links */
-        h4 { margin: 20px 0 0 23px;}
+        h4, .logo_div { margin: 20px 0 0 23px;}
         h5 { margin: 0px 0 0 23.25px;}
         .dash_row{ padding: 0 30px 0 14px;}
         .dash_sectionTwo button{ margin: 20px 30px 40px 14px; }

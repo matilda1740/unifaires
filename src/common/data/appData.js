@@ -4,6 +4,7 @@ import logo from 'common/assets/images/logoUnifaires.svg'
 import paypal from 'common/assets/images/tesla.svg'
 import { ArrowForwardIos, AutoStories, PersonOutlined, CorporateFareOutlined, SchoolOutlined, MarkAsUnreadOutlined, FlakyOutlined, GroupOutlined, HomeOutlined, HelpOutlineOutlined, SettingsOutlined, ShoppingCartOutlined, ChatBubbleOutlineOutlined, AccountBalanceWalletOutlined, AutoStoriesOutlined, PaymentsOutlined, HomeRepairServiceOutlined } from '@mui/icons-material';
 
+
 export const staticDashboard = [
   {
     icon: <HomeOutlined />,

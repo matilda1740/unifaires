@@ -1629,7 +1629,7 @@ const SectionWrapper = styled.section`
   }
 }
 .dash_sectionOne{
-    margin-top: 45px;
+    // margin-top: 45px;
 
 }
 .dash_sectionTwo{
