@@ -1388,7 +1388,12 @@ export const ModuleSection = styled.div`
         /* width: 104%; */
         width: 100%;
         margin: 10px 0 0 -7.5px;
-
+    }
+    &.module_column_to_row{
+        display: flex;
+        flex-flow: row wrap;
+        width: 100%;
+        /* height: 100%; */
     }
     @media screen and (max-width: 480px) {
         .each_cert_card{

@@ -2,8 +2,84 @@
 import logo from 'common/assets/images/logoUnifaires.svg'
 // import paypal from 'public/images/partners/paypal.svg'
 import paypal from 'common/assets/images/tesla.svg'
-import { ArrowForwardIos, AutoStories, PersonOutlined, CorporateFareOutlined, SchoolOutlined, MarkAsUnreadOutlined, FlakyOutlined, GroupOutlined } from '@mui/icons-material';
+import { ArrowForwardIos, AutoStories, PersonOutlined, CorporateFareOutlined, SchoolOutlined, MarkAsUnreadOutlined, FlakyOutlined, GroupOutlined, HomeOutlined, HelpOutlineOutlined, SettingsOutlined, ShoppingCartOutlined, ChatBubbleOutlineOutlined, AccountBalanceWalletOutlined, AutoStoriesOutlined, PaymentsOutlined, HomeRepairServiceOutlined } from '@mui/icons-material';
 
+export const staticDashboard = [
+  {
+    icon: <HomeOutlined />,
+    heading: "My Dashboard",
+    subheading: "Welcome, here are your daily analytics",
+    moduleRoute: "dashboard",
+    position: 0,
+  },  
+  {
+    icon: <AutoStoriesOutlined />,
+    heading: "My Learning",
+    subheading: "See relevant insights about your learning",
+    moduleRoute: "learning",
+    position: 1,
+  },
+  {
+    icon: <HomeRepairServiceOutlined /> ,
+    heading: "My Jobs",
+    subheading: "See relevant insights about your jobs",
+    moduleRoute: "jobs",
+    position: 1,
+  },
+  {
+    icon: <AccountBalanceWalletOutlined />,
+    heading: "Funding",
+    subheading: "See relevant insights about your funding",
+    moduleRoute: "funding",
+    position: 1,
+  },
+  {
+    icon: <ChatBubbleOutlineOutlined />,
+    heading: "Messages",
+    subheading: "See relevant insights about your messages",
+    moduleRoute: "messaging",
+    position: 1,
+
+  },
+  {
+    icon: <GroupOutlined />,
+    heading: "Vetted Talent Program",
+    subheading: "See relevant insights about the vetted talent program",
+    moduleRoute: "vettedtalent",
+    position: 1,
+
+  },
+  {
+    icon: <ShoppingCartOutlined />,
+    heading: "Orders",
+    subheading: "See relevant insights about your orders",
+    moduleRoute: "orders",
+    position: 1,
+
+  },
+  {
+    icon: <PaymentsOutlined />,
+    heading: "Billings & Payments",
+    subheading: "Manage subscriptions and billings",
+    moduleRoute: "billings",
+    position: 1,
+
+  },
+  {
+    icon: <SettingsOutlined /> ,
+    heading: "Settings",
+    subheading: "Manage your accounts and their settings",
+    moduleRoute: "settings",
+    position: 2,
+  },
+  {
+    icon: <HelpOutlineOutlined /> ,
+    heading: "Help",
+    subheading: "Talk to our support team",
+    moduleRoute: "help",
+    position: 2,
+  }
+]
 
 export const mockJobData = {
   title: "Product Designer, Documentation, USA based",
