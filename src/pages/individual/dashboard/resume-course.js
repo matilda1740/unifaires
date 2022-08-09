@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import Head from 'next/head';
 // Page Sections
-import UserWrapper from 'components/DashboardIndividual';
+import IndividualWrapper from 'components/DashboardIndividual';
 // import ResumeCoursesSection from 'components/DashboardIndividual/Pages/Home/resume';
 
 const Main = () => {
@@ -10,7 +10,7 @@ const Main = () => {
         <Head>
           <title>Unifaires | Resume Course</title>     
         </Head>
-        {/* <UserWrapper content={(<ResumeCoursesSection/>)}/> */}
+        {/* <IndividualWrapper content={(<ResumeCoursesSection/>)}/> */}
       </Fragment>
   );
 };

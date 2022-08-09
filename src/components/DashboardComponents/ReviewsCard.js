@@ -111,7 +111,7 @@ const RatingsBoxStyle = styled.div`
     }
 `;
 
-export const RatingsBox = ({label, value, size}) => {
+export const RatingsBox = ({length, label, value, size}) => {
 
   return (
     <RatingsWrapper className={size}>

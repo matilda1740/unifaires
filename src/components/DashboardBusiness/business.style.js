@@ -805,22 +805,15 @@ transition:all 0.3s ease-in-out;
     svg {
         color : rgba(88, 50, 218, 1);
     }
-    img{
-    /* filter: invert(25%) sepia(93%) saturate(1986%) hue-rotate(243deg) brightness(81%) contrast(111%); */
-    filter: invert(16%) sepia(97%) saturate(3077%) hue-rotate(252deg) brightness(98%) contrast(95%);
     }
-}
-    svg {
+    svg,p {
         color : #12355B;
+        margin-right:10px;
     }
-
-img, svg{
-    margin-right:10px;
-}
-p{
-    font-size: 14px;
-     height: 24px;
-}
+    p{
+        font-size: 14px;
+        margin-bottom: 0;
+    }
 
 `;
 
@@ -838,18 +831,18 @@ margin: 0 25px 20px 0;
 
 .col1{
     width: 80%;
-color: #082262;
-
-    font-weight: 600;
-    p{
-color: #082262;
-
+    * {
+        font-size: 14px;
+        font-weight: 500 !important;
+        color: #082262;
+    }
+    /* p{
+    color: #082262;
     font-weight: 500 !important;
     }
     span{
     font-weight: 500 !important;
-
-    }
+    } */
 }
 
 .icon{
@@ -875,26 +868,30 @@ width: 100%;
 height: 38px;
 font-weight: 300;
 border-bottom: rgba(234, 234, 234, 1);
-margin-top: -20px;
-a{
-margin-right: 32px; 
+margin: -12px 0 0px 0;
+display: flex;
+justify-content: space-between;
+p{
+font-weight: 500;
+margin-right: 24px; 
+width: 100px;
 color: #B8BCCA;
 border-radius: 8px 8px 0px 0px;
 padding-bottom: 8px;
 transition: all 0.3s ease-in-out;
 }
-a:hover, .selected{
-    color: #12355B;
+p:hover { cursor: pointer;}
+p:hover, .selected{
+    color: rgba(88, 50, 218, 1);
     line-height: 120%;
-    border-bottom: 4px solid  rgba(18, 53, 91, 1);
-
+    border-bottom: 4px solid  rgba(88, 50, 218, 1);
 }
-a:last-of-type{
+p:last-of-type{
     margin-right: 0;
 }
 @media screen and (max-width: 480px) {
     margin-top: 0px;
-    a{
+    p{
     margin-right: 24px; 
 
     }
@@ -965,7 +962,7 @@ export const FilterButton = styled.div`
 
 export const HeadingLeft = styled.div`
 height: 100px;
-width: 30%;
+width: 50%;
      @media screen and (max-width: 480px) {
          width: 100%;
          height: 80px;
@@ -974,7 +971,7 @@ width: 30%;
 
 export const HeadingRight = styled.div`
 height: 100px;
-width: 70%;
+width: 50%;
 display: flex;
 /* align-items: flex-end; */
     justify-content: flex-end;
@@ -1323,13 +1320,13 @@ flex-direction: column;
 .top_row{
 display:flex;
 flex-flow:row wrap;
+margin-bottom: 10px;
 }
 .bottom_row{
     display: flex;
     flex-flow:row nowrap;
     width:100%;
     justify-content: space-between;
-    /* margin: 10px 20px 0px 0px; */
 }
 p{
     color:rgba(128, 128, 128, 0.9);
@@ -1394,6 +1391,33 @@ export const ModuleSection = styled.div`
         flex-flow: row wrap;
         width: 100%;
         /* height: 100%; */
+    }
+    /* PAGINATION */
+    .stack {
+        height: 50px;
+        .MuiPagination-root {
+                height: 50px;
+            ul {
+                justify-content: center;
+                height: 50px;
+                li{
+                    height: 75%;
+                    button {
+                    height: 100%;
+                    margin: 0 12.5px;
+                    border-radius: 50%;
+                    background-color: transparent;
+                    color: #5832DA;
+                    border: 0.5px solid #5832DA;
+                    &.Mui-selected,:hover {
+                        background-color: #5832DA;
+                        color: #eee;
+                    }
+                    
+                }
+                }
+            }
+        }
     }
     @media screen and (max-width: 480px) {
         .each_cert_card{
@@ -1518,18 +1542,14 @@ opacity: 0.5;
 border: 1px solid rgba(0, 0, 0, 0.1);
 box-sizing: border-box;
 border-radius: 34px;
-width: 430px;
+width: 60%;
 height: 60px;
+display: flex;
  svg { 
-     margin-left: 2%;
+    height:100%;
+    margin-left: 2%;
     color: rgba(18, 53, 91, 0.5);
-
     }
-img {
-    width: 3%;
-    margin: 0px 2% 0px 3%;
-    z-index: 0;
-}
 input{
     border: transparent;
     background: transparent;
@@ -1537,10 +1557,10 @@ input{
     height: 100%;
     position: relative;
     z-index: 1;
-
     font-size: 14px;
-line-height: 120%;
-font-weight: 300;
+    line-height: 120%;
+    font-weight: 300;
+    outline: none;
 }
 
 
@@ -1571,6 +1591,9 @@ export const SectionHeading = styled.div`
     &.job_section{
         margin-right: 20px;
     }
+    button {
+        margin: 0 0 10px 0 !important;
+    }
 
     @media screen and (max-width: 480px) {
         h5 {
@@ -1581,10 +1604,8 @@ export const SectionHeading = styled.div`
 
 const SectionWrapper = styled.section`
     color:#5832DA;
-    /* height: 1000px; */
     min-height: fit-content;
-
-        display:flex;
+    display:flex;
     flex-direction: row; 
 .icon_ellipse{
     margin: 10px 10% 0 2.5%;
@@ -1621,7 +1642,6 @@ const SectionWrapper = styled.section`
         margin: 0px 0 0 0px;
     }
 
-    /* font-family: 'Lato', sans-serif; */
 
 .dash_row:hover{
   img,p {
@@ -1633,7 +1653,7 @@ const SectionWrapper = styled.section`
 
 }
 .dash_sectionTwo{
-    margin-top: 100px;
+    margin-top: 20px;
     background-color:rgba(88, 50, 218, 0.1);
 }
 button {

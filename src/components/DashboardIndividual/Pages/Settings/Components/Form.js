@@ -37,6 +37,7 @@ export const FormEachPhoneContainer = styled.div`
   .PhoneInput{
     margin: 10px 0 15px 0;
     width: 99%;
+    display: flex;
     .PhoneInputCountry{
       .PhoneInputCountryIcon {
         box-shadow: 0 0 0 0;
@@ -82,6 +83,29 @@ export const FormEachPhoneContainer = styled.div`
           }
         }
       }
+    }
+    &.row_phone_input{
+      display:flex;
+      align-items: center;
+      width: 100%;
+      height: 50px;
+       .PhoneInput{
+          .PhoneInputCountry{
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            select {height: 27.5px; }
+            select, .PhoneInputCountryIcon .PhoneInputCountryIconImg{
+                margin: 0 8px 0 0;
+            }
+            .PhoneInputCountryIcon{
+              img { width: 30px !important;}
+              svg { height: 20px; }
+              /* .PhoneInputCountryIconImg {height: 20px;} */
+            }
+          }
+        }
+
     }
   @media screen and (max-width: 480px) {
     label{ font-size: 12px; }

@@ -155,7 +155,7 @@ const DataTables = ({type, datarows, datacols, isCheckBoxGrid, getSelectedApplic
             
             getRowId={((row) => {
                 if(type==="courses"){
-                    return row.courseID
+                    return row.id
                 }else if(type === "invites"){
                     return row.inviteID
                 }else{

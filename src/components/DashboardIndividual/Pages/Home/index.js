@@ -129,7 +129,7 @@ const StartCoursesSection = () => {
                         className="course_card_button" 
                         href={{
                         pathname: "/individual/learning/courses/[id]",
-                        query: { id: course.courseID }
+                        query: { id: course.id }
                         }}>Start Course
                     </Link>                    
                 </CoursesStartCard>

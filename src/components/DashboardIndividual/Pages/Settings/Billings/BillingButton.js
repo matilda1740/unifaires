@@ -6,7 +6,7 @@ const BillingButtonStyle = styled.button`
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 !important;
+    margin: 0;
     font-weight: 500;
     text-transform: capitalize;
 
@@ -80,6 +80,19 @@ const BillingButtonStyle = styled.button`
         align-self: center ;
     }
 
+   &.tools_btn {
+    border-radius: 8px ;
+    width: fit-content ;
+    height: 40px;
+    padding: 8px 12px;
+    margin: 8px 0 16px 0 ;
+    background-color: rgba(88, 50, 218, 1);
+    color: rgba(255, 255, 255, 1);
+    svg { 
+        margin-left: 8px ;
+    }    
+   }
+
     @media screen and (max-width: 786px) {
         &.regular_btn {
             height: 80px !important;
@@ -97,10 +110,10 @@ const BillingButtonStyle = styled.button`
 
 const BillingButton = (props) => {
 
-    const { variant, text, type="button", position, href, size} = props;
+    const { variant, text, type="button", position, href, size, icon} = props;
 
     return (
-        <BillingButtonStyle onClick={props.openModal} className={`${variant}_btn ${position} ${size}`}>{text}</BillingButtonStyle>
+        <BillingButtonStyle onClick={props.openModal} className={`${variant}_btn ${position} ${size}`}>{text} {icon}</BillingButtonStyle>
     );
 };
 export default BillingButton;

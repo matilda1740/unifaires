@@ -10,7 +10,7 @@ import { SectionWrapper,  ProfileCard, DashboardRow } from '../../DashboardBusin
 import SidebarCard, { MobileHeader }  from './sidebarleft.style';
 
 import MenuBarIcon from 'public/images/dashboard/MenuBar.svg'
-import {AccountBalanceOutlined, AccountBalanceWalletOutlined, CheckCircleOutlined, GroupOutlined, HomeRepairServiceOutlined, HomeOutlined, MessageOutlined, CloseOutlined, SearchOutlined, SettingsOutlined, HelpOutlineOutlined } from '@mui/icons-material';
+import {AccountBalanceOutlined, AccountBalanceWalletOutlined, CheckCircleOutlined, GroupOutlined, HomeRepairServiceOutlined, HomeOutlined, MessageOutlined, CloseOutlined, SearchOutlined, SettingsOutlined, HelpOutlineOutlined, GroupsOutlined, ShoppingCartOutlined, PaymentOutlined } from '@mui/icons-material';
 
 import profileImg from 'public/images/dashboard/Dashboard/icon.svg'
 import unifairesLogo from 'public/images/unifaireslogofull.svg'
@@ -43,9 +43,6 @@ const SidebarLeft = ({userType, isNavOpen, setIsNavOpen}) => {
             </div>
         </MobileHeader>
 
-
-        {/* <Heading as="h4" content={company}/> */}
-        {/* <Heading as="h5" content={userType}/> */}
         <div className="logo_div">
             <img src={unifairesLogo?.src} alt="logo" />
         </div>
@@ -57,8 +54,8 @@ const SidebarLeft = ({userType, isNavOpen, setIsNavOpen}) => {
                     <Text as="p" content={"Dashboard"}/>
                 </DashboardRow>
             </Link>
-            <Link href="/individual/learning/courses">
-                <DashboardRow className={ router.pathname === "/individual/learning/courses" || router.pathname === "/individual/learning/certifications" || router.pathname === "/individual/learning/badges"   ? "dash_row dash_selected" : "dash_row"}>
+            <Link href={`/${userType}/learning`}>
+                <DashboardRow className={ router.pathname === `/${userType}/learning` ? "dash_row dash_selected" : "dash_row"}>
                     <GroupOutlined /> 
                     <Text as="p" content={"My Learning"}/>
                 </DashboardRow>
@@ -82,6 +79,29 @@ const SidebarLeft = ({userType, isNavOpen, setIsNavOpen}) => {
                     <Text as="p" content={"Messages"}/>
                 </DashboardRow>
             </Link>
+            {
+                userType === "individual" &&
+                <>
+                <Link href={`/${userType}/vettedtalent`}>
+                <DashboardRow className={ router.pathname === `/${userType}/vettedtalent` ? "dash_row dash_selected" : "dash_row"}>
+                    <GroupsOutlined />
+                    <Text as="p" content={"Vetted Talent Program"}/>
+                </DashboardRow>
+                </Link> 
+                <Link href={`/${userType}/orders`}>
+                <DashboardRow className={ router.pathname === `/${userType}/vettedtalent` ? "dash_row dash_selected" : "dash_row"}>
+                    <ShoppingCartOutlined />
+                    <Text as="p" content={"Your Orders"}/>
+                </DashboardRow>
+                </Link> 
+                <Link href={`/${userType}/billing`}>
+                <DashboardRow className={ router.pathname === `/${userType}/vettedtalent` ? "dash_row dash_selected" : "dash_row"}>
+                    <PaymentOutlined />
+                    <Text as="p" content={"Billings & Payments"}/>
+                </DashboardRow>
+                </Link> 
+                </>
+            }
             {
                 userType === "business" &&
                 <>

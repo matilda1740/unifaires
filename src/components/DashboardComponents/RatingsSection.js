@@ -94,7 +94,7 @@ const EachRating = ({variant}) => {
     return (
         <EachRatingStyle>
             <EachRatingInputStyle className={variant} />
-            <RatingsBox size={"rating_box"} label={"54%"}/>
+            <RatingsBox length={5} size={"rating_box"} label={"54%"}/>
         </EachRatingStyle>
     );
 }
@@ -103,7 +103,7 @@ const RatingsSection = () => {
     return (
     <RatingsSectionStyle>
         <div className="average_rating_container">
-            <h3>4.4</h3>
+            <h3>5</h3>
             <RatingsBox size={"center"}/>
             <p>Course Rating</p>
         </div>

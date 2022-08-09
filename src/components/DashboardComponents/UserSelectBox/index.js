@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
 import Box from '@mui/material/Box';
@@ -6,6 +6,7 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
+import { useRouter } from 'next/router';
 
 const UserSelectBoxStyle = styled.div`
 
@@ -19,7 +20,7 @@ const UserSelectBoxStyle = styled.div`
         font-weight: 500;
     }
     #select-container{
-        width: 75%;
+        width: 80%;
         margin: 0.5rem 1.5rem 0.75rem 1.5rem;
         height: 2rem;
         padding: 0.5rem 1rem;
@@ -58,10 +59,16 @@ const UserSelectBox = (props) => {
     const { userType } = props;
 
     const [type, setType] = React.useState(userType);
+    const router = useRouter();
 
     const handleChange = (event) => {
-    setType(event.target.value);
+        setType(event.target.value)
+        console.log(event.target.value)
     };
+
+    useEffect( () => {
+        // router.replace(`/${type}/dashboard`);
+    }, [type])
     return (
     <UserSelectBoxStyle>
     <Box id="select-container" sx={{ minWidth: 120 }}>

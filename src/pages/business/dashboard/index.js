@@ -8,7 +8,7 @@ const Main = () => {
   return (
       <Fragment>
         <Head><title>Unifaires | Business Suite</title></Head>
-        <BusinessWrapper content={<HomeWrapper />}/>    
+        <BusinessWrapper content={<HomeWrapper userType="business" />}/>    
       </Fragment>
   );
 };

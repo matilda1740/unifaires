@@ -62,33 +62,7 @@ const ModulesHeading = ({heading, subheading, bottomRow}) => {
                 <div className="counter"><span>4</span></div>
             </HeadingRight>
             </div>
-            {/* <SwipeableComponent />  
-            {
-            bottomRow === true ? 
-            <div className="bottom_row dashboard_slides">
-                <DashboardBadges 
-                    label={"Posted Courses"}
-                    number={980}
-                    // icon={<AutoStories/>}
-                    icon={CoursesIcon}
-
-                />
-                <DashboardBadges 
-                    label={"Posted Jobs"}
-                    number={980}
-                    icon={JobIcon}
-                />
-                <DashboardBadges 
-                    label={"Awarded Certifications & Badges"}
-                    number={980}
-                    icon={MedalIcon}
-                />                               
-            </div>
-
-            : <></>                
-            }          */}
-
-
+            {/* <SwipeableComponent />  */}       
         </ModulesHeadingStyle>
     )
 }

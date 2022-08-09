@@ -7,7 +7,7 @@ import { GlobalStyle, AppWrapper } from 'components/globalApp.style';
 import ResetCSS from 'common/assets/css/style';
 import { DrawerProvider } from 'common/contexts/DrawerContext';
 // Page Sections
-import UserWrapper from 'components/DashboardIndividual';
+import IndividualWrapper from 'components/DashboardIndividual';
 import HelpSectionWrapper from 'components/DashboardIndividual/Pages/Help';
 import HelpFeedback from 'components/DashboardIndividual/Pages/Help/Feedback';
 
@@ -25,7 +25,7 @@ const Main = () => {
         <AppWrapper>
           <Sticky top={0} innerZ={9999} activeClass="sticky-nav-active">
           </Sticky>
-          <UserWrapper content={(<HelpSectionWrapper content={(<HelpFeedback/>)}/>)}/>           
+          <IndividualWrapper content={(<HelpSectionWrapper content={(<HelpFeedback/>)}/>)}/>           
           </AppWrapper>
       </Fragment>
     </ThemeProvider>

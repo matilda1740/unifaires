@@ -1,7 +1,7 @@
 
 
 export const coursesColumns = [
-    { field: 'courseID', headerName: 'ID', width: 100 },
+    { field: 'id', headerName: 'ID', width: 100 },
     {
         field: 'title',
         headerName: 'Course Title',
@@ -49,7 +49,7 @@ export const coursesColumns = [
 ];
 
 export const courses = [{
-  "courseID": "WE04RRW",
+  "id": "WE04RRW",
   "title": "Accountant IV",
   "category": "Services",
   "description": "Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam vel augue.",
@@ -62,7 +62,7 @@ export const courses = [{
   "percentage": 0,
   "instructors": "Torie Borlease"
 }, {
-  "courseID": "UN75QS9",
+  "id": "UN75QS9",
   "title": "Legal Assistant",
   "category": "Marketing",
   "description": "In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus. Nulla ut erat id mauris vulputate elementum.",
@@ -75,7 +75,7 @@ export const courses = [{
   "percentage": 48,
   "instructors": "Elvera Sully"
 }, {
-  "courseID": "XU20WJT",
+  "id": "XU20WJT",
   "title": "Web Developer I",
   "category": "Human Resources",
   "description": "Duis mattis egestas metus. Aenean fermentum. Donec ut mauris eget massa tempor convallis.",
@@ -88,7 +88,7 @@ export const courses = [{
   "percentage": 56,
   "instructors": "Palmer Brotheridge"
 }, {
-  "courseID": "HH35DAC",
+  "id": "HH35DAC",
   "title": "Automation Specialist II",
   "category": "Services",
   "description": "Proin risus. Praesent lectus. Vestibulum quam sapien, varius ut, blandit non, interdum in, ante.",
@@ -101,7 +101,7 @@ export const courses = [{
   "percentage": 47,
   "instructors": "Corrie Primrose"
 }, {
-  "courseID": "LM64NPX",
+  "id": "LM64NPX",
   "title": "Legal Assistant",
   "category": "Business Development",
   "description": "Vestibulum sed magna at nunc commodo placerat. Praesent blandit. Nam nulla.",
@@ -114,7 +114,7 @@ export const courses = [{
   "percentage": 14,
   "instructors": "Rhett Welbelove"
 }, {
-  "courseID": "PY50CHG",
+  "id": "PY50CHG",
   "title": "Senior Developer",
   "category": "Accounting",
   "description": "Cras in purus eu magna vulputate luctus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien.",
@@ -127,7 +127,7 @@ export const courses = [{
   "percentage": 81,
   "instructors": "Giavani Treadgall"
 }, {
-  "courseID": "UA18UYO",
+  "id": "UA18UYO",
   "title": "Desktop Support Technician",
   "category": "Engineering",
   "description": "Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris. Morbi non lectus.",
@@ -140,7 +140,7 @@ export const courses = [{
   "percentage": 92,
   "instructors": "El Steenson"
 }, {
-  "courseID": "PQ78MYN",
+  "id": "PQ78MYN",
   "title": "Research Associate",
   "category": "Product Management",
   "description": "Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem. Integer tincidunt ante vel ipsum.",
@@ -153,7 +153,7 @@ export const courses = [{
   "percentage": 2,
   "instructors": "Alane Mahmood"
 }, {
-  "courseID": "OH46XM3",
+  "id": "OH46XM3",
   "title": "Structural Engineer",
   "category": "Accounting",
   "description": "Morbi vel lectus in quam fringilla rhoncus. Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.",
@@ -166,7 +166,7 @@ export const courses = [{
   "percentage": 5,
   "instructors": "Ashby Diehn"
 }, {
-  "courseID": "BR02QHX",
+  "id": "BR02QHX",
   "title": "Design Engineer",
   "category": "Human Resources",
   "description": "Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede. Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus.",
@@ -179,7 +179,7 @@ export const courses = [{
   "percentage": 6,
   "instructors": "Jacky Woolhouse"
 }, {
-  "courseID": "FW46CBK",
+  "id": "FW46CBK",
   "title": "Web Developer II",
   "category": "Training",
   "description": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam vel augue.",
@@ -192,7 +192,7 @@ export const courses = [{
   "percentage": 30,
   "instructors": "Dyna Danjoie"
 }, {
-  "courseID": "KQ92DMP",
+  "id": "KQ92DMP",
   "title": "Senior Cost Accountant",
   "category": "Accounting",
   "description": "Nunc purus. Phasellus in felis. Donec semper sapien a libero.",
@@ -205,7 +205,7 @@ export const courses = [{
   "percentage": 14,
   "instructors": "Sadella Lias"
 }, {
-  "courseID": "GP92BB6",
+  "id": "GP92BB6",
   "title": "General Manager",
   "category": "Research and Development",
   "description": "Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus. Suspendisse potenti. In eleifend quam a odio.",
@@ -218,7 +218,7 @@ export const courses = [{
   "percentage": 65,
   "instructors": "Gun Atcock"
 }, {
-  "courseID": "EM09ABO",
+  "id": "EM09ABO",
   "title": "Assistant Professor",
   "category": "Research and Development",
   "description": "Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi. Cras non velit nec nisi vulputate nonummy.",
@@ -231,7 +231,7 @@ export const courses = [{
   "percentage": 10,
   "instructors": "Haroun Mulmuray"
 }, {
-  "courseID": "SI33HIV",
+  "id": "SI33HIV",
   "title": "Geologist I",
   "category": "Human Resources",
   "description": "Ut tellus. Nulla ut erat id mauris vulputate elementum. Nullam varius.",
@@ -244,7 +244,7 @@ export const courses = [{
   "percentage": 97,
   "instructors": "Sofie Elleray"
 }, {
-  "courseID": "QA98PGP",
+  "id": "QA98PGP",
   "title": "Administrative Assistant II",
   "category": "Marketing",
   "description": "Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.",
@@ -257,7 +257,7 @@ export const courses = [{
   "percentage": 28,
   "instructors": "Paten Bermingham"
 }, {
-  "courseID": "PB49BVT",
+  "id": "PB49BVT",
   "title": "Mechanical Systems Engineer",
   "category": "Training",
   "description": "Suspendisse accumsan tortor quis turpis. Sed ante. Vivamus tortor. Duis mattis egestas metus.",
@@ -270,7 +270,7 @@ export const courses = [{
   "percentage": 12,
   "instructors": "Emelyne Gomm"
 }, {
-  "courseID": "BL25UNP",
+  "id": "BL25UNP",
   "title": "Help Desk Technician",
   "category": "Business Development",
   "description": "Etiam justo. Etiam pretium iaculis justo. In hac habitasse platea dictumst. Etiam faucibus cursus urna.",
@@ -283,7 +283,7 @@ export const courses = [{
   "percentage": 33,
   "instructors": "Jay Digby"
 }, {
-  "courseID": "KW94NKN",
+  "id": "KW94NKN",
   "title": "Physical Therapy Assistant",
   "category": "Support",
   "description": "Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst. Maecenas ut massa quis augue luctus tincidunt.",
@@ -296,7 +296,7 @@ export const courses = [{
   "percentage": 97,
   "instructors": "Rudiger Vinsen"
 }, {
-  "courseID": "KR84TEE",
+  "id": "KR84TEE",
   "title": "Tax Accountant",
   "category": "Product Management",
   "description": "Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo. Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros.",
@@ -309,7 +309,7 @@ export const courses = [{
   "percentage": 31,
   "instructors": "Brenn Baudic"
 }, {
-  "courseID": "RH51LAH",
+  "id": "RH51LAH",
   "title": "Editor",
   "category": "Training",
   "description": "In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin interdum mauris non ligula pellentesque ultrices.",
@@ -322,7 +322,7 @@ export const courses = [{
   "percentage": 65,
   "instructors": "Solomon Balma"
 }, {
-  "courseID": "LV35AUL",
+  "id": "LV35AUL",
   "title": "Sales Representative",
   "category": "Human Resources",
   "description": "Nulla tellus. In sagittis dui vel nisl. Duis ac nibh.",
@@ -335,7 +335,7 @@ export const courses = [{
   "percentage": 27,
   "instructors": "Armand Jiggens"
 }, {
-  "courseID": "FF64RLG",
+  "id": "FF64RLG",
   "title": "Computer Systems Analyst I",
   "category": "Training",
   "description": "Mauris lacinia sapien quis libero. Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum.",
@@ -348,7 +348,7 @@ export const courses = [{
   "percentage": 13,
   "instructors": "Shaw McCullagh"
 }, {
-  "courseID": "QL26GIC",
+  "id": "QL26GIC",
   "title": "Geologist III",
   "category": "Marketing",
   "description": "Nulla suscipit ligula in lacus. Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.",
@@ -361,7 +361,7 @@ export const courses = [{
   "percentage": 41,
   "instructors": "Annadiane Murrow"
 }, {
-  "courseID": "QF44XDV",
+  "id": "QF44XDV",
   "title": "Programmer Analyst II",
   "category": "Services",
   "description": "Integer a nibh. In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.",
@@ -374,7 +374,7 @@ export const courses = [{
   "percentage": 9,
   "instructors": "Sadye Adlard"
 }, {
-  "courseID": "KZ20LNE",
+  "id": "KZ20LNE",
   "title": "Recruiter",
   "category": "Sales",
   "description": "Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede. Morbi porttitor lorem id ligula.",
@@ -387,7 +387,7 @@ export const courses = [{
   "percentage": 38,
   "instructors": "Zondra Dowse"
 }, {
-  "courseID": "CT19GV5",
+  "id": "CT19GV5",
   "title": "GIS Technical Architect",
   "category": "Product Management",
   "description": "Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.",
@@ -400,7 +400,7 @@ export const courses = [{
   "percentage": 27,
   "instructors": "Venita Talkington"
 }, {
-  "courseID": "TH77WDZ",
+  "id": "TH77WDZ",
   "title": "Recruiter",
   "category": "Sales",
   "description": "Integer ac neque. Duis bibendum. Morbi non quam nec dui luctus rutrum.",
@@ -413,7 +413,7 @@ export const courses = [{
   "percentage": 23,
   "instructors": "Shandie Ardley"
 }, {
-  "courseID": "CS36ZL2",
+  "id": "CS36ZL2",
   "title": "General Manager",
   "category": "Marketing",
   "description": "Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero. Nullam sit amet turpis elementum ligula vehicula consequat.",
@@ -426,7 +426,7 @@ export const courses = [{
   "percentage": 68,
   "instructors": "Loria Quartly"
 }, {
-  "courseID": "MM57TYL",
+  "id": "MM57TYL",
   "title": "Social Worker",
   "category": "Marketing",
   "description": "Sed ante. Vivamus tortor. Duis mattis egestas metus.",
@@ -439,7 +439,7 @@ export const courses = [{
   "percentage": 79,
   "instructors": "Ofelia Sherborne"
 }, {
-  "courseID": "CA98TQ0",
+  "id": "CA98TQ0",
   "title": "Web Designer II",
   "category": "Business Development",
   "description": "Sed ante. Vivamus tortor. Duis mattis egestas metus.",
@@ -452,7 +452,7 @@ export const courses = [{
   "percentage": 80,
   "instructors": "Aldridge Swadlin"
 }, {
-  "courseID": "YG11DJM",
+  "id": "YG11DJM",
   "title": "Engineer I",
   "category": "Training",
   "description": "Etiam pretium iaculis justo. In hac habitasse platea dictumst. Etiam faucibus cursus urna.",
@@ -465,7 +465,7 @@ export const courses = [{
   "percentage": 79,
   "instructors": "Malinda Howroyd"
 }, {
-  "courseID": "FH05OG6",
+  "id": "FH05OG6",
   "title": "Nuclear Power Engineer",
   "category": "Accounting",
   "description": "Nullam varius. Nulla facilisi. Cras non velit nec nisi vulputate nonummy.",
@@ -478,7 +478,7 @@ export const courses = [{
   "percentage": 90,
   "instructors": "Sander Hanner"
 }, {
-  "courseID": "GA63EV3",
+  "id": "GA63EV3",
   "title": "Dental Hygienist",
   "category": "Marketing",
   "description": "Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus. In sagittis dui vel nisl.",
@@ -491,7 +491,7 @@ export const courses = [{
   "percentage": 87,
   "instructors": "Vicky Lyman"
 }, {
-  "courseID": "KW37NOY",
+  "id": "KW37NOY",
   "title": "Senior Financial Analyst",
   "category": "Business Development",
   "description": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros. Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue.",
@@ -504,7 +504,7 @@ export const courses = [{
   "percentage": 58,
   "instructors": "Robinett Prantoni"
 }, {
-  "courseID": "WF74UU0",
+  "id": "WF74UU0",
   "title": "Analog Circuit Design manager",
   "category": "Services",
   "description": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis. Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor.",
@@ -517,7 +517,7 @@ export const courses = [{
   "percentage": 22,
   "instructors": "Olivier Lightollers"
 }, {
-  "courseID": "HI45SL8",
+  "id": "HI45SL8",
   "title": "Occupational Therapist",
   "category": "Marketing",
   "description": "Fusce consequat. Nulla nisl. Nunc nisl.",
@@ -530,7 +530,7 @@ export const courses = [{
   "percentage": 32,
   "instructors": "Wayne Kief"
 }, {
-  "courseID": "GO50ET4",
+  "id": "GO50ET4",
   "title": "VP Sales",
   "category": "Marketing",
   "description": "Nulla suscipit ligula in lacus. Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.",
@@ -543,7 +543,7 @@ export const courses = [{
   "percentage": 24,
   "instructors": "Robinson Marder"
 }, {
-  "courseID": "HA31EDE",
+  "id": "HA31EDE",
   "title": "Design Engineer",
   "category": "Engineering",
   "description": "Aliquam non mauris. Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.",
@@ -556,7 +556,7 @@ export const courses = [{
   "percentage": 10,
   "instructors": "Wilbert Verrills"
 }, {
-  "courseID": "RL04WNC",
+  "id": "RL04WNC",
   "title": "General Manager",
   "category": "Product Management",
   "description": "Morbi vel lectus in quam fringilla rhoncus. Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci.",
@@ -569,7 +569,7 @@ export const courses = [{
   "percentage": 95,
   "instructors": "Abner Anning"
 }, {
-  "courseID": "QX29TX3",
+  "id": "QX29TX3",
   "title": "GIS Technical Architect",
   "category": "Services",
   "description": "Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh. Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.",
@@ -582,7 +582,7 @@ export const courses = [{
   "percentage": 62,
   "instructors": "Nanete Turbayne"
 }, {
-  "courseID": "FS72FSM",
+  "id": "FS72FSM",
   "title": "Administrative Assistant III",
   "category": "Human Resources",
   "description": "Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros. Vestibulum ac est lacinia nisi venenatis tristique.",
@@ -595,7 +595,7 @@ export const courses = [{
   "percentage": 51,
   "instructors": "Elga Vogl"
 }, {
-  "courseID": "FM30DH6",
+  "id": "FM30DH6",
   "title": "Geologist II",
   "category": "Sales",
   "description": "Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero. Nullam sit amet turpis elementum ligula vehicula consequat.",
@@ -608,7 +608,7 @@ export const courses = [{
   "percentage": 26,
   "instructors": "Fredric Tomadoni"
 }, {
-  "courseID": "SP00BVF",
+  "id": "SP00BVF",
   "title": "Information Systems Manager",
   "category": "Legal",
   "description": "Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros. Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue.",
@@ -621,7 +621,7 @@ export const courses = [{
   "percentage": 94,
   "instructors": "Adelind Enrico"
 }, {
-  "courseID": "LL02VOX",
+  "id": "LL02VOX",
   "title": "Geological Engineer",
   "category": "Human Resources",
   "description": "Nullam molestie nibh in lectus. Pellentesque at nulla. Suspendisse potenti.",
@@ -634,7 +634,7 @@ export const courses = [{
   "percentage": 21,
   "instructors": "Dorita Bickerdike"
 }, {
-  "courseID": "JS60QNY",
+  "id": "JS60QNY",
   "title": "Physical Therapy Assistant",
   "category": "Accounting",
   "description": "In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem. Integer tincidunt ante vel ipsum.",
@@ -647,7 +647,7 @@ export const courses = [{
   "percentage": 51,
   "instructors": "Eveleen M'Chirrie"
 }, {
-  "courseID": "QH36AWK",
+  "id": "QH36AWK",
   "title": "Marketing Manager",
   "category": "Sales",
   "description": "Nulla mollis molestie lorem. Quisque ut erat. Curabitur gravida nisi at nibh.",
@@ -660,7 +660,7 @@ export const courses = [{
   "percentage": 6,
   "instructors": "Wes Babcock"
 }, {
-  "courseID": "QV83TFZ",
+  "id": "QV83TFZ",
   "title": "Structural Analysis Engineer",
   "category": "Marketing",
   "description": "Maecenas pulvinar lobortis est. Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.",
@@ -673,7 +673,7 @@ export const courses = [{
   "percentage": 43,
   "instructors": "Charlena Duiguid"
 }, {
-  "courseID": "RT60SA2",
+  "id": "RT60SA2",
   "title": "Media Manager III",
   "category": "Marketing",
   "description": "Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.",
@@ -686,7 +686,7 @@ export const courses = [{
   "percentage": 68,
   "instructors": "Gordan Lardeux"
 }, {
-  "courseID": "CS44ZVK",
+  "id": "CS44ZVK",
   "title": "Automation Specialist IV",
   "category": "Research and Development",
   "description": "Etiam justo. Etiam pretium iaculis justo. In hac habitasse platea dictumst.",
@@ -699,7 +699,7 @@ export const courses = [{
   "percentage": 17,
   "instructors": "Rogerio Weippert"
 }, {
-  "courseID": "FF39YTZ",
+  "id": "FF39YTZ",
   "title": "Civil Engineer",
   "category": "Research and Development",
   "description": "Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis. Sed ante.",
@@ -712,7 +712,7 @@ export const courses = [{
   "percentage": 1,
   "instructors": "Norbie Battersby"
 }, {
-  "courseID": "UU06IQX",
+  "id": "UU06IQX",
   "title": "Software Engineer II",
   "category": "Accounting",
   "description": "Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.",
@@ -725,7 +725,7 @@ export const courses = [{
   "percentage": 38,
   "instructors": "Aliza Clitsome"
 }, {
-  "courseID": "JL09JF1",
+  "id": "JL09JF1",
   "title": "Nuclear Power Engineer",
   "category": "Research and Development",
   "description": "Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl. Aenean lectus.",
@@ -738,7 +738,7 @@ export const courses = [{
   "percentage": 5,
   "instructors": "Jemimah Prosser"
 }, {
-  "courseID": "QX44CD0",
+  "id": "QX44CD0",
   "title": "Actuary",
   "category": "Training",
   "description": "Etiam justo. Etiam pretium iaculis justo. In hac habitasse platea dictumst.",
@@ -751,7 +751,7 @@ export const courses = [{
   "percentage": 14,
   "instructors": "Katharine Kleeborn"
 }, {
-  "courseID": "GC50TMD",
+  "id": "GC50TMD",
   "title": "Senior Developer",
   "category": "Research and Development",
   "description": "Donec vitae nisi. Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.",
@@ -764,7 +764,7 @@ export const courses = [{
   "percentage": 79,
   "instructors": "Danna Mumbray"
 }, {
-  "courseID": "SR08KW5",
+  "id": "SR08KW5",
   "title": "Sales Representative",
   "category": "Legal",
   "description": "In eleifend quam a odio. In hac habitasse platea dictumst. Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem.",
@@ -777,7 +777,7 @@ export const courses = [{
   "percentage": 64,
   "instructors": "Ozzie Markwick"
 }, {
-  "courseID": "ZP06MCY",
+  "id": "ZP06MCY",
   "title": "Occupational Therapist",
   "category": "Legal",
   "description": "Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.",
@@ -790,7 +790,7 @@ export const courses = [{
   "percentage": 70,
   "instructors": "Noam Guite"
 }, {
-  "courseID": "HX47HQS",
+  "id": "HX47HQS",
   "title": "Nurse",
   "category": "Training",
   "description": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque. Duis bibendum. Morbi non quam nec dui luctus rutrum.",
@@ -803,7 +803,7 @@ export const courses = [{
   "percentage": 99,
   "instructors": "Devi Catonne"
 }, {
-  "courseID": "CQ17FAO",
+  "id": "CQ17FAO",
   "title": "Recruiting Manager",
   "category": "Engineering",
   "description": "Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl. Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
@@ -816,7 +816,7 @@ export const courses = [{
   "percentage": 85,
   "instructors": "Bessy McAreavey"
 }, {
-  "courseID": "VQ77VV0",
+  "id": "VQ77VV0",
   "title": "Software Test Engineer II",
   "category": "Human Resources",
   "description": "Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus. Phasellus in felis. Donec semper sapien a libero.",
@@ -829,7 +829,7 @@ export const courses = [{
   "percentage": 11,
   "instructors": "Lorrie Sargood"
 }, {
-  "courseID": "OF68ATP",
+  "id": "OF68ATP",
   "title": "Business Systems Development Analyst",
   "category": "Business Development",
   "description": "Nulla nisl. Nunc nisl. Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa.",
@@ -842,7 +842,7 @@ export const courses = [{
   "percentage": 48,
   "instructors": "Zane Maffy"
 }, {
-  "courseID": "OM61AWE",
+  "id": "OM61AWE",
   "title": "Account Executive",
   "category": "Human Resources",
   "description": "In est risus, auctor sed, tristique in, tempus sit amet, sem. Fusce consequat. Nulla nisl.",
@@ -855,7 +855,7 @@ export const courses = [{
   "percentage": 24,
   "instructors": "Juliet Phalp"
 }, {
-  "courseID": "AS47SDX",
+  "id": "AS47SDX",
   "title": "Account Executive",
   "category": "Product Management",
   "description": "Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit. Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue.",
@@ -868,7 +868,7 @@ export const courses = [{
   "percentage": 93,
   "instructors": "Arthur Ajean"
 }, {
-  "courseID": "LV42GQW",
+  "id": "LV42GQW",
   "title": "Research Assistant I",
   "category": "Marketing",
   "description": "Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis. Duis consequat dui nec nisi volutpat eleifend.",
@@ -881,7 +881,7 @@ export const courses = [{
   "percentage": 12,
   "instructors": "Essa Iggo"
 }, {
-  "courseID": "KL72XAT",
+  "id": "KL72XAT",
   "title": "Senior Cost Accountant",
   "category": "Engineering",
   "description": "Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.",
@@ -894,7 +894,7 @@ export const courses = [{
   "percentage": 41,
   "instructors": "Hewet Raithmill"
 }, {
-  "courseID": "TW43LO5",
+  "id": "TW43LO5",
   "title": "Software Engineer III",
   "category": "Training",
   "description": "Cras in purus eu magna vulputate luctus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
@@ -907,7 +907,7 @@ export const courses = [{
   "percentage": 12,
   "instructors": "Bret Parken"
 }, {
-  "courseID": "IR84GEN",
+  "id": "IR84GEN",
   "title": "Account Coordinator",
   "category": "Business Development",
   "description": "Donec vitae nisi. Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.",
@@ -920,7 +920,7 @@ export const courses = [{
   "percentage": 88,
   "instructors": "Greta Geale"
 }, {
-  "courseID": "KB10YXC",
+  "id": "KB10YXC",
   "title": "Executive Secretary",
   "category": "Training",
   "description": "Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem. Sed sagittis.",
@@ -933,7 +933,7 @@ export const courses = [{
   "percentage": 6,
   "instructors": "Bud Mithon"
 }, {
-  "courseID": "NM67KX2",
+  "id": "NM67KX2",
   "title": "Design Engineer",
   "category": "Product Management",
   "description": "Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede. Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.",
@@ -946,7 +946,7 @@ export const courses = [{
   "percentage": 20,
   "instructors": "Breanne Fielden"
 }, {
-  "courseID": "XB48OVP",
+  "id": "XB48OVP",
   "title": "VP Product Management",
   "category": "Engineering",
   "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.",
@@ -959,7 +959,7 @@ export const courses = [{
   "percentage": 81,
   "instructors": "Tracey Bearham"
 }, {
-  "courseID": "AT32SMT",
+  "id": "AT32SMT",
   "title": "Account Coordinator",
   "category": "Support",
   "description": "Etiam justo. Etiam pretium iaculis justo. In hac habitasse platea dictumst. Etiam faucibus cursus urna.",
@@ -972,7 +972,7 @@ export const courses = [{
   "percentage": 99,
   "instructors": "Catlaina Aspell"
 }, {
-  "courseID": "GN30PC8",
+  "id": "GN30PC8",
   "title": "Systems Administrator IV",
   "category": "Product Management",
   "description": "Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem. Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci.",
@@ -985,7 +985,7 @@ export const courses = [{
   "percentage": 31,
   "instructors": "Carlen Berger"
 }, {
-  "courseID": "AV97ATS",
+  "id": "AV97ATS",
   "title": "Desktop Support Technician",
   "category": "Marketing",
   "description": "Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh. Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est.",
@@ -998,7 +998,7 @@ export const courses = [{
   "percentage": 7,
   "instructors": "Charyl Cockayme"
 }, {
-  "courseID": "XA20FMF",
+  "id": "XA20FMF",
   "title": "Senior Editor",
   "category": "Support",
   "description": "Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit. Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue.",
@@ -1011,7 +1011,7 @@ export const courses = [{
   "percentage": 11,
   "instructors": "Nissa Waison"
 }, {
-  "courseID": "WX28LJ5",
+  "id": "WX28LJ5",
   "title": "Web Developer III",
   "category": "Support",
   "description": "In est risus, auctor sed, tristique in, tempus sit amet, sem. Fusce consequat. Nulla nisl. Nunc nisl.",
@@ -1024,7 +1024,7 @@ export const courses = [{
   "percentage": 88,
   "instructors": "Hillier Eyers"
 }, {
-  "courseID": "ON62GJZ",
+  "id": "ON62GJZ",
   "title": "Administrative Assistant IV",
   "category": "Engineering",
   "description": "Nullam varius. Nulla facilisi. Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit.",
@@ -1037,7 +1037,7 @@ export const courses = [{
   "percentage": 66,
   "instructors": "Charmaine Frogley"
 }, {
-  "courseID": "TJ81PTI",
+  "id": "TJ81PTI",
   "title": "VP Quality Control",
   "category": "Services",
   "description": "Donec vitae nisi. Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.",
@@ -1050,7 +1050,7 @@ export const courses = [{
   "percentage": 38,
   "instructors": "Idelle Hollyar"
 }, {
-  "courseID": "JH15DCE",
+  "id": "JH15DCE",
   "title": "Chief Design Engineer",
   "category": "Accounting",
   "description": "Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede. Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus.",
@@ -1063,7 +1063,7 @@ export const courses = [{
   "percentage": 67,
   "instructors": "Asher Benettini"
 }, {
-  "courseID": "LL97AQI",
+  "id": "LL97AQI",
   "title": "Analog Circuit Design manager",
   "category": "Support",
   "description": "In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.",
@@ -1076,7 +1076,7 @@ export const courses = [{
   "percentage": 12,
   "instructors": "Ber Mandrake"
 }, {
-  "courseID": "IG73NM3",
+  "id": "IG73NM3",
   "title": "Recruiting Manager",
   "category": "Services",
   "description": "Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.",
@@ -1089,7 +1089,7 @@ export const courses = [{
   "percentage": 86,
   "instructors": "Haily Trunkfield"
 }, {
-  "courseID": "PO05BQE",
+  "id": "PO05BQE",
   "title": "Pharmacist",
   "category": "Sales",
   "description": "Integer non velit. Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.",
@@ -1102,7 +1102,7 @@ export const courses = [{
   "percentage": 42,
   "instructors": "Johnathon Weall"
 }, {
-  "courseID": "IC46LR3",
+  "id": "IC46LR3",
   "title": "Product Engineer",
   "category": "Support",
   "description": "Cras pellentesque volutpat dui. Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam.",
@@ -1115,7 +1115,7 @@ export const courses = [{
   "percentage": 61,
   "instructors": "Nert Maffy"
 }, {
-  "courseID": "IK11CWN",
+  "id": "IK11CWN",
   "title": "Programmer Analyst I",
   "category": "Training",
   "description": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.",
@@ -1128,7 +1128,7 @@ export const courses = [{
   "percentage": 1,
   "instructors": "Jard Mcettrick"
 }, {
-  "courseID": "JW58BAI",
+  "id": "JW58BAI",
   "title": "Web Designer III",
   "category": "Product Management",
   "description": "Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl. Aenean lectus.",
@@ -1141,7 +1141,7 @@ export const courses = [{
   "percentage": 49,
   "instructors": "Ashby Stockoe"
 }, {
-  "courseID": "FT11IRF",
+  "id": "FT11IRF",
   "title": "Recruiter",
   "category": "Research and Development",
   "description": "Quisque ut erat. Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.",
@@ -1154,7 +1154,7 @@ export const courses = [{
   "percentage": 10,
   "instructors": "Cole MacKee"
 }, {
-  "courseID": "XC32JYK",
+  "id": "XC32JYK",
   "title": "Safety Technician III",
   "category": "Research and Development",
   "description": "Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat. Praesent blandit.",
@@ -1167,7 +1167,7 @@ export const courses = [{
   "percentage": 35,
   "instructors": "Alejandro Sterke"
 }, {
-  "courseID": "GW01XES",
+  "id": "GW01XES",
   "title": "Executive Secretary",
   "category": "Research and Development",
   "description": "In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.",
@@ -1180,7 +1180,7 @@ export const courses = [{
   "percentage": 95,
   "instructors": "Troy Tompion"
 }, {
-  "courseID": "XY10HK6",
+  "id": "XY10HK6",
   "title": "Biostatistician IV",
   "category": "Research and Development",
   "description": "Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero. Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum.",
@@ -1193,7 +1193,7 @@ export const courses = [{
   "percentage": 4,
   "instructors": "Annnora Dalgarno"
 }, {
-  "courseID": "BZ14QRU",
+  "id": "BZ14QRU",
   "title": "Help Desk Technician",
   "category": "Product Management",
   "description": "Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh. In quis justo.",
@@ -1206,7 +1206,7 @@ export const courses = [{
   "percentage": 72,
   "instructors": "Sonnie Dearle"
 }, {
-  "courseID": "SU16JH0",
+  "id": "SU16JH0",
   "title": "Paralegal",
   "category": "Training",
   "description": "Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet. Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo.",
@@ -1219,7 +1219,7 @@ export const courses = [{
   "percentage": 92,
   "instructors": "Christan Treadway"
 }, {
-  "courseID": "XP32SQU",
+  "id": "XP32SQU",
   "title": "Research Nurse",
   "category": "Services",
   "description": "Nulla mollis molestie lorem. Quisque ut erat. Curabitur gravida nisi at nibh. In hac habitasse platea dictumst.",
@@ -1232,7 +1232,7 @@ export const courses = [{
   "percentage": 94,
   "instructors": "Reinold Maffin"
 }, {
-  "courseID": "CV95SY7",
+  "id": "CV95SY7",
   "title": "Accountant III",
   "category": "Sales",
   "description": "Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros. Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.",
@@ -1245,7 +1245,7 @@ export const courses = [{
   "percentage": 67,
   "instructors": "Merell Bagot"
 }, {
-  "courseID": "AY18ONS",
+  "id": "AY18ONS",
   "title": "Legal Assistant",
   "category": "Research and Development",
   "description": "Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis. Fusce posuere felis sed lacus.",
@@ -1258,7 +1258,7 @@ export const courses = [{
   "percentage": 26,
   "instructors": "Stillmann Masser"
 }, {
-  "courseID": "DY17EUS",
+  "id": "DY17EUS",
   "title": "VP Accounting",
   "category": "Research and Development",
   "description": "Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh. Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est.",
@@ -1271,7 +1271,7 @@ export const courses = [{
   "percentage": 16,
   "instructors": "Edna Bampkin"
 }, {
-  "courseID": "SJ95IL7",
+  "id": "SJ95IL7",
   "title": "Design Engineer",
   "category": "Engineering",
   "description": "Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.",
@@ -1284,7 +1284,7 @@ export const courses = [{
   "percentage": 47,
   "instructors": "Homerus Widd"
 }, {
-  "courseID": "TT73XCG",
+  "id": "TT73XCG",
   "title": "GIS Technical Architect",
   "category": "Services",
   "description": "Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est. Phasellus sit amet erat.",
@@ -1297,7 +1297,7 @@ export const courses = [{
   "percentage": 74,
   "instructors": "Wilie O'Dempsey"
 }, {
-  "courseID": "QO61FKP",
+  "id": "QO61FKP",
   "title": "Financial Analyst",
   "category": "Support",
   "description": "Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi. Cras non velit nec nisi vulputate nonummy.",
@@ -1310,7 +1310,7 @@ export const courses = [{
   "percentage": 79,
   "instructors": "Adham McGraith"
 }, {
-  "courseID": "OG88HAA",
+  "id": "OG88HAA",
   "title": "Budget/Accounting Analyst I",
   "category": "Accounting",
   "description": "Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus. Phasellus in felis.",
@@ -1323,7 +1323,7 @@ export const courses = [{
   "percentage": 56,
   "instructors": "Katerine Bissatt"
 }, {
-  "courseID": "KR74MWR",
+  "id": "KR74MWR",
   "title": "Environmental Specialist",
   "category": "Sales",
   "description": "Suspendisse accumsan tortor quis turpis. Sed ante. Vivamus tortor.",
@@ -1336,7 +1336,7 @@ export const courses = [{
   "percentage": 89,
   "instructors": "Vicki Harkins"
 }, {
-  "courseID": "UE86ISM",
+  "id": "UE86ISM",
   "title": "VP Accounting",
   "category": "Business Development",
   "description": "Nulla tellus. In sagittis dui vel nisl. Duis ac nibh.",

@@ -11,7 +11,7 @@ import { HeadingLeft, HeadingRight, ModuleHeading, ModuleSection, SearchBar } fr
 import DashboardCard from 'components/DashboardComponents/DashboardCard';
 import ModulesHeading from 'components/DashboardComponents/ModulesHeading';
 
-const HomeWrapper = () => {
+const HomeWrapper = ({userType}) => {
     const router = useRouter(); 
 
     return (
@@ -29,7 +29,7 @@ const HomeWrapper = () => {
                     icon={module.icon}
                     heading={module.heading}
                     subheading={module.subheading}
-                    handleClick={ () => router.push(`/business/${module.moduleRoute}`)}
+                    handleClick={ () => router.push(`/${userType}/${module.moduleRoute}`)}
                 />
             ))
             }

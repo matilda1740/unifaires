@@ -43,7 +43,7 @@ const CoursesSection = () => {
             <ModuleRow className="courses_row">
                 {
                     section.courses.map(( course=> (
-                        <CoursesResumeCard key={course.courseID}>
+                        <CoursesResumeCard key={course.id}>
                             <div className="courses_resume_top">
                                 <img src={dashCard?.src} alt="Image" /> 
                                 <div className="top_icons">
@@ -92,7 +92,7 @@ const CoursesSection = () => {
             <ModuleRow>
                 {
                     section.courses.map(( course => (
-                        <CoursesStartCard key={course.courseID}>
+                        <CoursesStartCard key={course.id}>
                             <img src={dashCard?.src} alt="Image" /> 
                             <Heading as="h6" content={course.category}></Heading>
                             <Heading as="h5" content={course.title}></Heading>
@@ -110,7 +110,7 @@ const CoursesSection = () => {
                             <Link                                
                                 href={{
                                 pathname: "/individual/learning/courses/[id]",
-                                query: { id: course.courseID }
+                                query: { id: course.id }
                                 }}>Start Course
                             </Link>
                         </CoursesStartCard>

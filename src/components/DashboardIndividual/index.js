@@ -12,14 +12,14 @@ import { MenuOutlined, SearchOutlined } from '@mui/icons-material';
 import SkillsMatchingModal from './SkillsMatching';
 // --------------
 
-const UserWrapper = (props) => {
+const IndividualWrapper = (props) => {
 
     const [isNavOpen, setIsNavOpen] = useState(true);
     const [popup, setPopUp] = useState(false)
     const togglePopUp = () => setPopUp(!popup)
   return (
     <SectionWrapper>
-      <SidebarLeft userType={"Individual"} isNavOpen={isNavOpen} setIsNavOpen={setIsNavOpen}/>  
+      <SidebarLeft userType={"individual"} isNavOpen={isNavOpen} setIsNavOpen={setIsNavOpen}/>  
           <ModuleColumn>
           {
           isNavOpen &&
@@ -40,4 +40,4 @@ const UserWrapper = (props) => {
   );
 };
 
-export default UserWrapper;
+export default IndividualWrapper;
